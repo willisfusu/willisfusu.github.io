@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>李二先生</title>
+<meta name="description" content="李二先生的个博客，欢迎光临" />
+<meta name="google-site-verification" content="FHNMdYV7a7Bw4HNt-vm0Cto8QvAW1Vx_rTrhMgxLg44" />
+<link rel="shortcut icon" href="https://willisfusu.github.io/favicon.ico?v=1610655376390">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src='https://willisfusu.github.io/media/Valine.min.js'></script>
+<link rel="stylesheet" href="https://willisfusu.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="李二先生 - Atom Feed" href="https://willisfusu.github.io/atom.xml">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+    </head>
+    <body>
+    <div id="read-progress"></div>
+<div class="fixed-top">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+       <a class="navbar-brand" href="https://willisfusu.github.io">李二先生</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/archives">「全部文章」</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/tag/will-tech">技术</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/tag/will-thinking">想法</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/tag/will-life">生活</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">关于</a>
+                </li>
+            </ul>
+       </div>
+    </nav>
+</div>
+
+        <div class="container col-10" id="main" role="main">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <article class="post">
+                        <h1>
+                            <a itemprop="url" class="post-title" href="https://willisfusu.github.io/post/our-library/">Our Library 响应式网页编写反思记录</a>
+                        </h1>
+                        <p id="post-meta">
+                            <i class="fa fa-clock-o"></i>2020-05-05 |
+                            <i class="fa fa-tags"></i>
+                                <a href="https://willisfusu.github.io/tag/will-tech/">技术</a>
+                                
+                                <a href="https://willisfusu.github.io/tag/will-life/">日常</a>
+                                |
+                            <i class="fa fa-book-reader"></i>7 min read
+                        </p>
+                        
+                        
+                            <blockquote class="fa fa-exclamation-triangle warning">
+                                此文章发表于<strong><span style="color:#f75357">
+                                        254</span></strong> 天前，请注意文章时效
+                            </blockquote>
+                            
+                        <div class="post-content" itemprop="articleBody">
+                            <p>隔离在家，每天就想着怎么折腾 😂。之前在做 blog 主题的时候看过了不少的网站找参考样式，当时就想着，这些网站可真是好看，如果我也能做一个就好了。最近又赶上了老婆的生日，于是两者一结合，就打算做一个纪念网站，当作生日礼物（虽然后来因为自己半调子的能力，没有能够在生日之前上线 😢 ）。</p>
+<!-- more -->
+<h2 id="网页规划">网页规划</h2>
+<h3 id="需求确认">需求确认</h3>
+<p>在开始准备施工之前，我其实已经看了好多差不多类型的页面，也大概搞清楚了自己心里想要一个什么样子的产品。</p>
+<ul>
+<li>页面简洁，不要有大量的装饰。个人感觉这样比较大气 😂</li>
+<li>能够自适应移动端，</li>
+<li>有设计感，不要太简陋，</li>
+<li>如果可能，适当加一些动画。</li>
+</ul>
+<p>因为自己对前端一点也不懂，只能靠自己半调子的认知瞎搞搞，很多的需求也是自己看了别人的网站，觉得自己也应该有这样如此云云。</p>
+<h3 id="内容规划">内容规划</h3>
+<p>在确认了网页的样式需求之后，就是考虑在网页上放点什么。自己之前在情人节的时候，给老婆做了一个小小的纪念页面<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。现在又要搞一个，就想着把这两个整合起来，放到一个框架下面，也方便日后再有其它的项目可以加进来。另外就是我们两个人一直想把自己这一年做过的菜，整理出来，做成一个类似菜单的东西，到时候可以展示出来，算是给自己的生活增加一些仪式感。再加上我们两个日常拍的照片，平时也就是偶尔发一下朋友圈，可能也需要一个集中的地方。于是心里也就有了个数，要在这上面展示啥。</p>
+<ul>
+<li>情话版 😍</li>
+<li>项目展示</li>
+<li>照片区
+<ul>
+<li>旅游照片</li>
+<li>日常照片</li>
+</ul>
+</li>
+</ul>
+<p>大概就是这样一些内容，其后就是开始做施工准备。</p>
+<h2 id="知识储备">知识储备</h2>
+<h3 id="响应式web设计">响应式Web设计</h3>
+<p>对的，你没有看错，我做好了需求与内容确认之后，首先做的就是找了一本讲自适应网页编写的书看了一遍 😢 。 书名是：《响应式Web设计+HTML5和CSS3实战 第2版》大体上了解了下一些术语和常见的操作，省得自己在做的时候，在一些小问题上花费大时间（其实后面在操作的时候，还是在几个小问题上，浪费了不少时间，由此可见术业有专攻不假）。</p>
+<h3 id="bootstrap-响应式框架">Bootstrap 响应式框架</h3>
+<p>为了实现响应式的网页，我这次使用了 Bootstrap 这个框架，因为对新手比较友好，容易上手且外行也能做出一个像样的网页出来。为了方便使用，也在开始施工之前去学习了一下。学习比较快，主要是 Bootstrap 一些类的定义。</p>
+<h2 id="具体施工过程中的坑">具体施工过程中的坑</h2>
+<p>很详细的网页编写我就不写在这里了，有需要的朋友可以<a href="https://github.com/willisfusu/anniversary">点击这里查看</a>。这里我主要记录一下自己在学习以及编写这个网页的时候用到的一些 Js 库和遇到的一些坑，为以后再做相同工作减少阻碍。</p>
+<h3 id="用到的-js-库">用到的 Js 库</h3>
+<p>因为我毕竟是一个彻头彻尾的外行人，所以在开始施工的时候，采用的最原始方法就是选定一个网站，开始照着这个网站做。就在我分析这些网站的代码时，发现其中有一些部分很奇怪，非常像是「生成」的内容。仔细研究之后发现，对于同样的需求，已经有很多成熟的解决方，很多网站也没有自己去「造轮子」而是直接使用了这些 Js 库。</p>
+<p>但是由于我自己是一个非常彻底的外行，看到一些效果的时候，不知道是基于其它库实现的，结果我就掉进了一个大坑：扒 js 代码去研究咋实现的…… 😢 我大概看了几天的 Tween、fullpage 的代码。😅😅😅 此事不表，我列一下我主要用到的库有哪些：</p>
+<ul>
+<li><a href="https://getbootstrap.com/">Bootstrap</a> 用来实现响应式的框架</li>
+<li><a href="https://alvarotrigo.com/fullPage/">Fullpage</a> 用来实现那种整页展示效果</li>
+<li><a href="https://nanogallery2.nanostudio.org/">nanogallery2</a> 实现图片排版，轮播</li>
+<li><s><a href="https://github.com/janpaepke/ScrollMagic">ScrollMagic</a> 整页滚动效果</s> 可能和 fullPage 效果差不多，就用 fp 代替了</li>
+<li><s><a href="https://github.com/kenwheeler/slick">slick</a>  用于图片轮播，</s> 后来使用 nanogallery2 代替。</li>
+</ul>
+<p>使用这些库之后完成的效果分别是这样的：</p>
+<p>Fullpage:<br>
+<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200505172135.png" alt="" loading="lazy"></p>
+<p>nanogallery2:<br>
+<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200505172225.png" alt="" loading="lazy"></p>
+<p>其实如果一开始就知道使用这几个库，那整个过程相当简简单单，读完每个库的 Documents 之后，就可以非常快速的完成自己想要的结果，毕竟这几个库都是使用广泛且完成度相当高。</p>
+<h3 id="几个坑">几个坑</h3>
+<ol>
+<li><strong>完成比完美更重要</strong></li>
+</ol>
+<p>第一个坑就是 Tween（GSAP） 这个动画插件，看到了别人成品极其炫丽的样子（我参照的网站可以<a href="https://perficientdigitallabs.com/">点这里查看</a>，我不禁也动了念头，但是搞了半天，发现这个库的入门成本还是挺高的，比较光是画 svg 的路径可能就直接搞死我。最终的结局就是我在研究了两天之后，被迫放弃。这个库可以放到以后网站升级的时候去研究。我当时已经在这个库上花了不少时间，并且我感觉自己不是一时半会就能使用它，所以不得以放弃。</p>
+<ol start="2">
+<li><strong>先确定是什么，更确定怎么做</strong></li>
+</ol>
+<p>再一个坑就是我一头插进 Tween 和 Fullpage 的 js 代码中去看具体实现的方法，其实不是我自己对自己的能力高估了，只是我没有想到，这些代码竟然是这样一个庞大的库里的 😂（主要是这些网站不是引入 js 文件，而是把所有的 js 文件都整合成了一个文件，所以我也不知道其中的代码哪一部分是啥）。后来我发现，这些库里的代码其实都是有比较明显的特征，或者是函数名，或者是报错信息。从这里我得到一个教训，以后再做类似的事情，我得先找到这些特征的地方，搜索一下，确定这是什么，再去想怎么解决。</p>
+<ol start="3">
+<li>Fullpage 与 nanogallery2 冲突</li>
+</ol>
+<p>其实这个问题是一个真正的技术问题 🤓 🤓 上面两个都是我自己血的教训。但是这个问题也已经被很多人发现，并且官方也给了解决方法。这就是使用受众多的库的好处之一，很多坑别人都已经趟过一遍 😄 。简单点说就是 Fullpage 和其它使用 Scroll 监听器的插件会冲突。解决方法个人感觉不太优雅，但是官方也就只给了这一种方法。具体可以见<a href="https://github.com/alvarotrigo/fullPage.js/wiki/FAQ---Frequently-Answered-Questions">此处</a>。我自己也没有心情去看看 nanogallery2 的代码做修改，就按照官方的解决方法来了。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>如果没有记，这个纪念页面的开发者应该是我当时学校计院的一个学长。当时此网页一出，就引大众羡慕。但其后事情发展实在让人叹息。当时在日月光华上也是十大，我虽然围观过，但是对内情知之不详，此处不表。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+                        </div>
+                         <blockquote>
+                             <p>本文链接：<a style="text-decoration: underline" href="https://willisfusu.github.io/post/our-library/">https://willisfusu.github.io/post/our-library/</a></p>
+                             <p>此文章由<a style="text-decoration: underline" href="https://willisfusu.github.io/">李二先生</a>采用<a style="text-decoration: underline" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可,转载请注明出处。
+                             </p>
+                         </blockquote>
+                    </article>
+                    <ul class="post-near">
+                        
+                        <li>上一篇<a href="https://willisfusu.github.io/post/Lenovo-M910q-OpenCore-Hackintosh/"> 联想 M910q open core 黑苹果装机遇「坑」记录</a> </li>
+                        
+                        
+                        <li>上一篇<a href="https://willisfusu.github.io/post/valine/">Valine 评论系统美化定制</a> </li>
+                        
+                    </ul>
+                    <div id="vcomments"></div>
+                        <script>
+                            new Valine({
+                            el: '#vcomments',
+                            appId: '62yofvjrBSK8xn2MoylBkRUJ-MdYXbMMI',
+                            appKey: 'cfVwB8TO3A8o6l4Uo1h6OR9M',
+                            avatar:"retro"
+                        })
+                        </script>
+                </div>
+                <div class="col-12 col-lg-4" id="secondary" role="complementary">
+    <div class="card">
+        <div class="card-header">
+            <div class="widget-title">🚀关于李二先生</div>
+        </div>
+        <div class="card-body">
+            <section class="tagline">
+    Hey There, I'm <view class="under"><text class="textCon">WEI LI,</text><text class="borderText-lg"></text></view>
+</section><br/>
+<section class="desc">based in Manchester, UK.</section><br/>
+<section class="tagline">A PhD Student in Materials</section>
+<section class="desc">Focus on <view class="under"><text class="textCon">Graphene and Ceramic</text><text class="borderText-sm"></text> Composites.</view></section><br/>
+<section class="tagline">And know a little about coding.</section>
+<section class="desc">Maybe Just A Learner 🎉🤣</section>
+        </div>
+    </div>
+    <div class="card" id="tag-card">
+        <div class="card-header">
+            <div class="widget-title">🏷️标签</div>
+        </div>
+        <div class="card-body">
+            <div class="toc-container">
+                <p style="margin-bottom: .5rem;">待施工……</p>
+            </div>
+        </div>
+    </div>
+    <div class="card" id="toc-card">
+        <div class="card-header">
+            <div class="widget-title">📒目录</div>
+        </div>
+        <div class="card-body">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%BD%91%E9%A1%B5%E8%A7%84%E5%88%92">网页规划</a>
+<ul>
+<li><a href="#%E9%9C%80%E6%B1%82%E7%A1%AE%E8%AE%A4">需求确认</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9%E8%A7%84%E5%88%92">内容规划</a></li>
+</ul>
+</li>
+<li><a href="#%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87">知识储备</a>
+<ul>
+<li><a href="#%E5%93%8D%E5%BA%94%E5%BC%8Fweb%E8%AE%BE%E8%AE%A1">响应式Web设计</a></li>
+<li><a href="#bootstrap-%E5%93%8D%E5%BA%94%E5%BC%8F%E6%A1%86%E6%9E%B6">Bootstrap 响应式框架</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%B7%E4%BD%93%E6%96%BD%E5%B7%A5%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%9D%91">具体施工过程中的坑</a>
+<ul>
+<li><a href="#%E7%94%A8%E5%88%B0%E7%9A%84-js-%E5%BA%93">用到的 Js 库</a></li>
+<li><a href="#%E5%87%A0%E4%B8%AA%E5%9D%91">几个坑</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <footer class="footer bottom" role="contentinfo">
+    <a class="turn-up" href="#"><i class="fa fa-rocket"></i></a>
+    <div id="dark-mode">
+        <i class="fa fa-moon-o"></i>
+    </div>
+    Theme <a href="https://github.com/willisfusu/gridea-theme-SSRUI">SSRUI</a> made with <i class="fa fa-heart"></i> by <a href="https://willisfusu.github.io/">Wei LI</a>, modified from 🍀<a href="https://github.com/idealclover/Clover">Clover</a>🍀.<br/>
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>.<br />
+    &copy; 2021 <a href="https://willisfusu.github.io">李二先生</a>.
+    <div id="span_dt_dt"></div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://willisfusu.github.io/media/mouse-click.js"></script>
+    <script src="https://willisfusu.github.io/media/pace.min.js"></script>
+    <script src="https://willisfusu.github.io/media/prism.js"></script>
+    <script src="https://willisfusu.github.io/media/main_function.js"></script>
+</footer>
+    </body>
+</html>

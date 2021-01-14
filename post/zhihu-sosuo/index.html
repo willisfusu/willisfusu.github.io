@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>李二先生</title>
+<meta name="description" content="李二先生的个博客，欢迎光临" />
+<meta name="google-site-verification" content="FHNMdYV7a7Bw4HNt-vm0Cto8QvAW1Vx_rTrhMgxLg44" />
+<link rel="shortcut icon" href="https://willisfusu.github.io/favicon.ico?v=1610655376390">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src='https://willisfusu.github.io/media/Valine.min.js'></script>
+<link rel="stylesheet" href="https://willisfusu.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="李二先生 - Atom Feed" href="https://willisfusu.github.io/atom.xml">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+    </head>
+    <body>
+    <div id="read-progress"></div>
+<div class="fixed-top">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+       <a class="navbar-brand" href="https://willisfusu.github.io">李二先生</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/archives">「全部文章」</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/tag/will-tech">技术</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/tag/will-thinking">想法</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/tag/will-life">生活</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">关于</a>
+                </li>
+            </ul>
+       </div>
+    </nav>
+</div>
+
+        <div class="container col-10" id="main" role="main">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <article class="post">
+                        <h1>
+                            <a itemprop="url" class="post-title" href="https://willisfusu.github.io/post/zhihu-sosuo/"> 网红之路-使用 Python 做数据调研</a>
+                        </h1>
+                        <p id="post-meta">
+                            <i class="fa fa-clock-o"></i>2020-05-30 |
+                            <i class="fa fa-tags"></i>
+                                <a href="https://willisfusu.github.io/tag/will-life/">日常</a>
+                                
+                                <a href="https://willisfusu.github.io/tag/jJ_HdEonj/">Python</a>
+                                
+                                <a href="https://willisfusu.github.io/tag/ZnfcBuKT8/">生活</a>
+                                |
+                            <i class="fa fa-book-reader"></i>10 min read
+                        </p>
+                        
+                        
+                            <blockquote class="fa fa-exclamation-triangle warning">
+                                此文章发表于<strong><span style="color:#f75357">
+                                        229</span></strong> 天前，请注意文章时效
+                            </blockquote>
+                            
+                        <div class="post-content" itemprop="articleBody">
+                            <p>这篇文章是之前老婆突发奇想，想要在一些平台上建账号，尝试「网红」之路。我寻思着既然要做内容，那怎么也得先去了解一下自己内容在这个平台上的现况吧，比如这个话题的活跃度、发文量之类的。</p>
+<p>想了一下怎么去实现，找专业的调研机构是不太可行了，没有钱。那就只能自己做，然后我想了一下，觉得直接使用平台上的搜索功能，搜索自己需要的话题，然后统计文章数量与时间关系，大体上就可以得到时间变化曲线，应该也可以做个参考。</p>
+<!-- more -->
+<h2 id="️-1需求">🦁️ 1.需求</h2>
+<p>利用平台的搜索功能，搜索自己需要的话题，并且量化之后，做出时间变化曲线。</p>
+<h2 id="2思路">🐶 2.思路</h2>
+<p>应该可以使用 Python 编写爬虫，然后获取某段时间内的文章，对文章的发文量、评论量、赞数进行统计做图。</p>
+<ul>
+<li>爬虫可以使用 requests 库</li>
+<li>数据做图使用 matplotlib 库</li>
+<li>数据处理 pandas 与 pymongo</li>
+</ul>
+<h2 id="3具体实施">🛸 3.具体实施</h2>
+<h3 id="31-首先分析目标网页">3.1 首先分析目标网页</h3>
+<p>其实现在几乎所有的平台都有搜索功能，我这里选知乎做个例子，其它平台都大同小异，思路总是一样的。</p>
+<ol>
+<li>对目标网页进行分析</li>
+</ol>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_001.png" alt="" loading="lazy"></figure>
+<p>上面的图片是知乎上搜索的页面，我随便找了个关键词就选了「python」，搜索之后，发现乱七八糟的太多了，我又选择了时间范围为「三个月内」，结果如下：</p>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_002.png" alt="" loading="lazy"></figure>
+<p>嗯，这样看上去就好多了，并且三个月，统计出来的数据也有一定的参考价值了。打开 Chrome 的「检查」页面。点击 network 选项卡，在左边寻找和搜索相关的数据包。会发现一个有 search 名字的包，如下所示：</p>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_003.png" alt="" loading="lazy"></figure>
+<p>我们点击预览看看，果然就是返回的搜索结果，并且结果是 json 格式。仔细看一下请求的地址和数据</p>
+<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_004.png" alt="" loading="lazy"></figure>
+<p><em>一般而言，返回结果不可能只有一页</em> 所以我们向下滚动搜索结果页面，看看新刷新出来的结果返回什么样的数据包。向下滚动之后，不出所料果然又返回了一个新的搜索结果。</p>
+<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_005.png" alt="" loading="lazy"></figure>
+<p>仔细看下请求的地址，发现两次请求的参数有所不同。</p>
+<figure data-type="image" tabindex="6"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_006.png" alt="" loading="lazy"></figure>
+<p>多了两个参数：<code>search_hash_id</code>和<code>vertical_info</code></p>
+<p>分析目标网页到这，我们已经得到需要的内容：</p>
+<pre><code class="language-python">请求地址：https://www.zhihu.com/api/v4/search_v3?t=general&amp;q=python&amp;correction=1&amp;offset=20&amp;limit=20&amp;lc_idx=38&amp;show_all_topics=0&amp;time_zone=three_months&amp;search_hash_id=b633d8035402af9f9e431cbffc0aa46f&amp;vertical_info=0%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C0
+返回结果：json 格式
+</code></pre>
+<h3 id="32-爬虫代码">3.2 爬虫代码</h3>
+<p>其实大部分需要用到爬虫的地方，思路都差不多。我们得到请求的地址与返回的结果格式之后，就可以来编写代码了。</p>
+<p>仔细分析下请求地址中的参数：</p>
+<pre><code>general: 是指返回综合搜索结果
+q：搜索关键词
+correction：不知道是什么意思
+offset:搜索返回数据的偏移量
+limit：每次返回的结果数量
+lc_idx:不知道什么意思
+time_zone:时间范围
+search_hash_id：应该是此次执行的搜索行为的id
+vertical_info：不晓得
+</code></pre>
+<p>有了这些理解之后，我大概就知道了如何构造请求地址了，就是循环改变 offset 的数值，从而可以不断返回新的数据。每次返回20条数据的话，offset 可以取0、20、40、……之类的数据。</p>
+<p><em>请求数据</em></p>
+<pre><code class="language-python">pattern = re.compile(r'\\u003c/?em\\u003e')
+# remove &lt;em&gt; label
+def handle_url(url):
+    headers = {
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+        'accept-encoding': 'gzip',
+        'accept-language': 'en-GB,en;q=0.9,zh;q=0.8,zh-CN;q=0.7,zh-TW;q=0.6,ja;q=0.5',
+        &quot;cache-control&quot;: &quot;max-age=0&quot;,
+        'cookie': '_xsrf=a21de17a-59ee-4d29-b4b9-5c397d0917ca; _zap=cce7d96b-ecd2-4953-b958-cc0bfbe9a2e7; BAIDU_SSP_lcr=https://www.google.com/; cap_id=&quot;NGM1OGZlYTgwMWU2NGI5YjgyZGQyYzJlYTIwZDYyMTc=|1587130242|8f2a774418c56fabb1f42aaf30d7e37dbd0df1a7&quot;; capsion_ticket=&quot;2|1:0|10:1589482049|14:capsion_ticket|44:OGEzY2NkZGVjZTIzNDg2MGE1NWNkOTYwMTgxYWUzZWI=|0e51411a2863f1881abc1a57c7b1867e6b0a059464fa43e6a2e55bf97c86bc7d&quot;; d_c0=&quot;ADCb102P-hCPTr5IshFBfxUARc-mRhjx2iY=|1584472689&quot;; l_cap_id=&quot;MTI2ZDg3OWUxNmMwNDk2Y2ExYWI4ZjY5MDRjMGIyODQ=|1587130242|6c9a2dafefd22d23c9f19142a7fb4061ebc0f45f&quot;; q_c1=e14ff8f74d144c4d9b4ce781405d22ca|1589200919000|1589200919000; r_cap_id=&quot;OGIzMzU4ZmVjODFhNDZkYzg3MWZhOTdhMDliYTExNDY=|1587130242|5e08cedf3450929c6b9816ca0dfef46c1248fa24&quot;; tst=r; z_c0=&quot;2|1:0|10:1589482084|4:z_c0|92:Mi4xQWw0MEd3QUFBQUFBTUp2WFRZXzZFQ1lBQUFCZ0FsVk5aT0NxWHdDWEVhWUJXSE1BUzZuYnV6NURCSmNrNFlPNk9R|d2595436ce2f97f37b61de7c533b0415fd03bd8dc5b95c3d3199f7ab90bb5eeb&quot;; KLBRSID=5430ad6ccb1a51f38ac194049bce5dfe|1589487035|1589486377',
+        'sec-fetch-dest': 'document',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-site': 'none',
+        'sec-fetch-user': '?1',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36',
+    }
+# 我试了一下，这些 headers 好像是都需要的……没有办法减少    
+    resp = requests.get(url, headers=headers)
+    clear_text = pattern.sub(&quot;&quot;, resp.text)
+# 因为我发现有一些返回的标题中含有 &lt;em&gt; 强调标签，所以使用正则表达式，替代掉    
+    return clear_text
+</code></pre>
+<p>我原本以为就这样轻松完成了呢，结果第二条 url 就没有办法返回数据了，但是同样的方法，第一条 url 可以返回数据，第二条就不可以。我刚开始是以为 headers 的问题，我反复尝试了不同的参数，结果还是不成，总是返回一个 error 的 json 包。</p>
+<p>在这里，我大概花了一个多小时，直到我又重新思考请求参数的含义，发现<code>search_hash_id</code>可能是一个很重要的参数。既然是执行的每次搜索的 id，那是不是每次搜索都会得到一个唯一的 id， 而我在代码中使用的 id 是浏览器执行的那次搜索。我在代码中使用，会不会和自己新执行的搜索不同？</p>
+<p>但是这个 id 是什么时候产生的呢？第一次搜索是不需要 id 的，之后每次搜索都会有这个参数。会不会是第一次搜索返回的结果中包含了这个参数呢？</p>
+<p>于是我回头去检查了下第一次返回的结果</p>
+<figure data-type="image" tabindex="7"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_007.png" alt="" loading="lazy"></figure>
+<p>果然被我发现了，第一次返回的 json 包中含有了此次搜索操作的 id，而且我还发现 lc_idx 这个参数也是每次不同的。</p>
+<p><em>思路调整</em></p>
+<p>这样我调整了下思路，我需要执行一次搜索操作，从返回的结果中得到 <code>search_hash_id</code>和<code>lc_idx</code>，然后再按照规律构造请求地址。</p>
+<p><em>构造请求</em></p>
+<p>按照上面调整之后的思路，我这样来构造请求：</p>
+<pre><code class="language-python">def make_url(searchid, lcid, offset):
+    baseurl = &quot;https://api.zhihu.com/search_v3?advert_count=0&amp;correction=1&amp;&quot;
+    param = {
+        &quot;lc_idx&quot;: lcid,
+        &quot;limit&quot;: 20,
+        &quot;offset&quot;: offset,
+        &quot;q&quot;: &quot;python&quot;,
+        &quot;search_hash_id&quot;: searchid,
+        &quot;show_all_topics&quot;: 0,
+        &quot;t&quot;: &quot;general&quot;,
+        &quot;time_zone&quot;: &quot;three_months&quot;,
+        'vertical_info': '0,0,0,0,0,0,0,0,0,0',
+    }
+    url = baseurl + urlencode(param)
+    return url
+</code></pre>
+<p>尝试了一下，果然可以正常得到结果。但是发现一个问题：<em>只能最多返回200条数据</em> 开始我以为是反爬虫，但是我在浏览器中试了下，不断向下拉，刷新结果，也只能返回200条数据，换了几个关键词，也是同样的结果。</p>
+<h3 id="33-数据处理">3.3 数据处理</h3>
+<p>虽然只能得到200多条数据，但是好歹也算得到了数据。数据处理就当是练手了吧</p>
+<p>怎么处理呢？我需要知道每天这个话题的发文量，然后将发文量与时间做图，就能知道这个话题的热度变化。<br>
+代码如下：</p>
+<pre><code class="language-python">import pymongo
+import time
+from matplotlib import pyplot as plt
+import pandas as pd
+
+newclient=pymongo.MongoClient('mongodb://localhost:27017')
+mydb=newclient['data_research']
+mycol=mydb['Zhihu']
+
+mydata=mycol.find({})
+
+for item in mydata:
+    datestamp=item['date']
+    local_date=time.localtime(datestamp)
+    date_fmt=time.strftime('%Y-%m-%d',local_date)
+    mycol.update_one({&quot;date&quot;:datestamp},{'$set':{'date':date_fmt}})
+# 因为得到的时间是时间戳，所以需要先将其转换了正常的时间格式，并更新数据库
+x=mycol.aggregate([{'$group':{'_id':&quot;$date&quot;,'num':{'$sum':1}}},{'$sort':{'_id':-1}}])
+# 采用聚类计算，按照时间分组，并且计算每组中的数量，然后按照时间降序排列
+
+df=pd.DataFrame(x)
+x_a=df['_id']
+y_a=df['num']
+plt.plot(x_a,y_a)
+plt.xticks(rotation=90)
+plt.show()
+# 转成 dataframe 之后，方便作图
+</code></pre>
+<h3 id="34-最终结果">3.4 最终结果</h3>
+<p>虽然因为知乎的限制，这种方式可以说是失败了，但是也算是练习了自己的技巧吧</p>
+<figure data-type="image" tabindex="8"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/Figure_1.png" alt="" loading="lazy"></figure>
+<h2 id="4总结">😁 4.总结</h2>
+<p>首先吐槽一下，现在的互联网越来越封闭了，不只是知乎一家，其它家平台也是把数据都各种限制在自己的手中。从平台的角度说，这没有什么问题，我自己家的数据嘛。但是从用户的角度，或者从互联网的角度来说，每个平台就成了一个一个的小「孤岛」，原本互联网是降低用户获取信息的成本，但是现在或许连信息也获取不到了。</p>
+<p>知乎将搜索的返回结果限制在 200 条也不知道是出于什么考虑，可能是觉得不会有人看 200 条结果？但是你也没提供任何 filter 工具呀！<strong>按时间排序、赞数排序、热度排序</strong>什么也没有。这样的搜索结果就是返回了一大堆没什么用的数据……</p>
+<p>事后我搜索了一下，发现竟然也有人在吐槽知乎的搜索功能。<a href="https://www.zhihu.com/question/26617244">为什么知乎的搜索功能如此之烂？</a></p>
+<p>好了，不说了，总之这此数据调研没有成功 😂️😂️😂️😂️😂️😂️</p>
+
+                        </div>
+                         <blockquote>
+                             <p>本文链接：<a style="text-decoration: underline" href="https://willisfusu.github.io/post/zhihu-sosuo/">https://willisfusu.github.io/post/zhihu-sosuo/</a></p>
+                             <p>此文章由<a style="text-decoration: underline" href="https://willisfusu.github.io/">李二先生</a>采用<a style="text-decoration: underline" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可,转载请注明出处。
+                             </p>
+                         </blockquote>
+                    </article>
+                    <ul class="post-near">
+                        
+                        <li>上一篇<a href="https://willisfusu.github.io/post/icloud/">iCloud 同步功能的几个问题</a> </li>
+                        
+                        
+                        <li>上一篇<a href="https://willisfusu.github.io/post/windows-software/">Windows软件推荐</a> </li>
+                        
+                    </ul>
+                    <div id="vcomments"></div>
+                        <script>
+                            new Valine({
+                            el: '#vcomments',
+                            appId: '62yofvjrBSK8xn2MoylBkRUJ-MdYXbMMI',
+                            appKey: 'cfVwB8TO3A8o6l4Uo1h6OR9M',
+                            avatar:"retro"
+                        })
+                        </script>
+                </div>
+                <div class="col-12 col-lg-4" id="secondary" role="complementary">
+    <div class="card">
+        <div class="card-header">
+            <div class="widget-title">🚀关于李二先生</div>
+        </div>
+        <div class="card-body">
+            <section class="tagline">
+    Hey There, I'm <view class="under"><text class="textCon">WEI LI,</text><text class="borderText-lg"></text></view>
+</section><br/>
+<section class="desc">based in Manchester, UK.</section><br/>
+<section class="tagline">A PhD Student in Materials</section>
+<section class="desc">Focus on <view class="under"><text class="textCon">Graphene and Ceramic</text><text class="borderText-sm"></text> Composites.</view></section><br/>
+<section class="tagline">And know a little about coding.</section>
+<section class="desc">Maybe Just A Learner 🎉🤣</section>
+        </div>
+    </div>
+    <div class="card" id="tag-card">
+        <div class="card-header">
+            <div class="widget-title">🏷️标签</div>
+        </div>
+        <div class="card-body">
+            <div class="toc-container">
+                <p style="margin-bottom: .5rem;">待施工……</p>
+            </div>
+        </div>
+    </div>
+    <div class="card" id="toc-card">
+        <div class="card-header">
+            <div class="widget-title">📒目录</div>
+        </div>
+        <div class="card-body">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%EF%B8%8F-1%E9%9C%80%E6%B1%82">🦁️ 1.需求</a></li>
+<li><a href="#2%E6%80%9D%E8%B7%AF">🐶 2.思路</a></li>
+<li><a href="#3%E5%85%B7%E4%BD%93%E5%AE%9E%E6%96%BD">🛸 3.具体实施</a>
+<ul>
+<li><a href="#31-%E9%A6%96%E5%85%88%E5%88%86%E6%9E%90%E7%9B%AE%E6%A0%87%E7%BD%91%E9%A1%B5">3.1 首先分析目标网页</a></li>
+<li><a href="#32-%E7%88%AC%E8%99%AB%E4%BB%A3%E7%A0%81">3.2 爬虫代码</a></li>
+<li><a href="#33-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86">3.3 数据处理</a></li>
+<li><a href="#34-%E6%9C%80%E7%BB%88%E7%BB%93%E6%9E%9C">3.4 最终结果</a></li>
+</ul>
+</li>
+<li><a href="#4%E6%80%BB%E7%BB%93">😁 4.总结</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <footer class="footer bottom" role="contentinfo">
+    <a class="turn-up" href="#"><i class="fa fa-rocket"></i></a>
+    <div id="dark-mode">
+        <i class="fa fa-moon-o"></i>
+    </div>
+    Theme <a href="https://github.com/willisfusu/gridea-theme-SSRUI">SSRUI</a> made with <i class="fa fa-heart"></i> by <a href="https://willisfusu.github.io/">Wei LI</a>, modified from 🍀<a href="https://github.com/idealclover/Clover">Clover</a>🍀.<br/>
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>.<br />
+    &copy; 2021 <a href="https://willisfusu.github.io">李二先生</a>.
+    <div id="span_dt_dt"></div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://willisfusu.github.io/media/mouse-click.js"></script>
+    <script src="https://willisfusu.github.io/media/pace.min.js"></script>
+    <script src="https://willisfusu.github.io/media/prism.js"></script>
+    <script src="https://willisfusu.github.io/media/main_function.js"></script>
+</footer>
+    </body>
+</html>

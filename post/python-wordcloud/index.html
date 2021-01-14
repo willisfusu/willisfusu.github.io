@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>李二先生</title>
+<meta name="description" content="李二先生的个博客，欢迎光临" />
+<meta name="google-site-verification" content="FHNMdYV7a7Bw4HNt-vm0Cto8QvAW1Vx_rTrhMgxLg44" />
+<link rel="shortcut icon" href="https://willisfusu.github.io/favicon.ico?v=1610655376390">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src='https://willisfusu.github.io/media/Valine.min.js'></script>
+<link rel="stylesheet" href="https://willisfusu.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="李二先生 - Atom Feed" href="https://willisfusu.github.io/atom.xml">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+    </head>
+    <body>
+    <div id="read-progress"></div>
+<div class="fixed-top">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+       <a class="navbar-brand" href="https://willisfusu.github.io">李二先生</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/archives">「全部文章」</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/tag/will-tech">技术</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/tag/will-thinking">想法</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/tag/will-life">生活</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">关于</a>
+                </li>
+            </ul>
+       </div>
+    </nav>
+</div>
+
+        <div class="container col-10" id="main" role="main">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <article class="post">
+                        <h1>
+                            <a itemprop="url" class="post-title" href="https://willisfusu.github.io/post/python-wordcloud/">Python获取歌词、分词及词云绘制（一）</a>
+                        </h1>
+                        <p id="post-meta">
+                            <i class="fa fa-clock-o"></i>2020-03-08 |
+                            <i class="fa fa-tags"></i>
+                                <a href="https://willisfusu.github.io/tag/jJ_HdEonj/">Python</a>
+                                |
+                            <i class="fa fa-book-reader"></i>6 min read
+                        </p>
+                        
+                        
+                            <blockquote class="fa fa-exclamation-triangle warning">
+                                此文章发表于<strong><span style="color:#f75357">
+                                        312</span></strong> 天前，请注意文章时效
+                            </blockquote>
+                            
+                        <div class="post-content" itemprop="articleBody">
+                            <p>之前在没有学习使用python之前看到有人使用爬虫爬取了很多民谣，分析了歌词的组成，非常有意思。最近想着很久没有给妹妹惊喜了，是不是应该做点什么。刚好也可以练习一下python的一些库的使用，省得长时间不用就给忘记怎么用了（实事证明，我还真的是忘记了怎么用……）。</p>
+<!-- more -->
+<h2 id="目标">目标</h2>
+<p>获取有关爱情的歌曲，分析歌词，分词清洗之后，绘制成词云。</p>
+<h2 id="具体实现">具体实现</h2>
+<ol>
+<li>找到爱情歌曲的合集，分析网页代码，看看如何爬取</li>
+<li>写好爬虫，爬取歌词</li>
+<li>歌词分词，清洗</li>
+<li>绘制词云</li>
+</ol>
+<h2 id="歌曲合集">歌曲合集</h2>
+<h3 id="获取歌曲id">获取歌曲id</h3>
+<p>这个步骤说起来很简单，但是在具体做的时候，却着实让我楞了一下。咋形容爱情歌曲呢……想了大半天，还好想起不少音乐平台都有歌单的功能，去歌单里找一找，果然发现好多。随便选了一个<a href="https://music.163.com/#/playlist?id=2069951806">歌曲多的歌单</a> 有500多首，数量也足够了。</p>
+<p>然后就是分析网站，这种其实想都不用想，肯定是动态生成的，直接使用浏览器inspect功能，果然发现一个名字叫做playlist?id=2069951086请求里，包含了所有的歌单信息。<br>
+<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200309152216.png" alt="" loading="lazy"><br>
+根据这个请求的表头，就可以构造出爬虫request所需要的参数：</p>
+<pre><code class="language-python">def get_song_id(urls):
+    url = urls
+    headers = {#为了防止被反爬虫，按照表头也增加了cookie信息。
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-GB,en;q=0.9,zh;q=0.8,zh-CN;q=0.7,zh-TW;q=0.6,ja;q=0.5',
+        'cookie': '_iuqxldmzr_=32; _ntes_nnid=17a6d9410df165186c84022c752b4438,1577479004809; _ntes_nuid=17a6d9410df165186c84022c752b4438; WM_TID=iXoDW5wstqNFRBUBBUIovnXCRx8pJpKg; vinfo_n_f_l_n3=207e84c7da36a25f.1.0.1578577509635.0.1578577603314; hb_MA-BFF5-63705950A31C_source=www.google.com; JSESSIONID-WYYY=HBcDngRY%2BYlmce3%2FnICVq2sHUqzhf6lNpzFC0pMEa8STPmfdWsJB%2FmUGXN%5CyD9xf2ksArknY0xy%5Cq7vKCIjCYy4y428%2FS%5CXSCyN4INi9RIhFxkI9fnkY6HfKfC82S8sF0BACUqI43FVDIOKEUY6wuASapZa0nC2xp53yHigPkgzyyzWZ%3A1583164791677; WM_NI=svQbgFtZLExadgOi7pKFKoM8NRxTtAwKny3aGq1ZVk8eGEgsy4Ug2kMra3ZJxjrlSwIUOv%2FyMReiNDcvfe9w2ZWsqXIwg9DBpfexIU5eZKurO34kKQsPP1EUxRKqpoUYOUY%3D; WM_NIKE=9ca17ae2e6ffcda170e2e6eed0ed42f3b69c86ec34a8928fb6d55e938b9faff55b8b95aadaf57d9bb0a799e12af0fea7c3b92ab1aa9f83e64eb88684a6fb6ba8b9818ab67c899a8590d0348e8eb8b5f74bb595a29ab26b85afffbbd561fcbb89a6e679bbec9b88b1618faeafd4d942bcb6be8dd27d8b8b8197ae738f8eab8acd50a1aaaa86bc7df2869994f4548ba9a9dac74ab4baab99cc5ff7bb96acf87a8dedfc8cca5bb190a0d2c85fbc8e8592f365978781b6dc37e2a3',
+        'referer': 'https://music.163.com/',
+        'sec-fetch-dest': 'iframe',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-site': 'same-origin',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'}
+    webcontent = requests.get(url, headers=headers)
+    webtext = webcontent.content
+</code></pre>
+<p>我们分析一下返回的html内容就可以发现，所有的歌曲名与链接都放在了<code>&lt;li&gt;</code>标签下，具体是这样的<code>&lt;li&gt;&lt;a href=&quot;/song?id=1381755293&quot;&gt;山楂树之恋&lt;/a&gt;&lt;/li&gt;</code> 所以下一步就是提取出歌曲链接，然后从链接中得到歌曲的id</p>
+<pre><code class="language-python">    html = etree.HTML(webtext) #使用xpath解析之后，需要将文件内容转换为html对象
+    song_lyrc_url = html.xpath('//div[@id=&quot;song-list-pre-cache&quot;]/ul/li/a/@href')#得到所有歌曲的链接
+    id_pattan = re.compile(r'[0-9]+')
+    song_id = []
+    for idurl in song_lyrc_url:
+        id_result = id_pattan.findall(idurl)
+        song_id.extend(id_result)#使用正则表达式，得到歌曲id
+    return song_id
+</code></pre>
+<h3 id="获取歌词">获取歌词</h3>
+<p>上面一步中我们得到了歌曲的id，然后如何获得歌词呢？<br>
+随便打开一首歌的链接，分析网页发现了这样一个请求lyric?csrf_token= 里面打开一个，果然是歌词（废话嘛，都写了lyric了）,然后分析这个请求的表头信息，发现是post请求，这个post请求的form data是样的：<br>
+<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200309153808.png" alt="" loading="lazy"><br>
+这是啥……解析不能呀！（事后证实这是token验证信息）既然这样不能解析，哪可怎么获得歌词。谷歌一番之后，发现有一个链接<code>http://music.163.com/api/song/lyric?' + 'id=' + str(id) + '&amp;lv=1&amp;kv=1&amp;tv=-1</code> 果断使用这个链接获得歌词。</p>
+<pre><code class="language-python">def get_song_lyrc(id):
+    headers = {
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+        'Cookie': 'vjuids=633b23b2.1640e217940.0.c9d5e94c2b52d; vjlast=1529245432.1533478804.23; _iuqxldmzr_=32; _ntes_nnid=74ffb4f3efc5c648c5f4675d36a88bca,1575827003556; _ntes_nuid=74ffb4f3efc5c648c5f4675d36a88bca; WM_TID=lPwkACGiBMJFFAQFEAI4qals15qis3TX; WM_NI=HoIzRrrkX84mT7QgRTznPWQ43qeLC%2BPah4TYpoW71IGRLB7iPzcBAyLL6l0xtHE9NueJ0l55V59w2%2B%2BQJ78brun4MLTZMHWTC0Yzj8gc0uBheOX13INcucQaoRU6dvvuOFI%3D; WM_NIKE=9ca17ae2e6ffcda170e2e6eeb8db3f938685d1d04986b48bb6c44e878b8a85b55e9a91fdb7d47c8ee9ae92d12af0fea7c3b92a8cb1879bd17ab2b598d9b76798e99f88d160bab2a0b8d440f1afabadc22194bfa8d5d753b4b199d8b443858e84a3b66394a6ada3c4739094fa8db374b8988bdacd7fa796008db83f96ebf798b121e98f86d8bb6ab2aba2d5d048988683a9d66081f0979be934a5bd0096c164a79198d2b2438ebdbb84d46bad8e9bd7e77eb6ab81a7cc37e2a3; JSESSIONID-WYYY=VX%2FEiMGwpXTbV9DST718KECK%2BqiQ%2Fo%5CuhvkS%2B9r6ZSOZhiiu9b3i3RECpORir4a9%2BFsxTmhwBOq%2BXHgRPmlS1gTei6VD%2F1fMK0%2FECCsl%5CYrd8usX%2Fc%2FTg5sebrbxDRHmyyHxZK8R5Dpbo1KlRsrnff%2F0TmeY%5C2yb9ycMF2Gh%2F%2Faeqdbp%3A1583190953365',
+        'Connection': 'keep-alive',
+    }
+    url = 'http://music.163.com/api/song/lyric?' + 'id=' + str(id) + '&amp;lv=1&amp;kv=1&amp;tv=-1'
+    content = requests.get(url, headers=headers).content #返回的结果就直接是一个json格式的文件
+    j = json.loads(content)
+    try:
+        lyrc = j[&quot;lrc&quot;][&quot;lyric&quot;]
+        lyrc_pattan = re.compile(r'[A-Za-z0-9!%\[\],:\.]')
+        lyrc_text = lyrc_pattan.sub(&quot;&quot;, lyrc)#既然都是中文歌曲，直接使用正则表达式，排除所有的字母，数字，符号之类的，得到中文。
+    except KeyError: #这里防止有歌曲没有歌
+        lyrc_text = ''
+    return lyrc_text
+</code></pre>
+<h3 id="歌词存储">歌词存储</h3>
+<p>得到歌词之后，为了方便后面对歌词进行分析，先将歌词存储下来</p>
+<pre><code class="language-python">def write_lyrc_file(filename, path, list):
+    file_path = os.path.join(path, filename)
+    y = ''
+    for ids in list:
+        text = get_song_lyrc(ids)
+        y = y + text
+        d = list.index(ids)
+        if d % 10 == 0:
+            print(&quot;已经写入%d个文件&quot; % d) #增加输出显示，让自己知道大概程序进行到什么地步了
+    with codecs.open(file_path, 'a+', encoding='utf-8') as f:
+        f.write(y)
+</code></pre>
+<p>至此，我们就得到歌词，并且存储下来了，后面需要做就是对歌词进行清洗，然后分析，绘制就可以。</p>
+<h2 id="总结">总结</h2>
+<h3 id="使用到的库">使用到的库</h3>
+<ul>
+<li>Requests</li>
+<li>re</li>
+<li>lxml</li>
+<li>json</li>
+<li>codecs #使用这个库是为了解决文件读取，存储时编码问题的</li>
+</ul>
+
+                        </div>
+                         <blockquote>
+                             <p>本文链接：<a style="text-decoration: underline" href="https://willisfusu.github.io/post/python-wordcloud/">https://willisfusu.github.io/post/python-wordcloud/</a></p>
+                             <p>此文章由<a style="text-decoration: underline" href="https://willisfusu.github.io/">李二先生</a>采用<a style="text-decoration: underline" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可,转载请注明出处。
+                             </p>
+                         </blockquote>
+                    </article>
+                    <ul class="post-near">
+                        
+                        <li>上一篇<a href="https://willisfusu.github.io/post/vim-install/">Vim 安装及简单配置 Markdown</a> </li>
+                        
+                        
+                        <li>上一篇<a href="https://willisfusu.github.io/post/python-wordcloud-2/">Python获取歌词、分词及词云绘制（二）</a> </li>
+                        
+                    </ul>
+                    <div id="vcomments"></div>
+                        <script>
+                            new Valine({
+                            el: '#vcomments',
+                            appId: '62yofvjrBSK8xn2MoylBkRUJ-MdYXbMMI',
+                            appKey: 'cfVwB8TO3A8o6l4Uo1h6OR9M',
+                            avatar:"retro"
+                        })
+                        </script>
+                </div>
+                <div class="col-12 col-lg-4" id="secondary" role="complementary">
+    <div class="card">
+        <div class="card-header">
+            <div class="widget-title">🚀关于李二先生</div>
+        </div>
+        <div class="card-body">
+            <section class="tagline">
+    Hey There, I'm <view class="under"><text class="textCon">WEI LI,</text><text class="borderText-lg"></text></view>
+</section><br/>
+<section class="desc">based in Manchester, UK.</section><br/>
+<section class="tagline">A PhD Student in Materials</section>
+<section class="desc">Focus on <view class="under"><text class="textCon">Graphene and Ceramic</text><text class="borderText-sm"></text> Composites.</view></section><br/>
+<section class="tagline">And know a little about coding.</section>
+<section class="desc">Maybe Just A Learner 🎉🤣</section>
+        </div>
+    </div>
+    <div class="card" id="tag-card">
+        <div class="card-header">
+            <div class="widget-title">🏷️标签</div>
+        </div>
+        <div class="card-body">
+            <div class="toc-container">
+                <p style="margin-bottom: .5rem;">待施工……</p>
+            </div>
+        </div>
+    </div>
+    <div class="card" id="toc-card">
+        <div class="card-header">
+            <div class="widget-title">📒目录</div>
+        </div>
+        <div class="card-body">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%9B%AE%E6%A0%87">目标</a></li>
+<li><a href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0">具体实现</a></li>
+<li><a href="#%E6%AD%8C%E6%9B%B2%E5%90%88%E9%9B%86">歌曲合集</a>
+<ul>
+<li><a href="#%E8%8E%B7%E5%8F%96%E6%AD%8C%E6%9B%B2id">获取歌曲id</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E6%AD%8C%E8%AF%8D">获取歌词</a></li>
+<li><a href="#%E6%AD%8C%E8%AF%8D%E5%AD%98%E5%82%A8">歌词存储</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a>
+<ul>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%88%B0%E7%9A%84%E5%BA%93">使用到的库</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <footer class="footer bottom" role="contentinfo">
+    <a class="turn-up" href="#"><i class="fa fa-rocket"></i></a>
+    <div id="dark-mode">
+        <i class="fa fa-moon-o"></i>
+    </div>
+    Theme <a href="https://github.com/willisfusu/gridea-theme-SSRUI">SSRUI</a> made with <i class="fa fa-heart"></i> by <a href="https://willisfusu.github.io/">Wei LI</a>, modified from 🍀<a href="https://github.com/idealclover/Clover">Clover</a>🍀.<br/>
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>.<br />
+    &copy; 2021 <a href="https://willisfusu.github.io">李二先生</a>.
+    <div id="span_dt_dt"></div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://willisfusu.github.io/media/mouse-click.js"></script>
+    <script src="https://willisfusu.github.io/media/pace.min.js"></script>
+    <script src="https://willisfusu.github.io/media/prism.js"></script>
+    <script src="https://willisfusu.github.io/media/main_function.js"></script>
+</footer>
+    </body>
+</html>

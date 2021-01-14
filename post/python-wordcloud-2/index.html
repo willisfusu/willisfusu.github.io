@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>李二先生</title>
+<meta name="description" content="李二先生的个博客，欢迎光临" />
+<meta name="google-site-verification" content="FHNMdYV7a7Bw4HNt-vm0Cto8QvAW1Vx_rTrhMgxLg44" />
+<link rel="shortcut icon" href="https://willisfusu.github.io/favicon.ico?v=1610655376390">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src='https://willisfusu.github.io/media/Valine.min.js'></script>
+<link rel="stylesheet" href="https://willisfusu.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="李二先生 - Atom Feed" href="https://willisfusu.github.io/atom.xml">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+    </head>
+    <body>
+    <div id="read-progress"></div>
+<div class="fixed-top">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+       <a class="navbar-brand" href="https://willisfusu.github.io">李二先生</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/archives">「全部文章」</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/tag/will-tech">技术</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/tag/will-thinking">想法</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/tag/will-life">生活</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">关于</a>
+                </li>
+            </ul>
+       </div>
+    </nav>
+</div>
+
+        <div class="container col-10" id="main" role="main">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <article class="post">
+                        <h1>
+                            <a itemprop="url" class="post-title" href="https://willisfusu.github.io/post/python-wordcloud-2/">Python获取歌词、分词及词云绘制（二）</a>
+                        </h1>
+                        <p id="post-meta">
+                            <i class="fa fa-clock-o"></i>2020-03-08 |
+                            <i class="fa fa-tags"></i>
+                                <a href="https://willisfusu.github.io/tag/will-tech/">技术</a>
+                                
+                                <a href="https://willisfusu.github.io/tag/jJ_HdEonj/">Python</a>
+                                |
+                            <i class="fa fa-book-reader"></i>4 min read
+                        </p>
+                        
+                        
+                            <blockquote class="fa fa-exclamation-triangle warning">
+                                此文章发表于<strong><span style="color:#f75357">
+                                        312</span></strong> 天前，请注意文章时效
+                            </blockquote>
+                            
+                        <div class="post-content" itemprop="articleBody">
+                            <p>上一篇中完成了对歌词的下载及存储就等着这次的歌词分词、清洗处理。</p>
+<h2 id="简易过程">简易过程</h2>
+<ol>
+<li>读入歌词</li>
+<li>分词、清洗去掉停用词</li>
+<li>绘制词云</li>
+</ol>
+<!-- more -->
+<h2 id="读入歌词-分词">读入歌词、分词</h2>
+<p>读入歌词非常简单，在这一步骤时使用了<code>codecs</code>防止出现编码问题。得到了歌词之后就进行分词处理，采用结巴分词，并且读入停用词表。</p>
+<pre><code class="language-python">    lyrc_from_file = text
+    word_split = jieba.cut(lyrc_from_file, cut_all=False)
+    # 分词的结果不是列表
+    jdr = '/'.join(word_split)
+    stop_words_file = 'stopwords.txt'
+    stop_words = codecs.open(stop_words_file, &quot;r&quot;, encoding='utf-8').read()
+    stop_words_list = stop_words.split(&quot;\n&quot;)
+</code></pre>
+<p>但是很快就发现了另一个问题，那是就网上下载的停用词表不能将歌词中无意义的词给一网打尽，比如“编曲”、“作词”、“混音”之类的。所以采用自定义停用词，但是在这里我却遇到了一个问题：自己创建的停用词文件读入之后，不能去除歌词中的停用词。</p>
+<pre><code class="language-python">    my_stop_words =codecs.open('mystopwords.txt','r',encoding='utf-8').read()
+    my_stop_words_list=my_stop_words.split('\n')
+</code></pre>
+<p>考虑了好久，一直也没有发现问题在哪里。在这个问题上，搞了很长时间，最后才发现问题所在：<strong>自己创建的txt文件中的手动换行并不是\n而是\r\n</strong> 完整的代码是这样的：</p>
+<pre><code class="language-python">def split_text(text):
+    lyrc_from_file = text
+    word_split = jieba.cut(lyrc_from_file, cut_all=False)
+    # 分词的结果不是列表
+    jdr = '/'.join(word_split)
+    stop_words_file = 'stopwords.txt'
+    stop_words = codecs.open(stop_words_file, &quot;r&quot;, encoding='utf-8').read()
+    stop_words_list = stop_words.split(&quot;\n&quot;)
+    my_stop_words =codecs.open('mystopwords.txt','r',encoding='utf-8').read()
+    my_stop_words_list=my_stop_words.split('\r\n')
+    #注意自己写的中回车处理不同
+    stop_words_list.extend(my_stop_words_list)
+    lyrc_list = []
+    for abt in jdr.split('/'):
+        if not (abt.strip() in stop_words_list):
+            lyrc_list.append(abt)
+    return lyrc_list
+</code></pre>
+<h2 id="绘词云">绘词云</h2>
+<p>在绘制词云的时候也遇到一个很奇怪的问题：在给词云上色的时候使用<code>recolor</code>函数，如果在参数中不声明color_func参数名，则会报错。所以在使用这个函数的时候，一定要指明color_func。<br>
+另外还有一个有意思的问题，那就是使用generate from text 不会包含单个字母，对应到中文中则不包含一个字。这其实是因为wordcloud是为了英文设计的，所以会有这个问题。为了防止词云绘制失真，可以使用generate from frequencies。 在使用这个函数的时候，需要注意一点，虽然wordcloud说明中generate from frequencies的参数是turtle,但是使用turtle则会报错，<strong>实际上的参数类型是dict</strong>(真是坑呀！！)<br>
+词云部分的代码如下：</p>
+<pre><code class="language-python">def draw_word_cloud(text, pic):
+    font = &quot;HYJiaGuoSongW.ttf&quot; #When drawing chinese wordcloud, the font must be used, otherwise, it will not display chinese characters.
+    mask_image_path = pic
+    mask_image = np.array(Image.open(mask_image_path))
+    word_cloud_color1 = ImageColorGenerator(mask_image)
+    wcp = WordCloud(
+        font_path=font,
+        background_color=&quot;white&quot;,
+        max_words=600,
+        mask=mask_image,  # 设置背景图片
+        max_font_size=100,  # 字体最大值
+        random_state=42,
+        width=1200,
+        height=900,
+        margin=2,
+    )
+    # wcp.generate(text)
+    wcp.generate_from_frequencies(text)
+    #fre required dit not turtle
+    #and default generate(text) will not include single word(one chinese word or one english letter)
+    wcr = wcp.recolor(color_func=word_cloud_color1)
+    # 此外如果不是这样就会报错
+    plt.rcParams['savefig.dpi'] = 300
+    plt.imshow(wcr)
+    plt.axis('off')
+    plt.savefig('word_cloud_result.png')
+    plt.show()
+</code></pre>
+<p>既然需要使用词频来绘制词云，那如何得到词频呢？ 使用counter对象，可以方便的得到词频。代码如下：</p>
+<pre><code class="language-python">def get_word_fre(wordlist):
+    seg_list = wordlist
+    c = Counter()
+    for x in seg_list:
+        c[x] += 1
+    word_fre={}
+    for(k,v)in c.most_common(600):
+        word_fre[k]=int(v)
+    return word_fre
+</code></pre>
+<h2 id="结果">结果</h2>
+<p><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200309151302.png" alt="" loading="lazy"><br>
+其实从词频中我们看到一个很有意思的现象：<br>
+唱情歌的人，更喜欢说，而不是唱。哈哈哈哈哈哈</p>
+
+                        </div>
+                         <blockquote>
+                             <p>本文链接：<a style="text-decoration: underline" href="https://willisfusu.github.io/post/python-wordcloud-2/">https://willisfusu.github.io/post/python-wordcloud-2/</a></p>
+                             <p>此文章由<a style="text-decoration: underline" href="https://willisfusu.github.io/">李二先生</a>采用<a style="text-decoration: underline" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可,转载请注明出处。
+                             </p>
+                         </blockquote>
+                    </article>
+                    <ul class="post-near">
+                        
+                        <li>上一篇<a href="https://willisfusu.github.io/post/python-wordcloud/">Python获取歌词、分词及词云绘制（一）</a> </li>
+                        
+                        
+                        <li>上一篇<a href="https://willisfusu.github.io/post/python-matplotlib-1/">Python-Matplotlib作图基本学习（1）</a> </li>
+                        
+                    </ul>
+                    <div id="vcomments"></div>
+                        <script>
+                            new Valine({
+                            el: '#vcomments',
+                            appId: '62yofvjrBSK8xn2MoylBkRUJ-MdYXbMMI',
+                            appKey: 'cfVwB8TO3A8o6l4Uo1h6OR9M',
+                            avatar:"retro"
+                        })
+                        </script>
+                </div>
+                <div class="col-12 col-lg-4" id="secondary" role="complementary">
+    <div class="card">
+        <div class="card-header">
+            <div class="widget-title">🚀关于李二先生</div>
+        </div>
+        <div class="card-body">
+            <section class="tagline">
+    Hey There, I'm <view class="under"><text class="textCon">WEI LI,</text><text class="borderText-lg"></text></view>
+</section><br/>
+<section class="desc">based in Manchester, UK.</section><br/>
+<section class="tagline">A PhD Student in Materials</section>
+<section class="desc">Focus on <view class="under"><text class="textCon">Graphene and Ceramic</text><text class="borderText-sm"></text> Composites.</view></section><br/>
+<section class="tagline">And know a little about coding.</section>
+<section class="desc">Maybe Just A Learner 🎉🤣</section>
+        </div>
+    </div>
+    <div class="card" id="tag-card">
+        <div class="card-header">
+            <div class="widget-title">🏷️标签</div>
+        </div>
+        <div class="card-body">
+            <div class="toc-container">
+                <p style="margin-bottom: .5rem;">待施工……</p>
+            </div>
+        </div>
+    </div>
+    <div class="card" id="toc-card">
+        <div class="card-header">
+            <div class="widget-title">📒目录</div>
+        </div>
+        <div class="card-body">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%AE%80%E6%98%93%E8%BF%87%E7%A8%8B">简易过程</a></li>
+<li><a href="#%E8%AF%BB%E5%85%A5%E6%AD%8C%E8%AF%8D-%E5%88%86%E8%AF%8D">读入歌词、分词</a></li>
+<li><a href="#%E7%BB%98%E8%AF%8D%E4%BA%91">绘词云</a></li>
+<li><a href="#%E7%BB%93%E6%9E%9C">结果</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <footer class="footer bottom" role="contentinfo">
+    <a class="turn-up" href="#"><i class="fa fa-rocket"></i></a>
+    <div id="dark-mode">
+        <i class="fa fa-moon-o"></i>
+    </div>
+    Theme <a href="https://github.com/willisfusu/gridea-theme-SSRUI">SSRUI</a> made with <i class="fa fa-heart"></i> by <a href="https://willisfusu.github.io/">Wei LI</a>, modified from 🍀<a href="https://github.com/idealclover/Clover">Clover</a>🍀.<br/>
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>.<br />
+    &copy; 2021 <a href="https://willisfusu.github.io">李二先生</a>.
+    <div id="span_dt_dt"></div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://willisfusu.github.io/media/mouse-click.js"></script>
+    <script src="https://willisfusu.github.io/media/pace.min.js"></script>
+    <script src="https://willisfusu.github.io/media/prism.js"></script>
+    <script src="https://willisfusu.github.io/media/main_function.js"></script>
+</footer>
+    </body>
+</html>

@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://willisfusu.github.io</id>
+    <title>李二先生</title>
+    <updated>2021-01-14T20:16:20.326Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://willisfusu.github.io"/>
+    <link rel="self" href="https://willisfusu.github.io/atom.xml"/>
+    <subtitle>&lt;section class=&quot;tagline&quot;&gt;
+    Hey There, I&apos;m &lt;view class=&quot;under&quot;&gt;&lt;text class=&quot;textCon&quot;&gt;WEI LI,&lt;/text&gt;&lt;text class=&quot;borderText-lg&quot;&gt;&lt;/text&gt;&lt;/view&gt;
+&lt;/section&gt;&lt;br/&gt;
+&lt;section class=&quot;desc&quot;&gt;based in Manchester, UK.&lt;/section&gt;&lt;br/&gt;
+&lt;section class=&quot;tagline&quot;&gt;A PhD Student in Materials&lt;/section&gt;
+&lt;section class=&quot;desc&quot;&gt;Focus on &lt;view class=&quot;under&quot;&gt;&lt;text class=&quot;textCon&quot;&gt;Graphene and Ceramic&lt;/text&gt;&lt;text class=&quot;borderText-sm&quot;&gt;&lt;/text&gt; Composites.&lt;/view&gt;&lt;/section&gt;&lt;br/&gt;
+&lt;section class=&quot;tagline&quot;&gt;And know a little about coding.&lt;/section&gt;
+&lt;section class=&quot;desc&quot;&gt;Maybe Just A Learner 🎉🤣&lt;/section&gt;</subtitle>
+    <logo>https://willisfusu.github.io/images/avatar.png</logo>
+    <icon>https://willisfusu.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2021, 李二先生</rights>
+    <entry>
+        <title type="html"><![CDATA[iCloud 同步功能的几个问题]]></title>
+        <id>https://willisfusu.github.io/post/icloud/</id>
+        <link href="https://willisfusu.github.io/post/icloud/">
+        </link>
+        <updated>2021-01-12T23:04:13.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="问题起始">问题起始</h2>
+<p>其实这个问题之前在使用 iCloud 的时候根本没有感知到，直到今天从实验室回家准备下载一个软件的时候才发生。情况是这样的：<br>
+我需要从 APP Store 上下载一个软件，但是 APP Store 总是「无响应」，在网上查了一下发现这个 问题也很好解决。只要登出 Apple ID，然后再次登入就可以。</p>
+]]></summary>
+        <content type="html"><![CDATA[<h2 id="问题起始">问题起始</h2>
+<p>其实这个问题之前在使用 iCloud 的时候根本没有感知到，直到今天从实验室回家准备下载一个软件的时候才发生。情况是这样的：<br>
+我需要从 APP Store 上下载一个软件，但是 APP Store 总是「无响应」，在网上查了一下发现这个 问题也很好解决。只要登出 Apple ID，然后再次登入就可以。</p>
+<!-- more -->
+<h2 id="但是这样就引发了另一个问题">但是这样就引发了另一个问题</h2>
+<p>因为我本机上的「Documents」是同步到了 iCloud，所以当 Apple ID 登出的时候，会将「Documents」里的文件都移动到「iCloud (Archive)」这个文件夹内。当我重新登入 ID 的时候，iCloud 不会将「iCloud (Archive)」里文件给移动回来，只会重新从云端下载。</p>
+<p>本来这也没什么，但是当 iCloud 重新下载完之后，我发现有一些文件仍然在云端，没有同步到本地，而且这些文件还是我必需要用到的。所以我当时就想当然的以为将文件从「iCloud (Archive)」里复制过来就可以。但是我复制之后发现，云端的文件都没有了，系统正在上传我复制过来的文件😭️……</p>
+<p>然后我就等到上传完，发现还有一部分文件是没有同步到本地的（实在是不能理解为什么，明明我已经从本地复制了 🤨），于是想着那就从云端下载吧，只要点一下☁️️标志就🆗️️了。但是我等了半天，也没有反应……</p>
+<p>折腾了大半个小时，经历了取消 iCloud 同步，再次同步以及 iCloud 的各种等待之后，我发现还是不行……本以为这个问题是个 bug 我没有能力解决了的时候，我发现，如果我打开一个在「云端」还没有同步下来的文件的时候，iCloud 就开始下载，但是没有速度。<strong>我发现之所以没有速度，是因为 iCloud 卡在了一个已经下载完，但不知道为什么没有结束的进程上。</strong> 于是我点了❎️，取消掉卡住的下载进程之后，竟然就可以正常下载了……</p>
+<p>真是太奇葩了。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ 网红之路-使用 Python 做数据调研]]></title>
+        <id>https://willisfusu.github.io/post/zhihu-sosuo/</id>
+        <link href="https://willisfusu.github.io/post/zhihu-sosuo/">
+        </link>
+        <updated>2020-05-30T15:10:13.000Z</updated>
+        <summary type="html"><![CDATA[<p>这篇文章是之前老婆突发奇想，想要在一些平台上建账号，尝试「网红」之路。我寻思着既然要做内容，那怎么也得先去了解一下自己内容在这个平台上的现况吧，比如这个话题的活跃度、发文量之类的。</p>
+<p>想了一下怎么去实现，找专业的调研机构是不太可行了，没有钱。那就只能自己做，然后我想了一下，觉得直接使用平台上的搜索功能，搜索自己需要的话题，然后统计文章数量与时间关系，大体上就可以得到时间变化曲线，应该也可以做个参考。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>这篇文章是之前老婆突发奇想，想要在一些平台上建账号，尝试「网红」之路。我寻思着既然要做内容，那怎么也得先去了解一下自己内容在这个平台上的现况吧，比如这个话题的活跃度、发文量之类的。</p>
+<p>想了一下怎么去实现，找专业的调研机构是不太可行了，没有钱。那就只能自己做，然后我想了一下，觉得直接使用平台上的搜索功能，搜索自己需要的话题，然后统计文章数量与时间关系，大体上就可以得到时间变化曲线，应该也可以做个参考。</p>
+<!-- more -->
+<h2 id="️-1需求">🦁️ 1.需求</h2>
+<p>利用平台的搜索功能，搜索自己需要的话题，并且量化之后，做出时间变化曲线。</p>
+<h2 id="2思路">🐶 2.思路</h2>
+<p>应该可以使用 Python 编写爬虫，然后获取某段时间内的文章，对文章的发文量、评论量、赞数进行统计做图。</p>
+<ul>
+<li>爬虫可以使用 requests 库</li>
+<li>数据做图使用 matplotlib 库</li>
+<li>数据处理 pandas 与 pymongo</li>
+</ul>
+<h2 id="3具体实施">🛸 3.具体实施</h2>
+<h3 id="31-首先分析目标网页">3.1 首先分析目标网页</h3>
+<p>其实现在几乎所有的平台都有搜索功能，我这里选知乎做个例子，其它平台都大同小异，思路总是一样的。</p>
+<ol>
+<li>对目标网页进行分析</li>
+</ol>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_001.png" alt="" loading="lazy"></figure>
+<p>上面的图片是知乎上搜索的页面，我随便找了个关键词就选了「python」，搜索之后，发现乱七八糟的太多了，我又选择了时间范围为「三个月内」，结果如下：</p>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_002.png" alt="" loading="lazy"></figure>
+<p>嗯，这样看上去就好多了，并且三个月，统计出来的数据也有一定的参考价值了。打开 Chrome 的「检查」页面。点击 network 选项卡，在左边寻找和搜索相关的数据包。会发现一个有 search 名字的包，如下所示：</p>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_003.png" alt="" loading="lazy"></figure>
+<p>我们点击预览看看，果然就是返回的搜索结果，并且结果是 json 格式。仔细看一下请求的地址和数据</p>
+<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_004.png" alt="" loading="lazy"></figure>
+<p><em>一般而言，返回结果不可能只有一页</em> 所以我们向下滚动搜索结果页面，看看新刷新出来的结果返回什么样的数据包。向下滚动之后，不出所料果然又返回了一个新的搜索结果。</p>
+<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_005.png" alt="" loading="lazy"></figure>
+<p>仔细看下请求的地址，发现两次请求的参数有所不同。</p>
+<figure data-type="image" tabindex="6"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_006.png" alt="" loading="lazy"></figure>
+<p>多了两个参数：<code>search_hash_id</code>和<code>vertical_info</code></p>
+<p>分析目标网页到这，我们已经得到需要的内容：</p>
+<pre><code class="language-python">请求地址：https://www.zhihu.com/api/v4/search_v3?t=general&amp;q=python&amp;correction=1&amp;offset=20&amp;limit=20&amp;lc_idx=38&amp;show_all_topics=0&amp;time_zone=three_months&amp;search_hash_id=b633d8035402af9f9e431cbffc0aa46f&amp;vertical_info=0%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C0
+返回结果：json 格式
+</code></pre>
+<h3 id="32-爬虫代码">3.2 爬虫代码</h3>
+<p>其实大部分需要用到爬虫的地方，思路都差不多。我们得到请求的地址与返回的结果格式之后，就可以来编写代码了。</p>
+<p>仔细分析下请求地址中的参数：</p>
+<pre><code>general: 是指返回综合搜索结果
+q：搜索关键词
+correction：不知道是什么意思
+offset:搜索返回数据的偏移量
+limit：每次返回的结果数量
+lc_idx:不知道什么意思
+time_zone:时间范围
+search_hash_id：应该是此次执行的搜索行为的id
+vertical_info：不晓得
+</code></pre>
+<p>有了这些理解之后，我大概就知道了如何构造请求地址了，就是循环改变 offset 的数值，从而可以不断返回新的数据。每次返回20条数据的话，offset 可以取0、20、40、……之类的数据。</p>
+<p><em>请求数据</em></p>
+<pre><code class="language-python">pattern = re.compile(r'\\u003c/?em\\u003e')
+# remove &lt;em&gt; label
+def handle_url(url):
+    headers = {
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+        'accept-encoding': 'gzip',
+        'accept-language': 'en-GB,en;q=0.9,zh;q=0.8,zh-CN;q=0.7,zh-TW;q=0.6,ja;q=0.5',
+        &quot;cache-control&quot;: &quot;max-age=0&quot;,
+        'cookie': '_xsrf=a21de17a-59ee-4d29-b4b9-5c397d0917ca; _zap=cce7d96b-ecd2-4953-b958-cc0bfbe9a2e7; BAIDU_SSP_lcr=https://www.google.com/; cap_id=&quot;NGM1OGZlYTgwMWU2NGI5YjgyZGQyYzJlYTIwZDYyMTc=|1587130242|8f2a774418c56fabb1f42aaf30d7e37dbd0df1a7&quot;; capsion_ticket=&quot;2|1:0|10:1589482049|14:capsion_ticket|44:OGEzY2NkZGVjZTIzNDg2MGE1NWNkOTYwMTgxYWUzZWI=|0e51411a2863f1881abc1a57c7b1867e6b0a059464fa43e6a2e55bf97c86bc7d&quot;; d_c0=&quot;ADCb102P-hCPTr5IshFBfxUARc-mRhjx2iY=|1584472689&quot;; l_cap_id=&quot;MTI2ZDg3OWUxNmMwNDk2Y2ExYWI4ZjY5MDRjMGIyODQ=|1587130242|6c9a2dafefd22d23c9f19142a7fb4061ebc0f45f&quot;; q_c1=e14ff8f74d144c4d9b4ce781405d22ca|1589200919000|1589200919000; r_cap_id=&quot;OGIzMzU4ZmVjODFhNDZkYzg3MWZhOTdhMDliYTExNDY=|1587130242|5e08cedf3450929c6b9816ca0dfef46c1248fa24&quot;; tst=r; z_c0=&quot;2|1:0|10:1589482084|4:z_c0|92:Mi4xQWw0MEd3QUFBQUFBTUp2WFRZXzZFQ1lBQUFCZ0FsVk5aT0NxWHdDWEVhWUJXSE1BUzZuYnV6NURCSmNrNFlPNk9R|d2595436ce2f97f37b61de7c533b0415fd03bd8dc5b95c3d3199f7ab90bb5eeb&quot;; KLBRSID=5430ad6ccb1a51f38ac194049bce5dfe|1589487035|1589486377',
+        'sec-fetch-dest': 'document',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-site': 'none',
+        'sec-fetch-user': '?1',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36',
+    }
+# 我试了一下，这些 headers 好像是都需要的……没有办法减少    
+    resp = requests.get(url, headers=headers)
+    clear_text = pattern.sub(&quot;&quot;, resp.text)
+# 因为我发现有一些返回的标题中含有 &lt;em&gt; 强调标签，所以使用正则表达式，替代掉    
+    return clear_text
+</code></pre>
+<p>我原本以为就这样轻松完成了呢，结果第二条 url 就没有办法返回数据了，但是同样的方法，第一条 url 可以返回数据，第二条就不可以。我刚开始是以为 headers 的问题，我反复尝试了不同的参数，结果还是不成，总是返回一个 error 的 json 包。</p>
+<p>在这里，我大概花了一个多小时，直到我又重新思考请求参数的含义，发现<code>search_hash_id</code>可能是一个很重要的参数。既然是执行的每次搜索的 id，那是不是每次搜索都会得到一个唯一的 id， 而我在代码中使用的 id 是浏览器执行的那次搜索。我在代码中使用，会不会和自己新执行的搜索不同？</p>
+<p>但是这个 id 是什么时候产生的呢？第一次搜索是不需要 id 的，之后每次搜索都会有这个参数。会不会是第一次搜索返回的结果中包含了这个参数呢？</p>
+<p>于是我回头去检查了下第一次返回的结果</p>
+<figure data-type="image" tabindex="7"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_007.png" alt="" loading="lazy"></figure>
+<p>果然被我发现了，第一次返回的 json 包中含有了此次搜索操作的 id，而且我还发现 lc_idx 这个参数也是每次不同的。</p>
+<p><em>思路调整</em></p>
+<p>这样我调整了下思路，我需要执行一次搜索操作，从返回的结果中得到 <code>search_hash_id</code>和<code>lc_idx</code>，然后再按照规律构造请求地址。</p>
+<p><em>构造请求</em></p>
+<p>按照上面调整之后的思路，我这样来构造请求：</p>
+<pre><code class="language-python">def make_url(searchid, lcid, offset):
+    baseurl = &quot;https://api.zhihu.com/search_v3?advert_count=0&amp;correction=1&amp;&quot;
+    param = {
+        &quot;lc_idx&quot;: lcid,
+        &quot;limit&quot;: 20,
+        &quot;offset&quot;: offset,
+        &quot;q&quot;: &quot;python&quot;,
+        &quot;search_hash_id&quot;: searchid,
+        &quot;show_all_topics&quot;: 0,
+        &quot;t&quot;: &quot;general&quot;,
+        &quot;time_zone&quot;: &quot;three_months&quot;,
+        'vertical_info': '0,0,0,0,0,0,0,0,0,0',
+    }
+    url = baseurl + urlencode(param)
+    return url
+</code></pre>
+<p>尝试了一下，果然可以正常得到结果。但是发现一个问题：<em>只能最多返回200条数据</em> 开始我以为是反爬虫，但是我在浏览器中试了下，不断向下拉，刷新结果，也只能返回200条数据，换了几个关键词，也是同样的结果。</p>
+<h3 id="33-数据处理">3.3 数据处理</h3>
+<p>虽然只能得到200多条数据，但是好歹也算得到了数据。数据处理就当是练手了吧</p>
+<p>怎么处理呢？我需要知道每天这个话题的发文量，然后将发文量与时间做图，就能知道这个话题的热度变化。<br>
+代码如下：</p>
+<pre><code class="language-python">import pymongo
+import time
+from matplotlib import pyplot as plt
+import pandas as pd
+
+newclient=pymongo.MongoClient('mongodb://localhost:27017')
+mydb=newclient['data_research']
+mycol=mydb['Zhihu']
+
+mydata=mycol.find({})
+
+for item in mydata:
+    datestamp=item['date']
+    local_date=time.localtime(datestamp)
+    date_fmt=time.strftime('%Y-%m-%d',local_date)
+    mycol.update_one({&quot;date&quot;:datestamp},{'$set':{'date':date_fmt}})
+# 因为得到的时间是时间戳，所以需要先将其转换了正常的时间格式，并更新数据库
+x=mycol.aggregate([{'$group':{'_id':&quot;$date&quot;,'num':{'$sum':1}}},{'$sort':{'_id':-1}}])
+# 采用聚类计算，按照时间分组，并且计算每组中的数量，然后按照时间降序排列
+
+df=pd.DataFrame(x)
+x_a=df['_id']
+y_a=df['num']
+plt.plot(x_a,y_a)
+plt.xticks(rotation=90)
+plt.show()
+# 转成 dataframe 之后，方便作图
+</code></pre>
+<h3 id="34-最终结果">3.4 最终结果</h3>
+<p>虽然因为知乎的限制，这种方式可以说是失败了，但是也算是练习了自己的技巧吧</p>
+<figure data-type="image" tabindex="8"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/Figure_1.png" alt="" loading="lazy"></figure>
+<h2 id="4总结">😁 4.总结</h2>
+<p>首先吐槽一下，现在的互联网越来越封闭了，不只是知乎一家，其它家平台也是把数据都各种限制在自己的手中。从平台的角度说，这没有什么问题，我自己家的数据嘛。但是从用户的角度，或者从互联网的角度来说，每个平台就成了一个一个的小「孤岛」，原本互联网是降低用户获取信息的成本，但是现在或许连信息也获取不到了。</p>
+<p>知乎将搜索的返回结果限制在 200 条也不知道是出于什么考虑，可能是觉得不会有人看 200 条结果？但是你也没提供任何 filter 工具呀！<strong>按时间排序、赞数排序、热度排序</strong>什么也没有。这样的搜索结果就是返回了一大堆没什么用的数据……</p>
+<p>事后我搜索了一下，发现竟然也有人在吐槽知乎的搜索功能。<a href="https://www.zhihu.com/question/26617244">为什么知乎的搜索功能如此之烂？</a></p>
+<p>好了，不说了，总之这此数据调研没有成功 😂️😂️😂️😂️😂️😂️</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows软件推荐]]></title>
+        <id>https://willisfusu.github.io/post/windows-software/</id>
+        <link href="https://willisfusu.github.io/post/windows-software/">
+        </link>
+        <updated>2020-05-24T08:50:14.000Z</updated>
+        <summary type="html"><![CDATA[<p>这篇文章主要是总结并且推荐一些我在 windows 平台下长期使用并且真正值得推荐的软件。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>这篇文章主要是总结并且推荐一些我在 windows 平台下长期使用并且真正值得推荐的软件。</p>
+<!-- more -->
+<h2 id="为什么有这篇文章">为什么有这篇文章</h2>
+<p>最后因为疫情在家里没事做，就在「折腾」黑苹果，也在尝试日常使用 Mac OS。因为是从 Windows 平台转过去，所以免不了要对照着在 Windows 下的使用习惯安装一些软件。刚好借这个机会，将自己在 Windows 下使用的顺手软件总结，推荐一下。这些软件可谓是我的「装机必备」</p>
+<h2 id="软件推荐">软件推荐</h2>
+<h3 id="total-commander">Total Commander</h3>
+<p>相信这个软件已经有无数人推荐过了，在我心中，这个软件就是像 Office 一样，必备！我记得第一次用这个软件的时候是在2012年，看了「善用佳软」的推荐。当时还觉得这个软件 UI 丑，操作繁琐。当时自己真的是 Too navie。</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/%E6%8D%95%E8%8E%B7.PNG" alt="" loading="lazy"></figure>
+<p><strong>使用时长</strong>：到今天为止，这个软件已经使用了8年了。</p>
+<p><strong>特点</strong>：代替 Windows 自带的文件浏览器，实现快速的文件定位、以及文件<strong>复制、剪切、重命名、解压、预览、分色</strong>等文件管理操作。使用熟练之后，操作文件，再也不需要鼠标。软件中有大量的快捷键，这也是新手劝退的主要因素。但是相信我，使用这个软件之后那种「行云流水」一般的感觉，真的爽！</p>
+<p><strong>价格</strong>：不购买可以无限期试用，如果要买的话，37欧元，有学生优惠。建议先试用一段时间，觉得好用再入手。我也是试用了6年才入手的。是我觉让我花钱花得最开心的一个软件。</p>
+<h3 id="office-365家庭版">Office 365家庭版</h3>
+<p>Office 365的价格现在已经相当的亲民，起码在中国的售价是相当便宜的。在英国的我就是使用的中国区 365，英国的价格实在是高。在一些软件代理商那里可以经常搞活动，一年的家庭版才269左右？可以支持6个人，每个人6台机器。平均一个人一年才50不到，其中还包含了 1 TB 的 OneDrive 空间。实在是太划算。</p>
+<p>就在我买了一年家庭版之后，曼大就开始提供免费的 365 教育版。</p>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200524234418.png" alt="" loading="lazy"></figure>
+<ol>
+<li><strong>不要再找激活器了，因为正版的价格太低了</strong></li>
+<li>某宝有提供很低价格 365的，要注意一下管理员是可以查看你的 OneDrive 的。</li>
+</ol>
+<p><strong>使用时长</strong> 365家庭版已经使用3年了，之前使用的是学校授权激活的 Office</p>
+<p><strong>价格</strong>：搞活动的时候269~300之间可以搞定一年。</p>
+<h3 id="everything">Everything</h3>
+<p>Everything 是一个搜索软件，主要作用是帮助你定位你需要的文件。这个软件很小，但是功能强悍。搜索速度不要太快，配合过滤器，可以快速的找到自己想要找的文件、程序、文件夹。Win 10 下的搜索已经改进了很多了，但是相信我，去用一下这个软件，要比系统自带的强的不知道到哪里去了。</p>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/every.png" alt="" loading="lazy"></figure>
+<p><strong>使用时长</strong> 8年，当年和 TC 一起在「善用佳软」上看到的推荐文章。</p>
+<p><strong>价格</strong>：免费软件</p>
+<h3 id="ditto">Ditto</h3>
+<p>Ditto 是一个剪切板增强软件。想一下，是不是有这样的情境：在寻找资料时，找到了一个关键内容A，我们复制到了其它地方。然后又到到了 B、C、D等内容，也都复制到了一个地方。但是我们发现另一个地方也需要之前的某个内容A，这时候如果是没有这个软件，那么你要么再打开搜索的网页，要么去刚才粘贴的地方再复制一遍。如果是这些页面，文件都开着，并且体量不大，那还好。如果是页面已经关掉了，又或者那个文件非常大，有很多页，你是不是还要花时间去找刚才的内容呢？</p>
+<p>有了这个软件，你可以轻易保存自己复制粘贴的记录，使用快捷键，快速唤出，搜索再次粘贴，尤其是大量重复工作的时候。实在是太好用了。</p>
+<p>这个软件的使用场景实在是太多，也不一一去举例了，软件非常小，你可以安装了去试试。关键还是免费，没有广告。就这样功能的软件，在 Mac 下也<strong>一个 Paste 竟然丧心病狂地订阅制？？？</strong> 而且完全不如 Ditto 优雅、无打扰。</p>
+<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/ditto.png" alt="" loading="lazy"></figure>
+<p><strong>使用时长</strong>8年</p>
+<p><strong>价格</strong> 免费软件</p>
+<h3 id="internet-download-manager">Internet Download Manager</h3>
+<p>IDM 是一款下载辅助软件。可以调用电脑的多核多线程，加快下载速度。我用这个软件也用了很多年，还写过文件介绍如何搭配百度云使用。但是后来下载百度云并且提示403错误，才知道是百度管的更紧了。可能现在还是有办法做到，但是太折腾了。我现在就把这个软件当成一个单纯的下载工具（好像这原本就是这个软件的功能……）方便，又好用。<br>
+<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/idm.png" alt="" loading="lazy"></p>
+<p><strong>使用时长</strong>4年以上，实在记不清用了多少年了</p>
+<p><strong>价格</strong>：搞活动的时候99元买的终身授权</p>
+<h3 id="listary-pro">Listary Pro</h3>
+<p>这个软件也是我日常重度使用的软件。大概功能和 Mac 下的 spotlight 或者 Alfred 差不多。可以快捷打开软件，或者执行一些指令。并且开发者非常慷慨的规定个人可以免费使用，也就是你不需要付费。只有单位使用时，需要 Pro 授权。 个人版好像只是不能自定义外观和新建 Project （大概是这样）。非常推荐，有了这个软件，基本上桌面上不需要再放什么软件图标了，直接用 Listary 快捷打开，好用。</p>
+<p><strong>使用时长</strong>大概5年得有了</p>
+<p><strong>价格</strong>去年搞活动的时候41.3元入了 Pro 授权</p>
+<h3 id="zotero-文献管理">Zotero 文献管理</h3>
+<p>终于说到和我博士相关的软件啦（哈哈哈哈）。 Zotero 是一个文献管理软件。其实同类型的软件有很多，像是国外的 Endnote 国内的 NoteExpress。在国内读书的时候一直是用 NoteExpress，因为图书馆提供正版授权，于是也就养成了一些使用习惯。但是曼大这边只有 Endnote 我刚开始用了一段时间，实在用不惯。主要是 Endnote 只提供了文件夹一种管理方式，这种方式明显不科学，一篇文章可能有很多的方向，只使用文件夹必然会造成文件大量重复。这时候就需要有<strong>标签</strong>功能的工具，增加一个维度的管理方式。</p>
+<p>Zotero刚好可以提供文件夹，标签管理。我试用了几天就中意了。并且还让我有意外的地方。Zotero提供了 Chrome 插件，下载文献更加方便了，不需要自己下载文献，再拖到软件中。只要 chrome 上点一下，文献就自动到了它该去的地方，并且已经重新命名了。</p>
+<p>至于软件的使用，我之前也写过文章，配合 OneDrive、Dropbox 等可以实现多端同步。</p>
+<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/win-zotero.png" alt="" loading="lazy"></figure>
+<p><strong>使用时长</strong> 3年</p>
+<p><strong>价格</strong>免费软件</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[今日头条新闻评论翻译]]></title>
+        <id>https://willisfusu.github.io/post/jin-ri-tou-tiao-2/</id>
+        <link href="https://willisfusu.github.io/post/jin-ri-tou-tiao-2/">
+        </link>
+        <updated>2020-05-22T23:22:15.000Z</updated>
+        <summary type="html"><![CDATA[<p>上一篇文章我说到了由于老婆博士课题的原因，需要爬取今日头条的新闻评论，并且需要翻译成英文。我把评论的获取写成了文章，可以见<a href="https://willisfusu.github.io/post/jin-ri-tou-tiao-1/">此处</a>。今天我准备把如何使用 python 将中文翻译成英文总结一下，以备参考与之后复习之用。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>上一篇文章我说到了由于老婆博士课题的原因，需要爬取今日头条的新闻评论，并且需要翻译成英文。我把评论的获取写成了文章，可以见<a href="https://willisfusu.github.io/post/jin-ri-tou-tiao-1/">此处</a>。今天我准备把如何使用 python 将中文翻译成英文总结一下，以备参考与之后复习之用。</p>
+<!-- more -->
+<h2 id="1-为什么会有这篇文章">🐶1 为什么会有这篇文章</h2>
+<p>从老婆那边拿到的项目，她要求将今日头条的新闻评论翻译为英文，以为其博士课题服务。刚开始她是想着自己翻译，后来我我她大概需要多少评论翻译成英文，告诉我说大概800条…… 于是我就问她需不需要我先给她「机翻」一下，这样后期做较对要比自己翻译快很多。于是我就成功拿到了这个项目🤣🤣🤣🤣。</p>
+<h2 id="️2-项目过程">🐼️2 项目过程</h2>
+<h3 id="21-确定思路">2.1 确定思路</h3>
+<p>因为我自己也没有「根红苗正」的 python 学习经历，学习 python 完全是为了老婆的博士课题服务。因此这里讲到的思路可能并不是正统的程序员思路，姑且看之。</p>
+<ol>
+<li>读取评论内容。从我们之前存入的数据库中读取评论内容。</li>
+<li>找到谷歌翻译<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>的 API 接口，将评论传入。</li>
+<li>处理返回的翻译结果。</li>
+</ol>
+<h3 id="22-谷歌翻译-api-的配置与使用-a-namegooglea">2.2 谷歌翻译 API 的配置与使用 <a name="google"></a></h3>
+<p>这一部分内容建议阅读谷歌官方给出的指南，非常详细。分为了 Basic 与 Advanced 两个版本，选择任何一个指南进行都可以完成我们翻译文本的目标。</p>
+<p>谷歌翻译 API 可以<a href="https://cloud.google.com/translate/docs/quickstarts">点击这里阅读</a>。简单说分为以下四步：</p>
+<ol>
+<li>创建 Cloud Console project，并获得 Private Key (一个 json 文件）</li>
+<li>将第1步得到的 private key 添加到环境变量中</li>
+<li>配置 Google Cloud SDK （此步骤又包含了许多小步骤）</li>
+<li>安装 google-cloud-translate==2.0.1 python 库。</li>
+</ol>
+<pre><code>pip3 install google-cloud-translate==2.0.1
+</code></pre>
+<h3 id="23-代码实现">2.3 代码实现</h3>
+<p>其实分析到这里，整个项目也差不多完成了。剩下的代码部分比较简单。可以分为两步：1.引入 google-cloud-translate 库。 2. 传入评论。</p>
+<ol>
+<li>引入 google-cloud-translate 库</li>
+</ol>
+<pre><code class="language-python">from google.cloud import translate_v2 as translate
+# 引入 google.cloud 库，并重命名
+translate_client=translate.Client()
+# 创建translate对象
+</code></pre>
+<ol start="2">
+<li>传入评论内容，并处理返回结果  <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></li>
+</ol>
+<pre><code class="language-python">def translate_comment(col):
+    print('开始%s翻译'% col)
+    collection = mydb[col]
+    collection.update_many({}, {'$set': {'Comment_English': 'none'}})
+    # 获取评论 collection, 并且增加'Comment_English' 字段。
+    querry = {&quot;Comment_English&quot;: 'none'}
+    comment_array = collection.find({}, {'comment_text': 1})
+    print('已获取所有评论，准备开始翻译')
+    for i in comment_array:
+        ch_comment = emojis.decode(i['comment_text'])
+        # 由于很多评论中使用了 emoji 谷歌翻译不能正确识别 emoji，所以需要使用 emoji 库将 emoji 转换为 unicode 编码。 emoji 就是 😂️😅️☺️ 这种。
+        result=translate_client.translate(ch_comment,target_language='en')
+        collection.update_one(querry, {'$set': {'Comment_English': result['translatedText']}})
+        # 提交评论到谷歌翻译，并将返回的翻译结果更新 'Comment_English' 字段。
+</code></pre>
+<ol start="3">
+<li>因为有多条新闻，所以有很多组评论，需要再写一个 for 循环。</li>
+</ol>
+<pre><code class="language-python">collectionarray = mydb.list_collection_names()
+i = 1
+for col in collectionarray:
+    translate_comment(col)
+    print('已经完成%d个库评论数据翻译' % i)
+    i += 1
+</code></pre>
+<h3 id="24-说明">2.4 说明</h3>
+<p>如果是在像 pycharm 这样的 IDE 中执行上面的程序，很大概率（之所以说很大概率是因为我只在 pycharm 中运行过）遇到报错，提示谷歌凭证配置错误。不要担心，只要你是<a href="#google">按照上面</a>指南配置，那应该不会有错。之所以出现这个报错是因为只能在 cmd 或者 terminal 中运行。到命令终端中运行刚刚写的 py 文件，看看是不是正常执行。如果还不正常，就按照上面的指南再配置一遍。</p>
+<h2 id="️3-总结">🦁️3 总结</h2>
+<h3 id="31-使用到库">3.1 使用到库</h3>
+<ol>
+<li>pymongo 数据库</li>
+<li>emojis 处理评论中的 emoji，防止谷歌翻译报错</li>
+<li>google.cloud 谷歌翻译库</li>
+</ol>
+<h3 id="32-pymongo-修改新增字段">3.2 pymongo 修改/新增字段</h3>
+<p><a href="https://www.runoob.com/python3/python-mongodb-update-document.html">update/update_many/update_one</a></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>这里选择谷歌翻译是因为人在英国，并且个人感觉谷歌翻译可能会比较准确一点？ <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>再次说一下，这个项目中不一定非得使用数据库来存储，增加新字段，并更新字段浪费了我不少时间去学习🤪🤪🤪。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[今日头条新闻评论获取]]></title>
+        <id>https://willisfusu.github.io/post/jin-ri-tou-tiao-1/</id>
+        <link href="https://willisfusu.github.io/post/jin-ri-tou-tiao-1/">
+        </link>
+        <updated>2020-05-22T14:31:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>本文属于「大型网红记录片」python 文科数据分析系列。</p>
+<h2 id="为什么有这篇文章">🐶为什么有这篇文章</h2>
+<p>因为老婆博士专业的原因，她需要获取不少网站的新闻或者帖子的评论，并且对评论进行数据分析或者是自然语义分析（NLP）。因此从来没有接触过 python，只有 VB 二级的我自然就成了她的技术支持，为她提供 python 爬虫和数据分析业务 🤣🤣。经过一段时间学习之后，我意识到，这些需求可能在文科的数据分析中具有某种程度上的一致性，如果能够记录下每个项目，可以供他人参考，也可以提高自己对于代码的理解。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本文属于「大型网红记录片」python 文科数据分析系列。</p>
+<h2 id="为什么有这篇文章">🐶为什么有这篇文章</h2>
+<p>因为老婆博士专业的原因，她需要获取不少网站的新闻或者帖子的评论，并且对评论进行数据分析或者是自然语义分析（NLP）。因此从来没有接触过 python，只有 VB 二级的我自然就成了她的技术支持，为她提供 python 爬虫和数据分析业务 🤣🤣。经过一段时间学习之后，我意识到，这些需求可能在文科的数据分析中具有某种程度上的一致性，如果能够记录下每个项目，可以供他人参考，也可以提高自己对于代码的理解。</p>
+<!-- more -->
+<p>结合我自己的学习过程，我觉得如果能够在学习一门编程语言的过程中有一个比较明确的目的，并且从一个可以执行的项目开始，可以大幅度地提高自己的学习意愿与动力。所以我觉得如果可以，尽量从一个简单易行的项目入手，而不是拿到一个事无巨细的教程，从基础开始学习。自下而上是可以打下坚实的基础，但是自上而下的学习可以提供更强大的学习动力。</p>
+<p>此篇文章产生的需求为：<strong>对指定的今日头条上的新闻，获取文章下面的评论，并且将评论翻译为英文</strong>。</p>
+<h2 id="项目过程">🤖项目过程</h2>
+<h3 id="目标页面分析">目标页面分析</h3>
+<p>我们先随意选定一条新闻，打开新闻页面。比如这条<a href="https://www.toutiao.com/a6829669065624125959/">新闻</a>。打开之后页面如下：</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_001.png" alt="" loading="lazy"></figure>
+<ol>
+<li>然后在页面上右键，选择「检查」</li>
+</ol>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_003.png" alt="" loading="lazy"></figure>
+<ol start="2">
+<li>之后会打开开发者工具页面，在 Chrome 下，应该是下面这张图这样</li>
+</ol>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_002.png" alt="" loading="lazy"></figure>
+<ol start="3">
+<li>选择 Network， 并且刷新页面</li>
+</ol>
+<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_004.png" alt="" loading="lazy"></figure>
+<p>这个时候会得到这个页面所有的网络流量内容，我需要的评论内容肯定也在其中。从评论中随便找一句话，或者一个词，在开发者工具中 Control+F，可以打开搜索。搜索刚才随便找的词句。我就随意选了「转发了」，回车执行搜索后，会发现有结果出现。下一步就是点击搜索结果。点了之后，该搜索结果所在的条目，会变暗（或者变色）。</p>
+<ol start="4">
+<li>双击刚刚变色的条目，会打开下面的结果 <a name="json"></a></li>
+</ol>
+<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_007.png" alt="" loading="lazy"></figure>
+<p>选择 Preview 可以看到预览，看结构应该是一个 Json 文件。选择 data 打开，发现果然就是需要的评论内容。接下来就是 <strong>找到请求的 url 地址以及请求的参数信息</strong>。</p>
+<ol start="5">
+<li>点击 headers，查找请求信息</li>
+</ol>
+<figure data-type="image" tabindex="6"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_005.png" alt="" loading="lazy"></figure>
+<p>从这张图里，可以知道请求的 url 地址，以及请求方法是 Get 方法。继续往下拉，可以看到请求的头信息（request headers)</p>
+<figure data-type="image" tabindex="7"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_006.png" alt="" loading="lazy"></figure>
+<p><strong>通过上面五步，就完成了对目标页面的分析，那得到了什么结果呢？</strong></p>
+<ul>
+<li>请求地址 <code>https://www.toutiao.com/article/v2/tab_comments/?aid=24&amp;app_name=toutiao-web&amp;group_id=6829669065624125959&amp;item_id=6829669065624125959&amp;offset=0&amp;count=5</code></li>
+<li>请求方法 <code>Get</code></li>
+<li>请求参数 Parameters ：</li>
+</ul>
+<pre><code class="language-javascript">aid: 24 
+app_name: toutiao-web
+group_id: 6829669065624125959
+item_id: 6829669065624125959
+/* item_id, group_id 与文章链接中的数字是相同的，应该是文章的id*/
+offset: 0
+count: 5
+/*offset 应该是评论的偏移量，count应该是每次返回的评论数*/
+</code></pre>
+<h3 id="请求地址及请求参数分析">请求地址及请求参数分析</h3>
+<p>通过对目标页面分析之后，得到了请求的地址及请求参数。在使用爬虫时，我们需要自己构造请求链接，所以首先得搞清楚请求链接是怎么构造的。</p>
+<p>观察这个链接：<br>
+https://www.toutiao.com/article/v2/tab_comments/?aid=24&amp;app_name=toutiao-web&amp;group_id=6829669065624125959&amp;item_id=6829669065624125959&amp;offset=0&amp;count=5</p>
+<p>前半部分<code>https://www.toutiao.com/article/v2/tab_comments/?</code> 可以不用管，后半部分则是请求参数组合在一起。这样看起来，我们只需要在 for 循环中 offset 偏移就可以获取所有的评论。</p>
+<p><strong>验证</strong> 点击下图中标志出来的图标，清空 network 标签，然后点击评论下面的 「加载更多评论」，看看会返回什么结果。</p>
+<figure data-type="image" tabindex="8"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_009.png" alt="" loading="lazy"></figure>
+<p>跟上面一样，找到返回的评论，点击 headers，观察请求地址</p>
+<figure data-type="image" tabindex="9"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_008.png" alt="" loading="lazy"></figure>
+<p>将两次请求的地址放到一起对比，更容易找到变化：</p>
+<pre><code>https://www.toutiao.com/article/v2/tab_comments/?aid=24&amp;app_name=toutiao-web&amp;group_id=6829669065624125959&amp;item_id=6829669065624125959&amp;offset=0&amp;count=5
+
+https://www.toutiao.com/article/v2/tab_comments/?aid=24&amp;app_name=toutiao-web&amp;group_id=6829669065624125959&amp;item_id=6829669065624125959&amp;offset=5&amp;count=10
+</code></pre>
+<h3 id="python-程序编写">🦁Python 程序编写</h3>
+<p>由于此次返回的结果直接就是 Json 格式，对于结果处理是相当友好。 代码中用到的库如下：</p>
+<ul>
+<li><strong>requests</strong> http 请求库，用于向服务器发送请求，获得请求结果。</li>
+<li><strong>pymongo</strong> 数据库，用于数据持久化 （用其它文件存储方式也可以，我这里使用 pymongo 主要是因为自己想要熟练一下这个库的使用🦁🦁🦁🦁。完全也可以用 pandas 或者 Excel 相关的库替代）</li>
+<li><strong>json</strong> json 处理 因为返回的结果是 json 格式。</li>
+</ul>
+<ol>
+<li>请求链接构造</li>
+</ol>
+<p>首先我们要做的是构造请求的 url 链接，根据我们上面的分析，只要在 for 循环中更新 offset 就可以了。代码示例如下：</p>
+<pre><code class="language-python">def handle_comment_url(id):
+    for a in range(0, 80, 20):
+        # 此处使用 range 函数，产生 offset 的数值（0， 20， 40， 60……）这里的80是因为老婆只需要前50条热评。如果想得到所有的评论，可以将80换成一个很大的数值即可，例如80000。
+        param_data = {
+            &quot;group_id&quot;: id,
+            &quot;item_id&quot;: id,
+            &quot;offset&quot;: a,
+            &quot;count&quot;: 20
+        }
+        # param_data 就是上面分析得到的请求参数
+        url = &quot;https://www.toutiao.com/article/v2/tab_comments/?aid=24&amp;app_name=toutiao-web&amp;&quot; + urlencode(param_data)
+        # 构造 url，使用 urlencode 将参数组合到一起，省得自己写产生错误。
+        result = handle_response(url)
+        if result:
+            break
+        # 将构造的 url给到另一个函数，处理。这里 if 条件语句的作用是在上面想要获得所有评论时，可以及时退出循环。
+</code></pre>
+<ol start="2">
+<li>然后我们再构造结果请求函数</li>
+</ol>
+<pre><code class="language-python">def handle_url(url):
+    header = {
+        &quot;accept&quot;: &quot;text/javascript, text/html, application/xml, text/xml, */*&quot;,
+        &quot;accept - encoding&quot;: &quot;gzip, deflate, br&quot;,
+        &quot;accept-language&quot;: &quot;en-GB,en;q=0.9,zh;q=0.8,zh-CN;q=0.7,zh-TW;q=0.6,ja;q=0.5&quot;,
+        &quot;user-agent&quot;: &quot;user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36&quot;,
+        &quot;x-requested-with&quot;: &quot;XMLHttpRequest&quot;
+    }
+    # 增加 headers 参数可以一定程度上防止被「反爬虫」，只能说是一定程度上。「反爬虫」与「反反爬虫」之间的斗争是另一个很长的故事。
+    response = requests.get(url, headers=header)
+    return (response)
+</code></pre>
+<ol start="3">
+<li>处理返回结果的函数<br>
+我们现在构造一个处理返回结果的函数，并且在这个函数里，调用上面的 <strong>请求函数</strong>。</li>
+</ol>
+<p>另外，这一步里需要我们对请求返回的 json 数据的结构进行分析，以便我们可以找到对应的键值对。分析 json 很简单，找一个 json 解析的网页，比如<a href="https://www.json.cn/">这一个我常用的</a>。 然后将我们<a href="#json">上面得到的 json 结果</a> 复制进这个网页中，就可以在右边得到结构比较清晰的结果。</p>
+<pre><code class="language-python">def handle_response(url):
+    response = handle_url(url)
+    # 此处调用请求函数
+    response_json = json.loads(response.text)
+    # 使用 json 的 loads 方法，将 json 格式的数据，转换为 dict 格式的数据，方便 python  处理。
+    break_for = True
+    if (len(response_json[&quot;data&quot;]) == 0):
+        print(&quot;评论已经获取完毕！！&quot;)
+        return break_for
+    # 这里这个 if 语句用于判断评论是否请求完，如果已经请求完，那返回 True，方便上面步骤1中及时中断循环。
+    else:
+        for item in response_json[&quot;data&quot;]:
+            comment = {}
+            comment['id'] = item[&quot;comment&quot;][&quot;id&quot;]
+            comment['username']=item[&quot;comment&quot;][&quot;user_name&quot;]
+            comment[&quot;comment_text&quot;] = item[&quot;comment&quot;][&quot;text&quot;]
+            comment[&quot;reply_count&quot;] = item[&quot;comment&quot;][&quot;reply_count&quot;]
+            comment[&quot;digg_count&quot;] = item[&quot;comment&quot;][&quot;digg_count&quot;]
+            comment[&quot;creat_time&quot;] = item[&quot;comment&quot;]['create_time']
+            mycol.insert_one(comment)
+        print(&quot;已经完成20次数据库写入&quot;)
+    # 写入数据。
+</code></pre>
+<h3 id="说明">说明</h3>
+<ol>
+<li>多线程、协程的使用</li>
+</ol>
+<p>这个例子中，我其实尝试使用过多线程，毕竟可以大幅度缩减时间。但是今日头条对于爬虫限制的挺厉害，我有一天晚上就被限制了 ip，导致几个小时没法访问今日头条。所以后来就干脆不使用多线程了，能稳定的运行实在是优先于时间少。 也有可能是我使用方法不对，想尝试的朋友可以尝试。</p>
+<ol start="2">
+<li>pymongo 的使用</li>
+</ol>
+<p>在这个例子中使用 pymongo 仅仅是因为我想要练习使用这个工具，数据的持久化有太多方法，使用任何一种即可。其实使用 pymongo 后面还给我带来了不少不便利😂😂😂。</p>
+<ol start="3">
+<li>获取所有评论的方法</li>
+</ol>
+<p>在这个例子中，获取所有评论的方法显得有些「暴力」直接是使用一个很大的数值来代替真实的评论总数。其实这也是无奈，因为头条将对已有评论的回复也计算在评论数中，所以就算是使用真实的评论数，也得对返回的 json--&gt; data 长度进行判断。既然是这样，直接使用一个大数值代替也是一样的。</p>
+<h2 id="总结">📓总结</h2>
+<h3 id="技术总结">技术总结</h3>
+<p>头条新闻评论的获取就到这里了。其实大部分的爬虫都是这样的思路，最重要的就是获得请求地址，以及能构造出正确的请求 url。</p>
+<p>我的代码文件可以<a href="https://github.com/willisfusu/python_projects_wife/tree/master/jin_ri_tou_tiao">在这里找到</a></p>
+<h3 id="部分库及方法详解">部分库及方法详解</h3>
+<p>其实我自己在写的过程中，也是不断去确认一些函数、库、方法的使用详解。比如 json 的 load 与 loads 区别。所以我在这里把一些我查过的列出来，这样也方便我自己回来复习。</p>
+<ul>
+<li><a href="https://www.runoob.com/python/python-func-range.html">range()</a></li>
+<li><a href="https://www.runoob.com/python/python-json.html">JSON</a></li>
+<li><a href="https://www.cnblogs.com/bigtreei/p/10466518.html">json.loads</a></li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ 联想 M910q open core 黑苹果装机遇「坑」记录]]></title>
+        <id>https://willisfusu.github.io/post/Lenovo-M910q-OpenCore-Hackintosh/</id>
+        <link href="https://willisfusu.github.io/post/Lenovo-M910q-OpenCore-Hackintosh/">
+        </link>
+        <updated>2020-05-20T05:40:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>因为疫情在家隔离已经快两个月了，学校不开门，实验室也不给进。无奈之下只好在家里「折腾」。因为之前在网上看到别人晒的联想 M920q 黑苹果装机，对于联想这个 Tiny 机型实在是心里种草，在 ebay 上搜索了下，发现有人出售 M910q 价格也比较合适，于是就拍下，准备搞黑苹果🐶。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>因为疫情在家隔离已经快两个月了，学校不开门，实验室也不给进。无奈之下只好在家里「折腾」。因为之前在网上看到别人晒的联想 M920q 黑苹果装机，对于联想这个 Tiny 机型实在是心里种草，在 ebay 上搜索了下，发现有人出售 M910q 价格也比较合适，于是就拍下，准备搞黑苹果🐶。</p>
+<!-- more -->
+<h2 id="为什么有这篇文章">为什么有这篇文章</h2>
+<p>因为自己以前在我的 T440P 上「折腾」过黑苹果，感觉现在的黑苹果安装已经非常简单，只要按照教程来，十有八九是可以成功的。但是我自己在安装 10.15.4 Catalina 的过程中遇到了很多指南上没有讲到或者是和指南推荐值不同的情况，为了对的起自己折腾花掉的时间，于是就把这些「坑」给记录下来。</p>
+<h2 id="机器配置信息">机器配置信息</h2>
+<p>CPU: i5-7600T</p>
+<p>iGPU: intel HD graphics 630</p>
+<p>Disk01: Samsung SSD 860 EVO 500G</p>
+<p>Disk02: Samsung MZVLM128HEGR-000L1</p>
+<p>Chipset: Q270</p>
+<p>RAM: 16GB</p>
+<h2 id="安装教程">安装教程</h2>
+<p>推荐按照<a href="https://dortania.github.io/OpenCore-Desktop-Guide/">OpenCore-Desktop-Guide</a> 指南进行配置安装。个人感觉这个指南已经是很详细的了，并且最好的一点是该指南里基本将能用的到的 config 设置项给解释了一遍，按照这个指南进行安装，可以很好的了解到自己的设置到底是在设置些什么。 尤其是对于「非标准硬件」<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>用户，非常有用。</p>
+<h2 id="我遇到的一些坑">我遇到的一些「坑」</h2>
+<h3 id="休眠唤醒之后卡住-死机只能硬重启解决">休眠唤醒之后卡住、死机，只能硬重启解决</h3>
+<p>其实这个问题不是我在 Opencore 下遇到的，是我在 Clover 下遇到的问题。我刚开始是使用 Clover 安装的，心里想着毕竟是一个受众非常广的引导方式了，就算是遇到了问题应该也可以很容易的在网上找到。安装完之后，除了休眠之外，都非常完美，没有什么问题。但是毕竟是处女座，总想是是不是可以修复。</p>
+<p><strong>现象</strong> 可以休眠，也可以键盘，鼠标唤醒，但是在唤醒之后，系统很快就会「冻」住，无任何反应。</p>
+<p>在网上搜了下，明确此问题会在以下情况下发生：</p>
+<ul>
+<li>使用了新的 AppleALC 补丁引起的问题</li>
+<li>Clover 引导</li>
+</ul>
+<p>退回 AppleALC 1.2.8 版本可以解决此问题。具体问题可以见下面的搜索结果：<br>
+<a href="https://hackintosher.com/guides/stop-macos-from-freezing-on-sleep-wake-with-a-catalina-hackintosh/">STOP MACOS FROM FREEZING DURING SLEEP/WAKE ON A CATALINA HACKINTOSH</a><br>
+<a href="https://www.reddit.com/r/hackintosh/comments/diwujo/catalina_vanilla_installation_freeze_after_sleep/">Catalina vanilla installation - freeze after sleep</a><br>
+<a href="https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Catalina-10.15-installation.html">关于数字音频中断，导致内核崩溃的解决方案</a></p>
+<p>我尝试了下上面帖子中推荐的方法：</p>
+<ol>
+<li>退回 1.2.8 版本 --&gt; 退回旧版本之后，的确可以解决「冻死」的问题，但是声卡却无法驱动了，试了不同的 layout-id 也不成功，应该是 1.2.8 版本和 10.15.4 Catalina 不兼容的问题。</li>
+<li>内核补丁 --&gt; 无效</li>
+</ol>
+<p>于是心里一横就准备换到 Opencore 下， <strong>问题解决</strong>。</p>
+<h3 id="opencore-引导时提示-memory-panic-stackshot-succeeded-然后重启或者卡住">Opencore 引导时，提示 memory panic stackshot succeeded 然后重启或者卡住</h3>
+<p>这种情况很有可能是没有分配 iGPU 的预留缓存，在 BIOS 中加入，或者在 Config 中添加 framebuffer-stolenmem 键。 这一个我找了个图片，图片如下：<br>
+<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/opencore.png" alt="" loading="lazy"></p>
+<h3 id="卡在eblogexitbsstart">卡在[EB|#LOG:EXITBS:START]</h3>
+<p>这个也是意料之外的问题，搜索了下，得到下面的帖子：</p>
+<p><a href="https://www.reddit.com/r/hackintosh/comments/g7rqt1/if_youre_stuck_at_endrandomseed_or/">if you're stuck at &quot;EndRandomSeed&quot; OR [EB|#LOG:EXITBS:START] ERROR with OpenCore 0.5.7, try this to fix</a></p>
+<p>需要将<br>
+RebuildAppleMemoryMap switch it OFF<br>
+SetupVirtualMap switch it ON<br>
+但是这是与 Vanilla 指南中的推荐值是相反的，原指南中对此两项的说明如下，我的 CPU 是 i5-7600T Kaby Lake 应该就是按照指南中的值来设定，不知道是哪里出了问题。</p>
+<pre><code class="language-ASL">RebuildAppleMemoryMap: YES
+Generates Memory Map compatible with macOS, can break on some laptop OEM firmwares so if you receive early boot failures disable this
+SetupVirtualMap: NO
+Fixes SetVirtualAddresses calls to virtual addresses, not needed on Skylake and newer. Some firmware like Gigabyte may still require it, and will kernel panic without this
+</code></pre>
+<h2 id="仍然存在的问题">仍然存在的问题</h2>
+<ol>
+<li>长时间休眠唤醒死机。 是的，现在不是因为「冻住」了，短时间内休眠再唤醒没有问题，但是长时间比如几个小时，就无法唤醒了。 使用命令<code>pmset -g log | grep -i failure</code> ，显示： Darkwake Exit Failure。尝试了几个方法，都没有效果，于是只好使用 Coffee Buzz 让系统不休眠。</li>
+</ol>
+<p>总结一下，就是从一个唤醒问题，换到了另一个唤醒问题。😭😭😭😭 我折腾这一圈干啥！<br>
+最后附上我<a href="https://github.com/willisfusu/Lenovo-M910q-Hackintosh">个人使用的EFI</a> <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>非标准硬件是指和网上大多数教程使用的硬件不同的硬件，是我杜撰的名词🦁。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>仅作参考使用，在使用前建议先阅读 Open core 安装指南。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Our Library 响应式网页编写反思记录]]></title>
+        <id>https://willisfusu.github.io/post/our-library/</id>
+        <link href="https://willisfusu.github.io/post/our-library/">
+        </link>
+        <updated>2020-05-05T09:49:02.000Z</updated>
+        <summary type="html"><![CDATA[<p>隔离在家，每天就想着怎么折腾 😂。之前在做 blog 主题的时候看过了不少的网站找参考样式，当时就想着，这些网站可真是好看，如果我也能做一个就好了。最近又赶上了老婆的生日，于是两者一结合，就打算做一个纪念网站，当作生日礼物（虽然后来因为自己半调子的能力，没有能够在生日之前上线 😢 ）。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>隔离在家，每天就想着怎么折腾 😂。之前在做 blog 主题的时候看过了不少的网站找参考样式，当时就想着，这些网站可真是好看，如果我也能做一个就好了。最近又赶上了老婆的生日，于是两者一结合，就打算做一个纪念网站，当作生日礼物（虽然后来因为自己半调子的能力，没有能够在生日之前上线 😢 ）。</p>
+<!-- more -->
+<h2 id="网页规划">网页规划</h2>
+<h3 id="需求确认">需求确认</h3>
+<p>在开始准备施工之前，我其实已经看了好多差不多类型的页面，也大概搞清楚了自己心里想要一个什么样子的产品。</p>
+<ul>
+<li>页面简洁，不要有大量的装饰。个人感觉这样比较大气 😂</li>
+<li>能够自适应移动端，</li>
+<li>有设计感，不要太简陋，</li>
+<li>如果可能，适当加一些动画。</li>
+</ul>
+<p>因为自己对前端一点也不懂，只能靠自己半调子的认知瞎搞搞，很多的需求也是自己看了别人的网站，觉得自己也应该有这样如此云云。</p>
+<h3 id="内容规划">内容规划</h3>
+<p>在确认了网页的样式需求之后，就是考虑在网页上放点什么。自己之前在情人节的时候，给老婆做了一个小小的纪念页面<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。现在又要搞一个，就想着把这两个整合起来，放到一个框架下面，也方便日后再有其它的项目可以加进来。另外就是我们两个人一直想把自己这一年做过的菜，整理出来，做成一个类似菜单的东西，到时候可以展示出来，算是给自己的生活增加一些仪式感。再加上我们两个日常拍的照片，平时也就是偶尔发一下朋友圈，可能也需要一个集中的地方。于是心里也就有了个数，要在这上面展示啥。</p>
+<ul>
+<li>情话版 😍</li>
+<li>项目展示</li>
+<li>照片区
+<ul>
+<li>旅游照片</li>
+<li>日常照片</li>
+</ul>
+</li>
+</ul>
+<p>大概就是这样一些内容，其后就是开始做施工准备。</p>
+<h2 id="知识储备">知识储备</h2>
+<h3 id="响应式web设计">响应式Web设计</h3>
+<p>对的，你没有看错，我做好了需求与内容确认之后，首先做的就是找了一本讲自适应网页编写的书看了一遍 😢 。 书名是：《响应式Web设计+HTML5和CSS3实战 第2版》大体上了解了下一些术语和常见的操作，省得自己在做的时候，在一些小问题上花费大时间（其实后面在操作的时候，还是在几个小问题上，浪费了不少时间，由此可见术业有专攻不假）。</p>
+<h3 id="bootstrap-响应式框架">Bootstrap 响应式框架</h3>
+<p>为了实现响应式的网页，我这次使用了 Bootstrap 这个框架，因为对新手比较友好，容易上手且外行也能做出一个像样的网页出来。为了方便使用，也在开始施工之前去学习了一下。学习比较快，主要是 Bootstrap 一些类的定义。</p>
+<h2 id="具体施工过程中的坑">具体施工过程中的坑</h2>
+<p>很详细的网页编写我就不写在这里了，有需要的朋友可以<a href="https://github.com/willisfusu/anniversary">点击这里查看</a>。这里我主要记录一下自己在学习以及编写这个网页的时候用到的一些 Js 库和遇到的一些坑，为以后再做相同工作减少阻碍。</p>
+<h3 id="用到的-js-库">用到的 Js 库</h3>
+<p>因为我毕竟是一个彻头彻尾的外行人，所以在开始施工的时候，采用的最原始方法就是选定一个网站，开始照着这个网站做。就在我分析这些网站的代码时，发现其中有一些部分很奇怪，非常像是「生成」的内容。仔细研究之后发现，对于同样的需求，已经有很多成熟的解决方，很多网站也没有自己去「造轮子」而是直接使用了这些 Js 库。</p>
+<p>但是由于我自己是一个非常彻底的外行，看到一些效果的时候，不知道是基于其它库实现的，结果我就掉进了一个大坑：扒 js 代码去研究咋实现的…… 😢 我大概看了几天的 Tween、fullpage 的代码。😅😅😅 此事不表，我列一下我主要用到的库有哪些：</p>
+<ul>
+<li><a href="https://getbootstrap.com/">Bootstrap</a> 用来实现响应式的框架</li>
+<li><a href="https://alvarotrigo.com/fullPage/">Fullpage</a> 用来实现那种整页展示效果</li>
+<li><a href="https://nanogallery2.nanostudio.org/">nanogallery2</a> 实现图片排版，轮播</li>
+<li><s><a href="https://github.com/janpaepke/ScrollMagic">ScrollMagic</a> 整页滚动效果</s> 可能和 fullPage 效果差不多，就用 fp 代替了</li>
+<li><s><a href="https://github.com/kenwheeler/slick">slick</a>  用于图片轮播，</s> 后来使用 nanogallery2 代替。</li>
+</ul>
+<p>使用这些库之后完成的效果分别是这样的：</p>
+<p>Fullpage:<br>
+<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200505172135.png" alt="" loading="lazy"></p>
+<p>nanogallery2:<br>
+<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200505172225.png" alt="" loading="lazy"></p>
+<p>其实如果一开始就知道使用这几个库，那整个过程相当简简单单，读完每个库的 Documents 之后，就可以非常快速的完成自己想要的结果，毕竟这几个库都是使用广泛且完成度相当高。</p>
+<h3 id="几个坑">几个坑</h3>
+<ol>
+<li><strong>完成比完美更重要</strong></li>
+</ol>
+<p>第一个坑就是 Tween（GSAP） 这个动画插件，看到了别人成品极其炫丽的样子（我参照的网站可以<a href="https://perficientdigitallabs.com/">点这里查看</a>，我不禁也动了念头，但是搞了半天，发现这个库的入门成本还是挺高的，比较光是画 svg 的路径可能就直接搞死我。最终的结局就是我在研究了两天之后，被迫放弃。这个库可以放到以后网站升级的时候去研究。我当时已经在这个库上花了不少时间，并且我感觉自己不是一时半会就能使用它，所以不得以放弃。</p>
+<ol start="2">
+<li><strong>先确定是什么，更确定怎么做</strong></li>
+</ol>
+<p>再一个坑就是我一头插进 Tween 和 Fullpage 的 js 代码中去看具体实现的方法，其实不是我自己对自己的能力高估了，只是我没有想到，这些代码竟然是这样一个庞大的库里的 😂（主要是这些网站不是引入 js 文件，而是把所有的 js 文件都整合成了一个文件，所以我也不知道其中的代码哪一部分是啥）。后来我发现，这些库里的代码其实都是有比较明显的特征，或者是函数名，或者是报错信息。从这里我得到一个教训，以后再做类似的事情，我得先找到这些特征的地方，搜索一下，确定这是什么，再去想怎么解决。</p>
+<ol start="3">
+<li>Fullpage 与 nanogallery2 冲突</li>
+</ol>
+<p>其实这个问题是一个真正的技术问题 🤓 🤓 上面两个都是我自己血的教训。但是这个问题也已经被很多人发现，并且官方也给了解决方法。这就是使用受众多的库的好处之一，很多坑别人都已经趟过一遍 😄 。简单点说就是 Fullpage 和其它使用 Scroll 监听器的插件会冲突。解决方法个人感觉不太优雅，但是官方也就只给了这一种方法。具体可以见<a href="https://github.com/alvarotrigo/fullPage.js/wiki/FAQ---Frequently-Answered-Questions">此处</a>。我自己也没有心情去看看 nanogallery2 的代码做修改，就按照官方的解决方法来了。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>如果没有记，这个纪念页面的开发者应该是我当时学校计院的一个学长。当时此网页一出，就引大众羡慕。但其后事情发展实在让人叹息。当时在日月光华上也是十大，我虽然围观过，但是对内情知之不详，此处不表。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Valine 评论系统美化定制]]></title>
+        <id>https://willisfusu.github.io/post/valine/</id>
+        <link href="https://willisfusu.github.io/post/valine/">
+        </link>
+        <updated>2020-04-19T07:10:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>前几天完成了自己的小博客的改版，兴冲冲的去拿给女朋友看。然后她非常好奇我为啥不整一个评论系统，并且觉得如果没有评论系统，我这个博客就显得不够完整。听她说之后，我想了想，感觉也有道理，如果有一个评论系统，就可以更好与其他朋友交流（虽然可能也没有几个人会看我的博客😂），因此决定整一个评论。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>前几天完成了自己的小博客的改版，兴冲冲的去拿给女朋友看。然后她非常好奇我为啥不整一个评论系统，并且觉得如果没有评论系统，我这个博客就显得不够完整。听她说之后，我想了想，感觉也有道理，如果有一个评论系统，就可以更好与其他朋友交流（虽然可能也没有几个人会看我的博客😂），因此决定整一个评论。</p>
+<!-- more -->
+<h2 id="评论系统选择">评论系统选择</h2>
+<p>现在的静态博客使用的评论系统大概就是 Gittalk, Disqus 这两个比较成熟的。但是我去看了下别人的博客，虽然这两个系统都应用比较多，但是Gittalk 和 Disqus 都没有给我一种简洁、干净的感觉，并且 Disqus 对大陆支持好像不是太好<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。找来找去，看到不少人也在使用 Valine 评论系统，我看了下他们的成品展示，嗯，是我要的感觉。😍</p>
+<h2 id="安装">安装</h2>
+<p>Valine 的安装非常简单，按照<a href="https://valine.js.org">官方文档</a>就可以非常迅速的完成安装过程。大体上就是注册一个 leanCloud 账号，创建一个应用。</p>
+<p>不过这里有一个问题，大陆版的 leanCloud 在创建应用的时候需要实名认证。这个认证过程是使用支付宝完成的。但是我试过几次，都不成功。我自己的支付宝是已经完成了实名认证的，按理说不会出现这种问题。搜索了一下，发现也有别的用户出现相同问题，官方也没有给出解决方法，需要用户自己去联系 leanCloud 客服。想来想去觉得好麻烦，正要想是不是换一个评论系统，结果就发现 leanCloud 竟然有国际版，不需要实名认证，于是就注册了国际版的账号。国际版和大陆版在安装 Valine 上没有区别。那就使用国际版好了。</p>
+<h2 id="定制修改评论框样式">定制修改评论框样式</h2>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200419144945.png" alt="" loading="lazy"></figure>
+<p>这是官方默认的样式，感觉有几个问题：</p>
+<ul>
+<li>不起眼，边框几乎不可见，非常难受。</li>
+<li>无用的组件，像是 Markdown 和评论预览。</li>
+</ul>
+<p>于是就想着自己把这个样式修改一下，最终的成果如下：</p>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/valine-result.png" alt="" loading="lazy"></figure>
+<p>虽然不能说多美，但是看上去顺眼多了。</p>
+<h3 id="修改步骤">修改步骤</h3>
+<p>因为我在修改过程中，按照我的设想，需要对 Valine 的输出元素进行修改，因此不可避免的要修改 Valine.js 文件，所以会对后续升级 Valine 版本造成一定的影响。但是实在是没办法，因为如果只修改 CSS 很难达到我需要的效果（也有可能是我的 CSS 功力不到家 😂 ）。</p>
+<p>所以这里也就不给出具体的代码了。只说说大体上的思路，需要修改的朋友可以参考一下。</p>
+<p>Valine 的 js 文件的功能就是输出评论所需要的元素标签，然后再输出针对这些元素标签的 CSS style。所以修改思路就是先使用浏览器检查功能，找到自己需要修改的元素标签的 id 或者 class，然后就可以修改输出内容。再找到对应的 CSS style 就可以修改样式。</p>
+<h3 id="评论框背景动画">评论框背景动画</h3>
+<p>这是再说一下评论框内的那个背景小动画，我看到不少人的博客评论框都设置了这样一个小动画。自己也比较喜欢，看了下，实现起来也是非常容易。就是设置输入框的背景图片，然后再对输入框的 :focus 做响应。简单的代码如下：</p>
+<pre><code class="language-css">.v .veditor {
+	background-image: url(&quot;https://raw.githubusercontent.com/willisfusu/piconly/master/image/comment_bg.png&quot;);
+	background-size: initial;
+	background-repeat: no-repeat;
+        background-position: right;
+}
+.v .veditor:focus{
+	background-position-y:115px;transition:.4s
+}
+</code></pre>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>只是在网上看到有人这么说，并没有实际证明。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ 网站改版记录（二）10-APR-2020]]></title>
+        <id>https://willisfusu.github.io/post/webtheme-change-2/</id>
+        <link href="https://willisfusu.github.io/post/webtheme-change-2/">
+        </link>
+        <updated>2020-04-12T01:44:11.000Z</updated>
+        <summary type="html"><![CDATA[<p>这段时间一直读读写写，看看别人的网站、主题以便我贯彻「拿来主义」，另一边把看到的好的特性研究下实现方法，摘录一些代码。看来看去好久，最终决定以 <a href="https://github.com/idealclover/Clover">idealClover</a> 为蓝本，规划设计自己的网站。[^1]</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>这段时间一直读读写写，看看别人的网站、主题以便我贯彻「拿来主义」，另一边把看到的好的特性研究下实现方法，摘录一些代码。看来看去好久，最终决定以 <a href="https://github.com/idealclover/Clover">idealClover</a> 为蓝本，规划设计自己的网站。<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<!-- more -->
+<h2 id="配色与字体">配色与字体</h2>
+<p>配色与字体对于一个网页看上去是否舒服还是非常重要的。字体与配色我参考了不少网站，最后选定的配色如下：<br>
+<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200412153906.png" alt="" loading="lazy"><br>
+网页的配色参考了 <a href="https://designmodo.github.io/Flat-UI/">Flat UI</a>、<a href="http://www.flatuicolorpicker.com/">flatuicolorpicker</a> 和 <a href="https://coolors.co/">Generate</a> 这几个配色工具。</p>
+<p>字体使用了 <a href="https://fonts.google.com/">Google Font API</a>，可以方便的选择并引入字体。这次我选择的字体中文使用 思源黑体，英文使用 Ubuntu。字重选择了300、400、700三种。</p>
+<h2 id="文章分类菜单">文章分类菜单</h2>
+<p>研究了下 Clover 这个主题，发现是以 bootstrap 框架实现的动态适应，但是仔细又看了下 bootstrap 这个框架，发现还是非常繁琐的。但是由于主题原作者已经使用 bootstrap 搭建好了，所以我就决定直接修改原作者的主题。因为是在 github 的公开仓库里，所以也版权也没有问题。</p>
+<p>原作者的主题是为 Typecho 编写的，而我的博客是使用 Gridea 搭建，所以首先要做的就是将 Typecho 主题的文档结构和 Gridea 对应。这里有一个问题：Gridea 没有「Category」这个概念，想了一下，最后决定使用几个标签来代替 Category。但是这样又会引入另一个问题，那就是没办法将主题做到自动化，只能别人在使用主题的时候自己加进去。<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
+<h2 id="鼠标特效与鼠标图标">鼠标特效与鼠标图标</h2>
+<p>看到好多个人博客的页面上都对鼠标特效与图标进行了自定义，为主要是文字的博客增加了一些点缀。在这次改版过程中，我也添加了特效与图标。</p>
+<h3 id="特效">特效</h3>
+<p>特效比较简单，网上有好多类似的项目，像是点击时出现心心 ❤️ 或者是出现「和谐、民主、自由」之类的。我这里就直接使用了一个叫「烟花特效」的特效。我看到很多博客在用这个特效，比较低调，又能增加点缀。但是我查了一下，并没有找到出处，就只好直接拿来用了。</p>
+<p>使用方法很简单，直接引入 js 文件就可以，默认的效果不错，也就没有再自己做调整。</p>
+<h3 id="图标">图标</h3>
+<p>修改 css 文件就可以实现自定义鼠标图标的目的。代码如下：</p>
+<pre><code class="language-css">body {
+	cursor: url(../media/houxuan.cur),auto
+	}
+body:active{
+	cursor: url(&quot;../media/zc.cur&quot;),auto
+	// 单击时鼠标图标
+	}
+</code></pre>
+<h2 id="代码高亮">代码高亮</h2>
+<p>代码高亮我使用的是 prism.js。这个模块可以自定义语言、高亮样式。使用也非常简单，只要在 <a href="https://prismjs.com/">prismjs</a> 的网站上设置好自己喜欢的样式，然后就可以下载 js 与 css 文件。将这两个文件插入到自己的网页中就可以了。最终实现的效果如图：<br>
+<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200412150824.png" alt="" loading="lazy"></p>
+<h2 id="主页">主页</h2>
+<p>主页的设置就直接拿了 idealClover 这个主题来用的。Title 与 subtitle 使用的是 <a href="https://github.com/idealclover/Random-Homepage">Random-Homepage</a>。背景使用的是 <a href="https://github.com/hustcc/canvas-nest.js">canvas-nest.js</a>。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>说实话，看到这个主题的时候，当时就觉得简洁又好看，大家可以去看看。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>或许可以看看 Gridea 的主题自定义功能，是否可以自己配置这几个标签, 但即使是这样，还是需要在发布文章的时候，手动添加分类标签。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[网站改版-05-APR-2020]]></title>
+        <id>https://willisfusu.github.io/post/webtheme-change/</id>
+        <link href="https://willisfusu.github.io/post/webtheme-change/">
+        </link>
+        <updated>2020-04-07T05:46:20.000Z</updated>
+        <summary type="html"><![CDATA[<p>英国的疫情不知道什么时候才能结束，原本在家应该是做点学术工作，处理处理数据，写写论文之类的。但是实在是没有心情去做这方面的工作，于是我只好找点事情来搞搞。</p>
+<p>最近看了不少让我眼前一亮的网站，于是就想着把自己的网页也改版一下。🎉</p>
+<p>因为我自己对于设计实在是没有天赋，所以就只好去网上「拿来主义」--依照别人的网页，做自己的设计 😊 。这篇文章是是记录这个改版过程。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>英国的疫情不知道什么时候才能结束，原本在家应该是做点学术工作，处理处理数据，写写论文之类的。但是实在是没有心情去做这方面的工作，于是我只好找点事情来搞搞。</p>
+<p>最近看了不少让我眼前一亮的网站，于是就想着把自己的网页也改版一下。🎉</p>
+<p>因为我自己对于设计实在是没有天赋，所以就只好去网上「拿来主义」--依照别人的网页，做自己的设计 😊 。这篇文章是是记录这个改版过程。</p>
+<!-- more -->
+<h2 id="信息收集">信息收集</h2>
+<p>首先要做的一件事就是去网上看看别人的设计，收集起来才好做到集「百家所长」。经过一段时间的网上搜索，我整理了下面几个网站，可以在改版时借鉴。</p>
+<ul>
+<li><a href="https://imiku.me">载入进度条</a> : 这个网站的载入进度条有特色，可以借鉴。</li>
+<li><a href="https://lcblog.cn/">鼠标单击特效、载入进度条</a> : 这个站的鼠标单击特效、进度条可借鉴。</li>
+<li><a href="https://blog.ixk.me/">页面布局</a> : 此站布局可借鉴。</li>
+<li><a href="https://tridiamond.me/">阅读进度条、toc浮动</a> : 此站阅读进度条及浮动toc可借鉴。</li>
+<li><a href="https://removeif.github.io/theme/%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81%E5%88%86%E4%BA%AB.html">博客主题编写</a> ： 可能用到的主题编写技术</li>
+<li><a href="https://2heng.xin/2019/12/31/graphql-recursion/">炫酷站</a> : 评论页及站点的其它设置</li>
+<li><a href="https://josephilo.com/archives/126/">配色及布局</a> : 此站简洁布局，配色舒服</li>
+<li><a href="https://github.com/yanm1ng/hexo-theme-vexo">toc浮动</a> : toc可借鉴</li>
+<li><a href="https://github.com/ITJoker233/Gridea-theme-Chic">Gridea主题</a> : Gridea主题</li>
+<li><a href="https://github.com/GeekaholicLin/hexo-theme-ylion">阅读进度条</a> : 阅读进度条</li>
+<li><a href="https://onlyorca.com/studio/">时尚布局</a> : 为以后给老婆主页改版做准备</li>
+<li><a href="http://www.jqueryfuns.com/resource/3862">模版网站</a> ： 一个模版网站</li>
+<li><a href="http://weihan.online/blog/lanyon/_site/index.html">主页logo图标</a> : 很好看的logo方法，强烈借鉴</li>
+<li><a href="http://iconmoon.com//">主页上的个人介绍</a> ： 布局非常好看，可以借鉴到老婆的主页</li>
+<li><a href="https://www.dandyweng.com/">炫酷站</a> : 非常好看的个人介绍站</li>
+<li><a href="https://freebiesbug.com/psd-freebies/leospa/">免费网站psd模版</a> : 免费的网页psd模版</li>
+<li><a href="https://tuzi.moe/">炫酷站</a> ：非常好看的个人介绍站</li>
+<li><a href="https://www.webhek.com/post/10-css-tools.html">css工具</a> ：可能用到的CSS工具</li>
+<li><a href="https://www.shejidaren.com/css-written-specifications.html">CSS书写规范</a> ： CSS书写规范</li>
+<li><a href="https://idealclover.top/">最主要的布局参考</a> : 🎏 🎏 🎏 这个网站所使用的模板 Clover 是我最主要的参考对象。非常感谢原作者的付出。</li>
+</ul>
+<h2 id="目标设定">目标设定</h2>
+<p>看了这么多的个人博客之后，我大体上了解了自己心里想要的样式，主要包含以下几个点：</p>
+<ul>
+<li>😝 简洁，不要有太多的复杂元素，像是大量动画，或者酷炫的视频背景。</li>
+<li>🎨 配色、字体优雅</li>
+<li>🌈 不单调，虽然前定位是简洁，但是要有一定的点缀，像是鼠标特效、鼠标图标</li>
+<li>👨‍💻 代码高亮</li>
+<li>📒 有文章分类菜单，方便快捷访问相关类别的文章 ( 😂 😂 这个要求在其它的博客框架下很容易实现，但是在Gridea下没有办法，因为Gridea根本就没有「Category」这个属性。)</li>
+<li>😆 有一个简单，但是好看的主页， 例如<a href="https://idealclover.top/">ideaclover</a>和<a href="http://weihan.online/blog/lanyon/_site/index.html">Weihan</a>这两个站。</li>
+</ul>
+]]></content>
+    </entry>
+</feed>

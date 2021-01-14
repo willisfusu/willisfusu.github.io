@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>李二先生</title>
+<meta name="description" content="李二先生的个博客，欢迎光临" />
+<meta name="google-site-verification" content="FHNMdYV7a7Bw4HNt-vm0Cto8QvAW1Vx_rTrhMgxLg44" />
+<link rel="shortcut icon" href="https://willisfusu.github.io/favicon.ico?v=1610655376390">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src='https://willisfusu.github.io/media/Valine.min.js'></script>
+<link rel="stylesheet" href="https://willisfusu.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="李二先生 - Atom Feed" href="https://willisfusu.github.io/atom.xml">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+    </head>
+    <body>
+    <div id="read-progress"></div>
+<div class="fixed-top">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+       <a class="navbar-brand" href="https://willisfusu.github.io">李二先生</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/archives">「全部文章」</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/tag/will-tech">技术</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/tag/will-thinking">想法</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://willisfusu.github.io/tag/will-life">生活</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">关于</a>
+                </li>
+            </ul>
+       </div>
+    </nav>
+</div>
+
+        <div class="container col-10" id="main" role="main">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <article class="post">
+                        <h1>
+                            <a itemprop="url" class="post-title" href="https://willisfusu.github.io/post/valine/">Valine 评论系统美化定制</a>
+                        </h1>
+                        <p id="post-meta">
+                            <i class="fa fa-clock-o"></i>2020-04-19 |
+                            <i class="fa fa-tags"></i>
+                                <a href="https://willisfusu.github.io/tag/will-tech/">技术</a>
+                                |
+                            <i class="fa fa-book-reader"></i>4 min read
+                        </p>
+                        
+                        
+                            <blockquote class="fa fa-exclamation-triangle warning">
+                                此文章发表于<strong><span style="color:#f75357">
+                                        270</span></strong> 天前，请注意文章时效
+                            </blockquote>
+                            
+                        <div class="post-content" itemprop="articleBody">
+                            <p>前几天完成了自己的小博客的改版，兴冲冲的去拿给女朋友看。然后她非常好奇我为啥不整一个评论系统，并且觉得如果没有评论系统，我这个博客就显得不够完整。听她说之后，我想了想，感觉也有道理，如果有一个评论系统，就可以更好与其他朋友交流（虽然可能也没有几个人会看我的博客😂），因此决定整一个评论。</p>
+<!-- more -->
+<h2 id="评论系统选择">评论系统选择</h2>
+<p>现在的静态博客使用的评论系统大概就是 Gittalk, Disqus 这两个比较成熟的。但是我去看了下别人的博客，虽然这两个系统都应用比较多，但是Gittalk 和 Disqus 都没有给我一种简洁、干净的感觉，并且 Disqus 对大陆支持好像不是太好<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。找来找去，看到不少人也在使用 Valine 评论系统，我看了下他们的成品展示，嗯，是我要的感觉。😍</p>
+<h2 id="安装">安装</h2>
+<p>Valine 的安装非常简单，按照<a href="https://valine.js.org">官方文档</a>就可以非常迅速的完成安装过程。大体上就是注册一个 leanCloud 账号，创建一个应用。</p>
+<p>不过这里有一个问题，大陆版的 leanCloud 在创建应用的时候需要实名认证。这个认证过程是使用支付宝完成的。但是我试过几次，都不成功。我自己的支付宝是已经完成了实名认证的，按理说不会出现这种问题。搜索了一下，发现也有别的用户出现相同问题，官方也没有给出解决方法，需要用户自己去联系 leanCloud 客服。想来想去觉得好麻烦，正要想是不是换一个评论系统，结果就发现 leanCloud 竟然有国际版，不需要实名认证，于是就注册了国际版的账号。国际版和大陆版在安装 Valine 上没有区别。那就使用国际版好了。</p>
+<h2 id="定制修改评论框样式">定制修改评论框样式</h2>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200419144945.png" alt="" loading="lazy"></figure>
+<p>这是官方默认的样式，感觉有几个问题：</p>
+<ul>
+<li>不起眼，边框几乎不可见，非常难受。</li>
+<li>无用的组件，像是 Markdown 和评论预览。</li>
+</ul>
+<p>于是就想着自己把这个样式修改一下，最终的成果如下：</p>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/valine-result.png" alt="" loading="lazy"></figure>
+<p>虽然不能说多美，但是看上去顺眼多了。</p>
+<h3 id="修改步骤">修改步骤</h3>
+<p>因为我在修改过程中，按照我的设想，需要对 Valine 的输出元素进行修改，因此不可避免的要修改 Valine.js 文件，所以会对后续升级 Valine 版本造成一定的影响。但是实在是没办法，因为如果只修改 CSS 很难达到我需要的效果（也有可能是我的 CSS 功力不到家 😂 ）。</p>
+<p>所以这里也就不给出具体的代码了。只说说大体上的思路，需要修改的朋友可以参考一下。</p>
+<p>Valine 的 js 文件的功能就是输出评论所需要的元素标签，然后再输出针对这些元素标签的 CSS style。所以修改思路就是先使用浏览器检查功能，找到自己需要修改的元素标签的 id 或者 class，然后就可以修改输出内容。再找到对应的 CSS style 就可以修改样式。</p>
+<h3 id="评论框背景动画">评论框背景动画</h3>
+<p>这是再说一下评论框内的那个背景小动画，我看到不少人的博客评论框都设置了这样一个小动画。自己也比较喜欢，看了下，实现起来也是非常容易。就是设置输入框的背景图片，然后再对输入框的 :focus 做响应。简单的代码如下：</p>
+<pre><code class="language-css">.v .veditor {
+	background-image: url(&quot;https://raw.githubusercontent.com/willisfusu/piconly/master/image/comment_bg.png&quot;);
+	background-size: initial;
+	background-repeat: no-repeat;
+        background-position: right;
+}
+.v .veditor:focus{
+	background-position-y:115px;transition:.4s
+}
+</code></pre>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>只是在网上看到有人这么说，并没有实际证明。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+                        </div>
+                         <blockquote>
+                             <p>本文链接：<a style="text-decoration: underline" href="https://willisfusu.github.io/post/valine/">https://willisfusu.github.io/post/valine/</a></p>
+                             <p>此文章由<a style="text-decoration: underline" href="https://willisfusu.github.io/">李二先生</a>采用<a style="text-decoration: underline" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可,转载请注明出处。
+                             </p>
+                         </blockquote>
+                    </article>
+                    <ul class="post-near">
+                        
+                        <li>上一篇<a href="https://willisfusu.github.io/post/our-library/">Our Library 响应式网页编写反思记录</a> </li>
+                        
+                        
+                        <li>上一篇<a href="https://willisfusu.github.io/post/webtheme-change-2/"> 网站改版记录（二）10-APR-2020</a> </li>
+                        
+                    </ul>
+                    <div id="vcomments"></div>
+                        <script>
+                            new Valine({
+                            el: '#vcomments',
+                            appId: '62yofvjrBSK8xn2MoylBkRUJ-MdYXbMMI',
+                            appKey: 'cfVwB8TO3A8o6l4Uo1h6OR9M',
+                            avatar:"retro"
+                        })
+                        </script>
+                </div>
+                <div class="col-12 col-lg-4" id="secondary" role="complementary">
+    <div class="card">
+        <div class="card-header">
+            <div class="widget-title">🚀关于李二先生</div>
+        </div>
+        <div class="card-body">
+            <section class="tagline">
+    Hey There, I'm <view class="under"><text class="textCon">WEI LI,</text><text class="borderText-lg"></text></view>
+</section><br/>
+<section class="desc">based in Manchester, UK.</section><br/>
+<section class="tagline">A PhD Student in Materials</section>
+<section class="desc">Focus on <view class="under"><text class="textCon">Graphene and Ceramic</text><text class="borderText-sm"></text> Composites.</view></section><br/>
+<section class="tagline">And know a little about coding.</section>
+<section class="desc">Maybe Just A Learner 🎉🤣</section>
+        </div>
+    </div>
+    <div class="card" id="tag-card">
+        <div class="card-header">
+            <div class="widget-title">🏷️标签</div>
+        </div>
+        <div class="card-body">
+            <div class="toc-container">
+                <p style="margin-bottom: .5rem;">待施工……</p>
+            </div>
+        </div>
+    </div>
+    <div class="card" id="toc-card">
+        <div class="card-header">
+            <div class="widget-title">📒目录</div>
+        </div>
+        <div class="card-body">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E9%80%89%E6%8B%A9">评论系统选择</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a></li>
+<li><a href="#%E5%AE%9A%E5%88%B6%E4%BF%AE%E6%94%B9%E8%AF%84%E8%AE%BA%E6%A1%86%E6%A0%B7%E5%BC%8F">定制修改评论框样式</a>
+<ul>
+<li><a href="#%E4%BF%AE%E6%94%B9%E6%AD%A5%E9%AA%A4">修改步骤</a></li>
+<li><a href="#%E8%AF%84%E8%AE%BA%E6%A1%86%E8%83%8C%E6%99%AF%E5%8A%A8%E7%94%BB">评论框背景动画</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <footer class="footer bottom" role="contentinfo">
+    <a class="turn-up" href="#"><i class="fa fa-rocket"></i></a>
+    <div id="dark-mode">
+        <i class="fa fa-moon-o"></i>
+    </div>
+    Theme <a href="https://github.com/willisfusu/gridea-theme-SSRUI">SSRUI</a> made with <i class="fa fa-heart"></i> by <a href="https://willisfusu.github.io/">Wei LI</a>, modified from 🍀<a href="https://github.com/idealclover/Clover">Clover</a>🍀.<br/>
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>.<br />
+    &copy; 2021 <a href="https://willisfusu.github.io">李二先生</a>.
+    <div id="span_dt_dt"></div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://willisfusu.github.io/media/mouse-click.js"></script>
+    <script src="https://willisfusu.github.io/media/pace.min.js"></script>
+    <script src="https://willisfusu.github.io/media/prism.js"></script>
+    <script src="https://willisfusu.github.io/media/main_function.js"></script>
+</footer>
+    </body>
+</html>
