@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://willisfusu.github.io</id>
     <title>李二先生</title>
-    <updated>2021-01-14T20:16:20.326Z</updated>
+    <updated>2021-01-14T20:17:29.572Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://willisfusu.github.io"/>
     <link rel="self" href="https://willisfusu.github.io/atom.xml"/>
@@ -22,13 +22,11 @@
         <id>https://willisfusu.github.io/post/icloud/</id>
         <link href="https://willisfusu.github.io/post/icloud/">
         </link>
-        <updated>2021-01-12T23:04:13.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="问题起始">问题起始</h2>
-<p>其实这个问题之前在使用 iCloud 的时候根本没有感知到，直到今天从实验室回家准备下载一个软件的时候才发生。情况是这样的：<br>
+        <updated>2021-01-12T15:04:13.000Z</updated>
+        <summary type="html"><![CDATA[<p>其实这个问题之前在使用 iCloud 的时候根本没有感知到，直到今天从实验室回家准备下载一个软件的时候才发生。情况是这样的：<br>
 我需要从 APP Store 上下载一个软件，但是 APP Store 总是「无响应」，在网上查了一下发现这个 问题也很好解决。只要登出 Apple ID，然后再次登入就可以。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<h2 id="问题起始">问题起始</h2>
-<p>其实这个问题之前在使用 iCloud 的时候根本没有感知到，直到今天从实验室回家准备下载一个软件的时候才发生。情况是这样的：<br>
+        <content type="html"><![CDATA[<p>其实这个问题之前在使用 iCloud 的时候根本没有感知到，直到今天从实验室回家准备下载一个软件的时候才发生。情况是这样的：<br>
 我需要从 APP Store 上下载一个软件，但是 APP Store 总是「无响应」，在网上查了一下发现这个 问题也很好解决。只要登出 Apple ID，然后再次登入就可以。</p>
 <!-- more -->
 <h2 id="但是这样就引发了另一个问题">但是这样就引发了另一个问题</h2>
