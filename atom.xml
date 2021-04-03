@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://willisfusu.github.io</id>
     <title>李二先生</title>
-    <updated>2021-01-14T20:17:29.572Z</updated>
+    <updated>2021-04-03T14:26:28.683Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://willisfusu.github.io"/>
     <link rel="self" href="https://willisfusu.github.io/atom.xml"/>
@@ -17,6 +17,23 @@
     <logo>https://willisfusu.github.io/images/avatar.png</logo>
     <icon>https://willisfusu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 李二先生</rights>
+    <entry>
+        <title type="html"><![CDATA[彩色配置]]></title>
+        <id>https://willisfusu.github.io/post/color-sheme/</id>
+        <link href="https://willisfusu.github.io/post/color-sheme/">
+        </link>
+        <updated>2021-04-03T07:24:48.000Z</updated>
+        <content type="html"><![CDATA[<p>前几天在网上看到别人分享的一个自己的色彩配置，我觉得还不错，就提取出来。</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/Snipaste_2021-04-02_11-14-25.png" alt="" loading="lazy"></figure>
+<ol>
+<li>#dcac04</li>
+<li>#95a5ab</li>
+<li>#13719e</li>
+<li>#34342c</li>
+<li>#faf3e2</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[iCloud 同步功能的几个问题]]></title>
         <id>https://willisfusu.github.io/post/icloud/</id>
@@ -753,56 +770,6 @@ body:active{
 </li>
 </ol>
 </section>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[网站改版-05-APR-2020]]></title>
-        <id>https://willisfusu.github.io/post/webtheme-change/</id>
-        <link href="https://willisfusu.github.io/post/webtheme-change/">
-        </link>
-        <updated>2020-04-07T05:46:20.000Z</updated>
-        <summary type="html"><![CDATA[<p>英国的疫情不知道什么时候才能结束，原本在家应该是做点学术工作，处理处理数据，写写论文之类的。但是实在是没有心情去做这方面的工作，于是我只好找点事情来搞搞。</p>
-<p>最近看了不少让我眼前一亮的网站，于是就想着把自己的网页也改版一下。🎉</p>
-<p>因为我自己对于设计实在是没有天赋，所以就只好去网上「拿来主义」--依照别人的网页，做自己的设计 😊 。这篇文章是是记录这个改版过程。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>英国的疫情不知道什么时候才能结束，原本在家应该是做点学术工作，处理处理数据，写写论文之类的。但是实在是没有心情去做这方面的工作，于是我只好找点事情来搞搞。</p>
-<p>最近看了不少让我眼前一亮的网站，于是就想着把自己的网页也改版一下。🎉</p>
-<p>因为我自己对于设计实在是没有天赋，所以就只好去网上「拿来主义」--依照别人的网页，做自己的设计 😊 。这篇文章是是记录这个改版过程。</p>
-<!-- more -->
-<h2 id="信息收集">信息收集</h2>
-<p>首先要做的一件事就是去网上看看别人的设计，收集起来才好做到集「百家所长」。经过一段时间的网上搜索，我整理了下面几个网站，可以在改版时借鉴。</p>
-<ul>
-<li><a href="https://imiku.me">载入进度条</a> : 这个网站的载入进度条有特色，可以借鉴。</li>
-<li><a href="https://lcblog.cn/">鼠标单击特效、载入进度条</a> : 这个站的鼠标单击特效、进度条可借鉴。</li>
-<li><a href="https://blog.ixk.me/">页面布局</a> : 此站布局可借鉴。</li>
-<li><a href="https://tridiamond.me/">阅读进度条、toc浮动</a> : 此站阅读进度条及浮动toc可借鉴。</li>
-<li><a href="https://removeif.github.io/theme/%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81%E5%88%86%E4%BA%AB.html">博客主题编写</a> ： 可能用到的主题编写技术</li>
-<li><a href="https://2heng.xin/2019/12/31/graphql-recursion/">炫酷站</a> : 评论页及站点的其它设置</li>
-<li><a href="https://josephilo.com/archives/126/">配色及布局</a> : 此站简洁布局，配色舒服</li>
-<li><a href="https://github.com/yanm1ng/hexo-theme-vexo">toc浮动</a> : toc可借鉴</li>
-<li><a href="https://github.com/ITJoker233/Gridea-theme-Chic">Gridea主题</a> : Gridea主题</li>
-<li><a href="https://github.com/GeekaholicLin/hexo-theme-ylion">阅读进度条</a> : 阅读进度条</li>
-<li><a href="https://onlyorca.com/studio/">时尚布局</a> : 为以后给老婆主页改版做准备</li>
-<li><a href="http://www.jqueryfuns.com/resource/3862">模版网站</a> ： 一个模版网站</li>
-<li><a href="http://weihan.online/blog/lanyon/_site/index.html">主页logo图标</a> : 很好看的logo方法，强烈借鉴</li>
-<li><a href="http://iconmoon.com//">主页上的个人介绍</a> ： 布局非常好看，可以借鉴到老婆的主页</li>
-<li><a href="https://www.dandyweng.com/">炫酷站</a> : 非常好看的个人介绍站</li>
-<li><a href="https://freebiesbug.com/psd-freebies/leospa/">免费网站psd模版</a> : 免费的网页psd模版</li>
-<li><a href="https://tuzi.moe/">炫酷站</a> ：非常好看的个人介绍站</li>
-<li><a href="https://www.webhek.com/post/10-css-tools.html">css工具</a> ：可能用到的CSS工具</li>
-<li><a href="https://www.shejidaren.com/css-written-specifications.html">CSS书写规范</a> ： CSS书写规范</li>
-<li><a href="https://idealclover.top/">最主要的布局参考</a> : 🎏 🎏 🎏 这个网站所使用的模板 Clover 是我最主要的参考对象。非常感谢原作者的付出。</li>
-</ul>
-<h2 id="目标设定">目标设定</h2>
-<p>看了这么多的个人博客之后，我大体上了解了自己心里想要的样式，主要包含以下几个点：</p>
-<ul>
-<li>😝 简洁，不要有太多的复杂元素，像是大量动画，或者酷炫的视频背景。</li>
-<li>🎨 配色、字体优雅</li>
-<li>🌈 不单调，虽然前定位是简洁，但是要有一定的点缀，像是鼠标特效、鼠标图标</li>
-<li>👨‍💻 代码高亮</li>
-<li>📒 有文章分类菜单，方便快捷访问相关类别的文章 ( 😂 😂 这个要求在其它的博客框架下很容易实现，但是在Gridea下没有办法，因为Gridea根本就没有「Category」这个属性。)</li>
-<li>😆 有一个简单，但是好看的主页， 例如<a href="https://idealclover.top/">ideaclover</a>和<a href="http://weihan.online/blog/lanyon/_site/index.html">Weihan</a>这两个站。</li>
-</ul>
 ]]></content>
     </entry>
 </feed>
