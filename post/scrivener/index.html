@@ -53,105 +53,56 @@
                 <div class="col-12 col-lg-8">
                     <article class="post">
                         <h1>
-                            <a itemprop="url" class="post-title" href="https://willisfusu.github.io/post/beamer-footnote/">Beamer中footnote、章节页设置</a>
+                            <a itemprop="url" class="post-title" href="https://willisfusu.github.io/post/scrivener/">Scrivener 方法总结 </a>
                         </h1>
                         <p id="post-meta">
-                            <i class="fa fa-clock-o"></i>2020-02-21 |
+                            <i class="fa fa-clock-o"></i>2021-06-04 |
                             <i class="fa fa-tags"></i>
                                 <a href="https://willisfusu.github.io/tag/will-tech/">技术</a>
                                 
-                                <a href="https://willisfusu.github.io/tag/k6oOWb0fr/">LaTex</a>
+                                <a href="https://willisfusu.github.io/tag/ZeIdG4LyD/">markdown</a>
                                 |
                             <i class="fa fa-book-reader"></i>3 min read
                         </p>
                         
                         
-                            <blockquote class="fa fa-exclamation-triangle warning">
-                                此文章发表于<strong><span style="color:#f75357">
-                                        469</span></strong> 天前，请注意文章时效
-                            </blockquote>
-                            
                         <div class="post-content" itemprop="articleBody">
-                            <p>这个周在做组会报告的时候刻意使用Beamer来制作，主要是想自己年前的时候学习了一段时间的Beamer，不能就这样放下了。另外就是我觉得自己年前修改的一个模版还是比较整洁好用。</p>
+                            <p>最近在写博士论文的时候，尝试了一下卡片写作的方法。感觉对自己的进度还是有不少的帮助。因为我使用的软件是scrivener，所以我有在考虑怎么才能把 Zotero 搭配 word 的那一套工作流转到 Scrivener 上来。</p>
+<p>不得不承认，Word绝对是文字编辑领域的top 1，不光体现在其本身的素质上，也体现在与其它软件的互联互通上。要想在 scrivener 上实现文献的引用，就要麻烦不少。我找到了一篇关于[此的文章]。</p>
 <!-- more -->
-<h2 id="遇到的问题">遇到的问题</h2>
-<p>但是在使用过程中，遇到了几个问题：</p>
+<p>这里就不去写过多软件设置方面的东西了，我在这里就只记录一下 compile时需要注意的几个问题，后面可能会不定期的来更新这篇文章。在 compile 的时候选择使用<a href="https://github.com/iandol/scrivomatic">scrivomatic</a>。具体的设置可以在上面的链接中找到。</p>
+<h2 id="format-选择配置">Format 选择配置</h2>
+<p>在选择导入的 scrivomatic 格式之后，还需要再根据自己的实际情况配置一下。其实也很简单，主要是标题格式、等级的选择。</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/scri-format.png" alt="Scrivomatic格式配置" loading="lazy"></figure>
+<p>需要配置的地方已经「圈」出来了：</p>
 <ol>
-<li>脚注的问题。 因为我需要在一些数据上加参考文献，又不想在Beamer最后放一个参考页，就想用脚注的方式来实现。但是有一个问题是，我在Beamer页面下加了一个logo，直接加脚注logo就会与footnote overlap。</li>
-<li>过渡页。在之前的PPT制作过程中，不同的部分之间喜欢加一个过渡页。在Beamer中也想实现这个样式。</li>
+<li>Section Type。这里需要特别注意，因为如果不人为定义 section type，那就会按默认的来，但是很可能是不正确的。所以需要根据实际情况修改 heading 或者 subheading 再或者就是简单的 section。</li>
+<li>第一步完成之后，就需要给选择的 heading or subeading 选择一个样式。这就是中间的 section layouts。 点击下面的 Assign section layouts 就可以给不同的标题等级配置样式。</li>
+<li>如果还需要更加详细的样式设置，那么可以点击左下角的「齿轮⚙️️」，编辑格式。</li>
 </ol>
-<h2 id="footnote解决方案">Footnote解决方案</h2>
-<h3 id="最简单的方法">最简单的方法</h3>
-<p>根据Beamer的用户指南，我们可以直接使用<code>\setbeamertemplate{footnote}</code>来进行设置。如下面的代码：</p>
-<pre><code class="language-Tex">\setbeamertemplate{footnote}{
-  \hspace*{0.08\textwidht}
-  \insertfootnotemark
-  \parbox[b][1.2em][b]{0.7\textwidth}{\insertfootnotetext}
-}
-</code></pre>
-<p>如此就可以得到下面图示的脚注，并且因为使用了<code>\parbox</code>脚注的内容可以根据设置的宽度进行换行。<br>
-<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200221213957.png" alt="" loading="lazy"></p>
-<h3 id="存在的问题">存在的问题</h3>
-<ol>
-<li>脚注过高<br>
-我们观察图片中的脚注发现一个问题，那就是脚注的位置好像有些高。这是因为在这个模版中设置了<strong>footline</strong>从而抬高了脚注的位置。这个问题的解决是直接将footline清空不设置。但是这样将会再产生一个问题，那就是页码很多是设置在footline里的，取消了footline如何设置页码呢？<br>
-我们使用Beamer的另一个页面元素：<strong>navigation symbols</strong>设置页码。</li>
-</ol>
-<pre><code class="language-Tex">\defbeamertemplate*{footprogress}{UoM}
-{%
-	\usebeamerfont{progress}\insertframenumber\ of \inserttotalframenumber
-}
-\setbeamertemplate{navigation symbols}{%
-	\ifx \insertframetitle \@empty
-	\else
-		\usebeamertemplate{footprogress}
-    \fi
-    }
-</code></pre>
-<p>结过这样的设置，并且在导言中使用<code>\renewcommand\footnoterule{}</code>取消掉脚注的分隔横线之后，就可以得到如下的结果：<br>
-<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200222154121.png" alt="" loading="lazy"></p>
-<ol start="2">
-<li>
-<p>脚注，页码，logo不对齐<br>
-虽然到目前为止我们可能已经完成了大部分的工作，结果也看起来很可以接受，但是想必有的朋友也发现了一个问题，那就是logo基线，脚注基线，页码基线不对齐，显得比较凌乱。那这个问题目前还没有解决(\cry) 。我在网上看到别人也提到了这个<a href="https://tex.stackexchange.com/questions/477227/how-can-i-move-the-footnote-in-the-far-left-or-adjust-it">问题</a>，同样也没有解决方法。</p>
-</li>
-<li>
-<p>脚注样式<br>
-我们现在看到的脚注都是上标的样式，这个样式同样可以修改，使其更加接近参考文献的样式。具体方法可以参考这里的<a href="https://tex.stackexchange.com/questions/308038/beamerbiblatex-change-the-footnotemark-style-of-footcite/308040#308040">文章</a>。</p>
-</li>
-</ol>
-<p>最终修改好的脚注是这个样子的：<br>
-<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200222171134.png" alt="" loading="lazy"></p>
-<h2 id="过渡页解决方案">过渡页解决方案</h2>
-<p>说白了过渡页其实就是一个小节的节标题。在Bearmer中有一个命令可以直接在节，小节，前加一页frame。代码如下：</p>
-<pre><code class="language-Tex">\AtBeginSection[]{
-	\begin{frame}
-		\vfill
-		\centering
-		\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
-			\usebeamerfont{title}
-			\textsc{\insertsectionhead}\par%
-		\end{beamercolorbox}
-		\vfill
-	\end{frame}}
-</code></pre>
-<p>如果想在subsection前也加过渡页，只要使用<code>\AtBeginSubsection</code>就可以。具体解释可以参考<strong>The beamer class-User Guide for version 3.57</strong> 98页<br>
-得到的结果是这样的：<br>
-<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200222171718.png" alt="" loading="lazy"></p>
+<h2 id="表格-table">表格 Table</h2>
+<p>其实表格可以是Markdown中最让人讨厌的地方了，总之找来找去也没有一个完美的解决方法。好在表格如果不多的话，也能忍受。需要注意的一点是，需要按照Pandoc的语法格式来书写表格。具体的可以参考<a href="https://pandoc.org/MANUAL.html#extension-grid_tables">此处</a>。在科研论文中，大部分的时候写的应该是「三线表」，但是Pandoc默认的并不是这个格式。</p>
+<p>这里着实花费了我不少的时间，终于结合 Pandoc manual 和 Pandoc github issue 页里的一个<a href="https://github.com/jgm/pandoc/issues/3275">回答</a> 解决了这个问题。具体的解决方法如下：</p>
+<h3 id="官方方法">官方方法</h3>
+<p>自己定义一个 reference-doc.docx 文件。 官方给的方法是 <code>pandoc -o custom-reference.docx --print-default-data-file reference.docx</code> 先导出一个 reference.docx，然后把里面预定义的 「Table」 表格样式修改为你自己需要的，然后保存。之后再转换为 docx 时，就手动指向这个修改后的模板。</p>
+<h3 id="在-scrivener-中的方法">在 scrivener 中的方法</h3>
+<p>因为我是使用 scrivomatic 这个脚本格式直接转成 docx 的，所以就不想每次再自己手动使用 Pandoc 去转换。仔细查看了 scrivomatic 的脚本配置文件之后，发现 scrivomatic 没有使用 Pandoc 默认的模板文件。那就直接修改 scrivomatic 应该就可以。</p>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/ScriRefDoc.png" alt="scrivomatic脚本配置文件" loading="lazy"></figure>
+<p>试了一下果然可以！</p>
+<p>需要注意的是，在修改 docx 模板中的预定义表格样式的时候，<strong>样式名要取为「Table」，并且设为默认样式。</strong></p>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/ScriTableSet.png" alt="表格样式设定" loading="lazy"></figure>
 
                         </div>
                          <blockquote>
-                             <p>本文链接：<a style="text-decoration: underline" href="https://willisfusu.github.io/post/beamer-footnote/">https://willisfusu.github.io/post/beamer-footnote/</a></p>
+                             <p>本文链接：<a style="text-decoration: underline" href="https://willisfusu.github.io/post/scrivener/">https://willisfusu.github.io/post/scrivener/</a></p>
                              <p>此文章由<a style="text-decoration: underline" href="https://willisfusu.github.io/">李二先生</a>采用<a style="text-decoration: underline" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可,转载请注明出处。
                              </p>
                          </blockquote>
                     </article>
                     <ul class="post-near">
                         
-                        <li>上一篇<a href="https://willisfusu.github.io/post/python-matplotlib-1/">Python-Matplotlib作图基本学习（1）</a> </li>
                         
-                        
-                        <li>上一篇<a href="https://willisfusu.github.io/post/github-tu-chuang-chuang-jian/">Github图床创建</a> </li>
+                        <li>上一篇<a href="https://willisfusu.github.io/post/color-sheme/">彩色配置</a> </li>
                         
                     </ul>
                     <div id="vcomments"></div>
@@ -198,14 +149,13 @@
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98">遇到的问题</a></li>
-<li><a href="#footnote%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">Footnote解决方案</a>
+<li><a href="#format-%E9%80%89%E6%8B%A9%E9%85%8D%E7%BD%AE">Format 选择配置</a></li>
+<li><a href="#%E8%A1%A8%E6%A0%BC-table">表格 Table</a>
 <ul>
-<li><a href="#%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%B9%E6%B3%95">最简单的方法</a></li>
-<li><a href="#%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98">存在的问题</a></li>
+<li><a href="#%E5%AE%98%E6%96%B9%E6%96%B9%E6%B3%95">官方方法</a></li>
+<li><a href="#%E5%9C%A8-scrivener-%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95">在 scrivener 中的方法</a></li>
 </ul>
 </li>
-<li><a href="#%E8%BF%87%E6%B8%A1%E9%A1%B5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">过渡页解决方案</a></li>
 </ul>
 </li>
 </ul>

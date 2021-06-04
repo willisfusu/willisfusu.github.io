@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://willisfusu.github.io</id>
     <title>李二先生</title>
-    <updated>2021-04-03T14:26:28.683Z</updated>
+    <updated>2021-06-04T19:20:33.396Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://willisfusu.github.io"/>
     <link rel="self" href="https://willisfusu.github.io/atom.xml"/>
@@ -17,6 +17,41 @@
     <logo>https://willisfusu.github.io/images/avatar.png</logo>
     <icon>https://willisfusu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 李二先生</rights>
+    <entry>
+        <title type="html"><![CDATA[Scrivener 方法总结 ]]></title>
+        <id>https://willisfusu.github.io/post/scrivener/</id>
+        <link href="https://willisfusu.github.io/post/scrivener/">
+        </link>
+        <updated>2021-06-04T12:16:29.000Z</updated>
+        <summary type="html"><![CDATA[<p>最近在写博士论文的时候，尝试了一下卡片写作的方法。感觉对自己的进度还是有不少的帮助。因为我使用的软件是scrivener，所以我有在考虑怎么才能把 Zotero 搭配 word 的那一套工作流转到 Scrivener 上来。</p>
+<p>不得不承认，Word绝对是文字编辑领域的top 1，不光体现在其本身的素质上，也体现在与其它软件的互联互通上。要想在 scrivener 上实现文献的引用，就要麻烦不少。我找到了一篇关于[此的文章]。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>最近在写博士论文的时候，尝试了一下卡片写作的方法。感觉对自己的进度还是有不少的帮助。因为我使用的软件是scrivener，所以我有在考虑怎么才能把 Zotero 搭配 word 的那一套工作流转到 Scrivener 上来。</p>
+<p>不得不承认，Word绝对是文字编辑领域的top 1，不光体现在其本身的素质上，也体现在与其它软件的互联互通上。要想在 scrivener 上实现文献的引用，就要麻烦不少。我找到了一篇关于[此的文章]。</p>
+<!-- more -->
+<p>这里就不去写过多软件设置方面的东西了，我在这里就只记录一下 compile时需要注意的几个问题，后面可能会不定期的来更新这篇文章。在 compile 的时候选择使用<a href="https://github.com/iandol/scrivomatic">scrivomatic</a>。具体的设置可以在上面的链接中找到。</p>
+<h2 id="format-选择配置">Format 选择配置</h2>
+<p>在选择导入的 scrivomatic 格式之后，还需要再根据自己的实际情况配置一下。其实也很简单，主要是标题格式、等级的选择。</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/scri-format.png" alt="Scrivomatic格式配置" loading="lazy"></figure>
+<p>需要配置的地方已经「圈」出来了：</p>
+<ol>
+<li>Section Type。这里需要特别注意，因为如果不人为定义 section type，那就会按默认的来，但是很可能是不正确的。所以需要根据实际情况修改 heading 或者 subheading 再或者就是简单的 section。</li>
+<li>第一步完成之后，就需要给选择的 heading or subeading 选择一个样式。这就是中间的 section layouts。 点击下面的 Assign section layouts 就可以给不同的标题等级配置样式。</li>
+<li>如果还需要更加详细的样式设置，那么可以点击左下角的「齿轮⚙️️」，编辑格式。</li>
+</ol>
+<h2 id="表格-table">表格 Table</h2>
+<p>其实表格可以是Markdown中最让人讨厌的地方了，总之找来找去也没有一个完美的解决方法。好在表格如果不多的话，也能忍受。需要注意的一点是，需要按照Pandoc的语法格式来书写表格。具体的可以参考<a href="https://pandoc.org/MANUAL.html#extension-grid_tables">此处</a>。在科研论文中，大部分的时候写的应该是「三线表」，但是Pandoc默认的并不是这个格式。</p>
+<p>这里着实花费了我不少的时间，终于结合 Pandoc manual 和 Pandoc github issue 页里的一个<a href="https://github.com/jgm/pandoc/issues/3275">回答</a> 解决了这个问题。具体的解决方法如下：</p>
+<h3 id="官方方法">官方方法</h3>
+<p>自己定义一个 reference-doc.docx 文件。 官方给的方法是 <code>pandoc -o custom-reference.docx --print-default-data-file reference.docx</code> 先导出一个 reference.docx，然后把里面预定义的 「Table」 表格样式修改为你自己需要的，然后保存。之后再转换为 docx 时，就手动指向这个修改后的模板。</p>
+<h3 id="在-scrivener-中的方法">在 scrivener 中的方法</h3>
+<p>因为我是使用 scrivomatic 这个脚本格式直接转成 docx 的，所以就不想每次再自己手动使用 Pandoc 去转换。仔细查看了 scrivomatic 的脚本配置文件之后，发现 scrivomatic 没有使用 Pandoc 默认的模板文件。那就直接修改 scrivomatic 应该就可以。</p>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/ScriRefDoc.png" alt="scrivomatic脚本配置文件" loading="lazy"></figure>
+<p>试了一下果然可以！</p>
+<p>需要注意的是，在修改 docx 模板中的预定义表格样式的时候，<strong>样式名要取为「Table」，并且设为默认样式。</strong></p>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/ScriTableSet.png" alt="表格样式设定" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[彩色配置]]></title>
         <id>https://willisfusu.github.io/post/color-sheme/</id>
@@ -718,55 +753,6 @@ Fixes SetVirtualAddresses calls to virtual addresses, not needed on Skylake and 
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>只是在网上看到有人这么说，并没有实际证明。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ 网站改版记录（二）10-APR-2020]]></title>
-        <id>https://willisfusu.github.io/post/webtheme-change-2/</id>
-        <link href="https://willisfusu.github.io/post/webtheme-change-2/">
-        </link>
-        <updated>2020-04-12T01:44:11.000Z</updated>
-        <summary type="html"><![CDATA[<p>这段时间一直读读写写，看看别人的网站、主题以便我贯彻「拿来主义」，另一边把看到的好的特性研究下实现方法，摘录一些代码。看来看去好久，最终决定以 <a href="https://github.com/idealclover/Clover">idealClover</a> 为蓝本，规划设计自己的网站。[^1]</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>这段时间一直读读写写，看看别人的网站、主题以便我贯彻「拿来主义」，另一边把看到的好的特性研究下实现方法，摘录一些代码。看来看去好久，最终决定以 <a href="https://github.com/idealclover/Clover">idealClover</a> 为蓝本，规划设计自己的网站。<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
-<!-- more -->
-<h2 id="配色与字体">配色与字体</h2>
-<p>配色与字体对于一个网页看上去是否舒服还是非常重要的。字体与配色我参考了不少网站，最后选定的配色如下：<br>
-<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200412153906.png" alt="" loading="lazy"><br>
-网页的配色参考了 <a href="https://designmodo.github.io/Flat-UI/">Flat UI</a>、<a href="http://www.flatuicolorpicker.com/">flatuicolorpicker</a> 和 <a href="https://coolors.co/">Generate</a> 这几个配色工具。</p>
-<p>字体使用了 <a href="https://fonts.google.com/">Google Font API</a>，可以方便的选择并引入字体。这次我选择的字体中文使用 思源黑体，英文使用 Ubuntu。字重选择了300、400、700三种。</p>
-<h2 id="文章分类菜单">文章分类菜单</h2>
-<p>研究了下 Clover 这个主题，发现是以 bootstrap 框架实现的动态适应，但是仔细又看了下 bootstrap 这个框架，发现还是非常繁琐的。但是由于主题原作者已经使用 bootstrap 搭建好了，所以我就决定直接修改原作者的主题。因为是在 github 的公开仓库里，所以也版权也没有问题。</p>
-<p>原作者的主题是为 Typecho 编写的，而我的博客是使用 Gridea 搭建，所以首先要做的就是将 Typecho 主题的文档结构和 Gridea 对应。这里有一个问题：Gridea 没有「Category」这个概念，想了一下，最后决定使用几个标签来代替 Category。但是这样又会引入另一个问题，那就是没办法将主题做到自动化，只能别人在使用主题的时候自己加进去。<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
-<h2 id="鼠标特效与鼠标图标">鼠标特效与鼠标图标</h2>
-<p>看到好多个人博客的页面上都对鼠标特效与图标进行了自定义，为主要是文字的博客增加了一些点缀。在这次改版过程中，我也添加了特效与图标。</p>
-<h3 id="特效">特效</h3>
-<p>特效比较简单，网上有好多类似的项目，像是点击时出现心心 ❤️ 或者是出现「和谐、民主、自由」之类的。我这里就直接使用了一个叫「烟花特效」的特效。我看到很多博客在用这个特效，比较低调，又能增加点缀。但是我查了一下，并没有找到出处，就只好直接拿来用了。</p>
-<p>使用方法很简单，直接引入 js 文件就可以，默认的效果不错，也就没有再自己做调整。</p>
-<h3 id="图标">图标</h3>
-<p>修改 css 文件就可以实现自定义鼠标图标的目的。代码如下：</p>
-<pre><code class="language-css">body {
-	cursor: url(../media/houxuan.cur),auto
-	}
-body:active{
-	cursor: url(&quot;../media/zc.cur&quot;),auto
-	// 单击时鼠标图标
-	}
-</code></pre>
-<h2 id="代码高亮">代码高亮</h2>
-<p>代码高亮我使用的是 prism.js。这个模块可以自定义语言、高亮样式。使用也非常简单，只要在 <a href="https://prismjs.com/">prismjs</a> 的网站上设置好自己喜欢的样式，然后就可以下载 js 与 css 文件。将这两个文件插入到自己的网页中就可以了。最终实现的效果如图：<br>
-<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200412150824.png" alt="" loading="lazy"></p>
-<h2 id="主页">主页</h2>
-<p>主页的设置就直接拿了 idealClover 这个主题来用的。Title 与 subtitle 使用的是 <a href="https://github.com/idealclover/Random-Homepage">Random-Homepage</a>。背景使用的是 <a href="https://github.com/hustcc/canvas-nest.js">canvas-nest.js</a>。</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>说实话，看到这个主题的时候，当时就觉得简洁又好看，大家可以去看看。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p>或许可以看看 Gridea 的主题自定义功能，是否可以自己配置这几个标签, 但即使是这样，还是需要在发布文章的时候，手动添加分类标签。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
