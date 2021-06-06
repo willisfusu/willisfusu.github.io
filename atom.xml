@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://willisfusu.github.io</id>
     <title>李二先生</title>
-    <updated>2021-06-04T19:20:33.396Z</updated>
+    <updated>2021-06-06T15:59:46.622Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://willisfusu.github.io"/>
     <link rel="self" href="https://willisfusu.github.io/atom.xml"/>
@@ -17,6 +17,49 @@
     <logo>https://willisfusu.github.io/images/avatar.png</logo>
     <icon>https://willisfusu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 李二先生</rights>
+    <entry>
+        <title type="html"><![CDATA[对于网络评论的一些思考]]></title>
+        <id>https://willisfusu.github.io/post/thinking_about_comments/</id>
+        <link href="https://willisfusu.github.io/post/thinking_about_comments/">
+        </link>
+        <updated>2021-06-06T08:58:45.000Z</updated>
+        <summary type="html"><![CDATA[<p>一段时间以来，我越来越觉得网络上的评论变得更加刻薄，更加具有攻击性。有时候很简单的几个问题，也有大量的人站到不同的阵营中去，对对方大加批斗。更有甚者，频频发出「反智」言论。因为我实在没有办法克制自己看评论的冲动，为此，我卸载了微博、酷安等软件。即使如此，还有不少无法避免的地方，像是 Bilibili 的弹幕。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一段时间以来，我越来越觉得网络上的评论变得更加刻薄，更加具有攻击性。有时候很简单的几个问题，也有大量的人站到不同的阵营中去，对对方大加批斗。更有甚者，频频发出「反智」言论。因为我实在没有办法克制自己看评论的冲动，为此，我卸载了微博、酷安等软件。即使如此，还有不少无法避免的地方，像是 Bilibili 的弹幕。</p>
+<!-- more -->
+<p>这两天华为「鸿蒙」的发布会视频让我又刷新了对于网络评论中「戾气」的认识。我自己觉得，对于一件事物，应该允许批评和质疑。但是一定是要有依据，言之有物的批评和质疑。这是任何事物的发展和进步所必须的。如果只是单纯的讨厌和不喜欢，当然也可以评论，但是不应该虚构和污蔑，只应该谈及主观情感上的感受。</p>
+<p>但是是视频弹幕中的有些言论，却让我一时觉得迷惑与不解，难道这家公司和那些发弹幕的「键盘侠」们是有什么过节？是什么力量驱动着这些人「孜孜不倦」地发着大量相同内容的言论？</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/Snipaste_2021-06-03_14-16-10.png" alt="某位「键盘侠」的弹幕" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/Snipaste_2021-06-03_14-19-10.png" alt="另一位「键盘侠」的高论" loading="lazy"></figure>
+<p>对于这种言论，出于对社区环境的维护，我当然是顺手举报加屏避。但是之后我一直思考这种行为背后的动因。我觉得有以下几点可能的原因：</p>
+<ol>
+<li>对于自己不懂的领域没有「敬畏」之心；</li>
+<li>评论的事物与生活相关，但又过于「高端」；</li>
+<li>叛逆心理，追求逆反的快感；</li>
+<li>单纯的「反革命」分子。</li>
+</ol>
+<h2 id="对于自己不懂的领域没有敬畏之心">对于自己不懂的领域没有「敬畏」之心</h2>
+<p>不得不承认，现代网络的发达，让信息的获得成本大大降低了。即便是自己从来不了解的领域，通过简单的搜索也可以快速的得知一些大概的信息。这其中对于复杂、高深的知识尤其如此。因为这种知识因其复杂的特性，网络上能找到的信息往往是极度概括又浅显的。这种概括浅显的描述是有利于知识普及的，可以使得想了解、学习该领域的人可以快速的对一个问题形成一个大概的认识。但同时这就给了那些「键盘侠」们一种误解，以为自己真的通过网络搜索到的「三言两语」就成了这个方面的专家，变得了不得了，自然而然又产生一种「不过如此」的轻视与傲慢。此类人物可以在各种为大众所熟知，但其背后机理又不甚普及或者明了的事物相关的文章、视频中所见到。例如最近的「核聚变」、「鸿蒙」、「火星车」相关的文章、视频的评论、弹幕中就可以轻松找到。</p>
+<p>这些人表现得如此自信，大概是源自于其真正的无知。这些人即可以是相关领域的工作者，也可以是非相关领域的人员。这种人对于知识的学习是机械且充满教条主义的，认为自己学习到的知识就是这个世界运行的真理，却丝毫不会去质疑是否有例外，是否有更深层次的原因。他们的思维模式是简单没有批判的。往往是先有了一个结论，而后又通过自己可怜且有限的知识去搜索自己想要的论据，以达到证明自己结论的目的。不得不说，在这种模式下，他们大概率是会找到自己女以为的「证据」。因为我们的大脑只会看到，我们想看到的东西。</p>
+<h2 id="评论的事物太过于普及但又过于高端">评论的事物太过于普及，但又过于「高端」</h2>
+<p>如果一件事物太过于普及，那么讨论的人不会很多。就像今天不会有人再去讨论空气中是不是有氧气这种物质。但如果一件事情与生活相关，但又过于「高端」，那就一定是一个非常流行的话题。就是像物理、数学从常人的讨论话题中淡出，反而生物学却是民众日常的话题。因为物理、数学与日常生活相关的部分越来越少了，同时其复杂和高难度让一般民众已经无法理解，自然就不会有人去讨论。但是同样复杂且需要大量科学学习的生物学却有很多人来讨论。因为作为一种生物，人类天天都接解到自己以及周边的动物与植物，是极其的熟悉的。同时，由于生物学的复杂和难度又让普通民众无法辨别别人的言论的真伪。又有民众基础，又可以不用担心随时被别人拆穿，自然就流行起来。崔永元之流就是借此来哄骗大众以实现其不可告人的密秘 <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。</p>
+<p>对应到「鸿蒙」系统这件事情上来，就是这种情况。手机每个人都有，系统每天都在用。「键盘侠」们心想：我就是最熟悉手机系统的人。毕竟他们每天也无有其它事情可做。再加上虽然没吃过其它系统的猪肉，但是起码见过猪跑就更加强了他们的信心。我上面的两张截图中，就是这种人。</p>
+<p>对付这种人，就应该拿到真正硬核的知识，不用担心其无法理解。当这种人觉得无法理解的时候，自然就不会再去讨论这个话题，并且认为这是一个真正厉害且高端的事物了。</p>
+<h2 id="叛逆心理">叛逆心理</h2>
+<p>我想这种人可能是占了不少比例的，但是又是不值得花费笔墨来讨论的。因为其还处于叛逆的时候，任何的解释与努力都是成效甚微的。我们应该允许且理解心智尚未成熟的行为，每个人都经过了这种时期。</p>
+<h2 id="单纯的反革命分子">单纯的「反革命」分子</h2>
+<p>实在是想不出用什么词会比较准确的描述这种人，想来想去，只有这个有年代感的「反革命」最贴切。但是这种人往往不会大量出现在评论中，他们更愿意自己写一篇文章，发一个视频来单纯的引导民众，污蔑他人。像是「松鼠会」「果壳网」 「回形针」等，借科普名义实行龌龊事的，这里就不展开讲了。真正出现在评论，弹幕中的大概是他们手下的喽啰们，也就是水军。所以你会看到如果在一个视频屏避了某个用户的言论，其它视频中，竟然也有他被屏避的弹幕。这些人大部分的弹幕是雷同的，且大量重复的。对于这种人，请遵守社区评论规范，点击举报。</p>
+<p>好了，忍了好几天，以上的内容不免也有些偏颇，或者有「戴帽子」的嫌疑，但是作为对一种现象的思考应该还是有益处的。</p>
+<p>暂时就写这么多，后面如果想到什么就再写什么进来。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>当年此人在我校新闻学院报告时，借助于自己多年的话术与辩论技巧竟然敢和一位生物学的教授争，可见其无知、自大与狂妄。可惜的是卢教授没能像丁院士对柴静一样打破话术与陷阱。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Scrivener 方法总结 ]]></title>
         <id>https://willisfusu.github.io/post/scrivener/</id>
@@ -703,56 +746,6 @@ Fixes SetVirtualAddresses calls to virtual addresses, not needed on Skylake and 
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>如果没有记，这个纪念页面的开发者应该是我当时学校计院的一个学长。当时此网页一出，就引大众羡慕。但其后事情发展实在让人叹息。当时在日月光华上也是十大，我虽然围观过，但是对内情知之不详，此处不表。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Valine 评论系统美化定制]]></title>
-        <id>https://willisfusu.github.io/post/valine/</id>
-        <link href="https://willisfusu.github.io/post/valine/">
-        </link>
-        <updated>2020-04-19T07:10:43.000Z</updated>
-        <summary type="html"><![CDATA[<p>前几天完成了自己的小博客的改版，兴冲冲的去拿给女朋友看。然后她非常好奇我为啥不整一个评论系统，并且觉得如果没有评论系统，我这个博客就显得不够完整。听她说之后，我想了想，感觉也有道理，如果有一个评论系统，就可以更好与其他朋友交流（虽然可能也没有几个人会看我的博客😂），因此决定整一个评论。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>前几天完成了自己的小博客的改版，兴冲冲的去拿给女朋友看。然后她非常好奇我为啥不整一个评论系统，并且觉得如果没有评论系统，我这个博客就显得不够完整。听她说之后，我想了想，感觉也有道理，如果有一个评论系统，就可以更好与其他朋友交流（虽然可能也没有几个人会看我的博客😂），因此决定整一个评论。</p>
-<!-- more -->
-<h2 id="评论系统选择">评论系统选择</h2>
-<p>现在的静态博客使用的评论系统大概就是 Gittalk, Disqus 这两个比较成熟的。但是我去看了下别人的博客，虽然这两个系统都应用比较多，但是Gittalk 和 Disqus 都没有给我一种简洁、干净的感觉，并且 Disqus 对大陆支持好像不是太好<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。找来找去，看到不少人也在使用 Valine 评论系统，我看了下他们的成品展示，嗯，是我要的感觉。😍</p>
-<h2 id="安装">安装</h2>
-<p>Valine 的安装非常简单，按照<a href="https://valine.js.org">官方文档</a>就可以非常迅速的完成安装过程。大体上就是注册一个 leanCloud 账号，创建一个应用。</p>
-<p>不过这里有一个问题，大陆版的 leanCloud 在创建应用的时候需要实名认证。这个认证过程是使用支付宝完成的。但是我试过几次，都不成功。我自己的支付宝是已经完成了实名认证的，按理说不会出现这种问题。搜索了一下，发现也有别的用户出现相同问题，官方也没有给出解决方法，需要用户自己去联系 leanCloud 客服。想来想去觉得好麻烦，正要想是不是换一个评论系统，结果就发现 leanCloud 竟然有国际版，不需要实名认证，于是就注册了国际版的账号。国际版和大陆版在安装 Valine 上没有区别。那就使用国际版好了。</p>
-<h2 id="定制修改评论框样式">定制修改评论框样式</h2>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200419144945.png" alt="" loading="lazy"></figure>
-<p>这是官方默认的样式，感觉有几个问题：</p>
-<ul>
-<li>不起眼，边框几乎不可见，非常难受。</li>
-<li>无用的组件，像是 Markdown 和评论预览。</li>
-</ul>
-<p>于是就想着自己把这个样式修改一下，最终的成果如下：</p>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/valine-result.png" alt="" loading="lazy"></figure>
-<p>虽然不能说多美，但是看上去顺眼多了。</p>
-<h3 id="修改步骤">修改步骤</h3>
-<p>因为我在修改过程中，按照我的设想，需要对 Valine 的输出元素进行修改，因此不可避免的要修改 Valine.js 文件，所以会对后续升级 Valine 版本造成一定的影响。但是实在是没办法，因为如果只修改 CSS 很难达到我需要的效果（也有可能是我的 CSS 功力不到家 😂 ）。</p>
-<p>所以这里也就不给出具体的代码了。只说说大体上的思路，需要修改的朋友可以参考一下。</p>
-<p>Valine 的 js 文件的功能就是输出评论所需要的元素标签，然后再输出针对这些元素标签的 CSS style。所以修改思路就是先使用浏览器检查功能，找到自己需要修改的元素标签的 id 或者 class，然后就可以修改输出内容。再找到对应的 CSS style 就可以修改样式。</p>
-<h3 id="评论框背景动画">评论框背景动画</h3>
-<p>这是再说一下评论框内的那个背景小动画，我看到不少人的博客评论框都设置了这样一个小动画。自己也比较喜欢，看了下，实现起来也是非常容易。就是设置输入框的背景图片，然后再对输入框的 :focus 做响应。简单的代码如下：</p>
-<pre><code class="language-css">.v .veditor {
-	background-image: url(&quot;https://raw.githubusercontent.com/willisfusu/piconly/master/image/comment_bg.png&quot;);
-	background-size: initial;
-	background-repeat: no-repeat;
-        background-position: right;
-}
-.v .veditor:focus{
-	background-position-y:115px;transition:.4s
-}
-</code></pre>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>只是在网上看到有人这么说，并没有实际证明。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
