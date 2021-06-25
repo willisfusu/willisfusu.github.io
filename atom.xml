@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://willisfusu.github.io</id>
     <title>李二先生</title>
-    <updated>2021-06-06T16:04:48.050Z</updated>
+    <updated>2021-06-25T20:25:11.537Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://willisfusu.github.io"/>
     <link rel="self" href="https://willisfusu.github.io/atom.xml"/>
@@ -17,6 +17,37 @@
     <logo>https://willisfusu.github.io/images/avatar.png</logo>
     <icon>https://willisfusu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 李二先生</rights>
+    <entry>
+        <title type="html"><![CDATA[黑苹果使用 M.2 NGFF 转接卡造成 Airdrop 反应慢，信号不好问题的解决方法]]></title>
+        <id>https://willisfusu.github.io/post/hackintosh-ngff-card/</id>
+        <link href="https://willisfusu.github.io/post/hackintosh-ngff-card/">
+        </link>
+        <updated>2021-06-25T13:23:42.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong>TL; DR：M.2 NGFF 转接卡质量都太差，造成短路。将所有接触点做绝缘处理就可以解决问题。</strong></p>
+]]></summary>
+        <content type="html"><![CDATA[<p><strong>TL; DR：M.2 NGFF 转接卡质量都太差，造成短路。将所有接触点做绝缘处理就可以解决问题。</strong></p>
+<!-- more -->
+<h2 id="1-我遇到的问题">1. 我遇到的问题</h2>
+<p>因为我自己一直在用黑苹果（我的装机方案可见<a href="https://willisfusu.github.io/post/Lenovo-M910q-OpenCore-Hackintosh/">李二先生</a> ，<a href="https://github.com/willisfusu/Lenovo-M910q-Hackintosh">willisfusu/Lenovo-M910q-Hackintosh</a>）网卡的解决方案就是买了一张苹果的原装网卡，使用 M.2 NGFF 转接卡装在了我的电脑上。Wifi 网络没有问题，能够正常使用，但是在使用 Airdrop 或者 Handoff 等功能时，却时好时坏，有时候 Airdrop 需要等很长时间，又或者 Handoff 打开的都是空白的页面。这个问题困扰了我很长时间，我一直以为是「黑苹果」系统层面造成的，也见论坛上有人说是因为 USB 定制的原因。但是我仔细检查，也按照别人方法定制了 USB 并没有解决这个问题。后来，在 tonymacx86 上看到一个帖子（<a href="https://www.tonymacx86.com/threads/solved-solution-bcm94360cs2-m-2-nfgg-wifi-and-airdrop-works-but-bt-not.275112/">原贴见此处</a>，才将这个问题解决。</p>
+<h2 id="2-解决方法">2. 解决方法</h2>
+<p>原来问题是出在了 M.2 NGFF 转接卡上，原作者发现现在市面上的这些转接卡质量都不太行，不知道是不是模具的问题，总之安装到主板上之后，有短路的情况出现。虽然 Wifi 可以正常使用，但是 Airdrop，Handoff 却有可能不能用。Fig.1 是转接卡，网卡，以及主板上固定位置的示意图。需要做绝缘处理的位置有两处：</p>
+<ol>
+<li>网卡与位置 3 之间</li>
+<li>位置 2 与位置 1 之间</li>
+</ol>
+<p>更直观的图示可以见 Fig. 2.</p>
+<figure>
+<center>
+<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20210625205336.png" alt="drawing" width="50%"/></center>
+ <figcaption align = "center">Fig.1 NGFF 转接卡，网卡，主板上固定位置示意图。图片来源：<a href="https://www.tonymacx86.com/threads/solved-solution-bcm94360cs2-m-2-nfgg-wifi-and-airdrop-works-but-bt-not.275112/">原贴</a></figcaption>
+</figure>
+<figure>
+ <center><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20210625211456.png" alt="绝缘处理示意图" /></center>
+ <figcaption align = "center">Fig.2 绝缘处理位置示意图。图片来源：<a href="https://www.tonymacx86.com/threads/solved-solution-bcm94360cs2-m-2-nfgg-wifi-and-airdrop-works-but-bt-not.275112/">原贴</a></figcaption>
+</figure>
+<p>经过了这样处理之后，果然 Airdrop 和 Handoff 都正常了。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[对于网络评论的一些思考]]></title>
         <id>https://willisfusu.github.io/post/thinking_about_comments/</id>
@@ -668,84 +699,6 @@ Fixes SetVirtualAddresses calls to virtual addresses, not needed on Skylake and 
 <li id="fn1" class="footnote-item"><p>非标准硬件是指和网上大多数教程使用的硬件不同的硬件，是我杜撰的名词🦁。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
 <li id="fn2" class="footnote-item"><p>仅作参考使用，在使用前建议先阅读 Open core 安装指南。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Our Library 响应式网页编写反思记录]]></title>
-        <id>https://willisfusu.github.io/post/our-library/</id>
-        <link href="https://willisfusu.github.io/post/our-library/">
-        </link>
-        <updated>2020-05-05T09:49:02.000Z</updated>
-        <summary type="html"><![CDATA[<p>隔离在家，每天就想着怎么折腾 😂。之前在做 blog 主题的时候看过了不少的网站找参考样式，当时就想着，这些网站可真是好看，如果我也能做一个就好了。最近又赶上了老婆的生日，于是两者一结合，就打算做一个纪念网站，当作生日礼物（虽然后来因为自己半调子的能力，没有能够在生日之前上线 😢 ）。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>隔离在家，每天就想着怎么折腾 😂。之前在做 blog 主题的时候看过了不少的网站找参考样式，当时就想着，这些网站可真是好看，如果我也能做一个就好了。最近又赶上了老婆的生日，于是两者一结合，就打算做一个纪念网站，当作生日礼物（虽然后来因为自己半调子的能力，没有能够在生日之前上线 😢 ）。</p>
-<!-- more -->
-<h2 id="网页规划">网页规划</h2>
-<h3 id="需求确认">需求确认</h3>
-<p>在开始准备施工之前，我其实已经看了好多差不多类型的页面，也大概搞清楚了自己心里想要一个什么样子的产品。</p>
-<ul>
-<li>页面简洁，不要有大量的装饰。个人感觉这样比较大气 😂</li>
-<li>能够自适应移动端，</li>
-<li>有设计感，不要太简陋，</li>
-<li>如果可能，适当加一些动画。</li>
-</ul>
-<p>因为自己对前端一点也不懂，只能靠自己半调子的认知瞎搞搞，很多的需求也是自己看了别人的网站，觉得自己也应该有这样如此云云。</p>
-<h3 id="内容规划">内容规划</h3>
-<p>在确认了网页的样式需求之后，就是考虑在网页上放点什么。自己之前在情人节的时候，给老婆做了一个小小的纪念页面<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。现在又要搞一个，就想着把这两个整合起来，放到一个框架下面，也方便日后再有其它的项目可以加进来。另外就是我们两个人一直想把自己这一年做过的菜，整理出来，做成一个类似菜单的东西，到时候可以展示出来，算是给自己的生活增加一些仪式感。再加上我们两个日常拍的照片，平时也就是偶尔发一下朋友圈，可能也需要一个集中的地方。于是心里也就有了个数，要在这上面展示啥。</p>
-<ul>
-<li>情话版 😍</li>
-<li>项目展示</li>
-<li>照片区
-<ul>
-<li>旅游照片</li>
-<li>日常照片</li>
-</ul>
-</li>
-</ul>
-<p>大概就是这样一些内容，其后就是开始做施工准备。</p>
-<h2 id="知识储备">知识储备</h2>
-<h3 id="响应式web设计">响应式Web设计</h3>
-<p>对的，你没有看错，我做好了需求与内容确认之后，首先做的就是找了一本讲自适应网页编写的书看了一遍 😢 。 书名是：《响应式Web设计+HTML5和CSS3实战 第2版》大体上了解了下一些术语和常见的操作，省得自己在做的时候，在一些小问题上花费大时间（其实后面在操作的时候，还是在几个小问题上，浪费了不少时间，由此可见术业有专攻不假）。</p>
-<h3 id="bootstrap-响应式框架">Bootstrap 响应式框架</h3>
-<p>为了实现响应式的网页，我这次使用了 Bootstrap 这个框架，因为对新手比较友好，容易上手且外行也能做出一个像样的网页出来。为了方便使用，也在开始施工之前去学习了一下。学习比较快，主要是 Bootstrap 一些类的定义。</p>
-<h2 id="具体施工过程中的坑">具体施工过程中的坑</h2>
-<p>很详细的网页编写我就不写在这里了，有需要的朋友可以<a href="https://github.com/willisfusu/anniversary">点击这里查看</a>。这里我主要记录一下自己在学习以及编写这个网页的时候用到的一些 Js 库和遇到的一些坑，为以后再做相同工作减少阻碍。</p>
-<h3 id="用到的-js-库">用到的 Js 库</h3>
-<p>因为我毕竟是一个彻头彻尾的外行人，所以在开始施工的时候，采用的最原始方法就是选定一个网站，开始照着这个网站做。就在我分析这些网站的代码时，发现其中有一些部分很奇怪，非常像是「生成」的内容。仔细研究之后发现，对于同样的需求，已经有很多成熟的解决方，很多网站也没有自己去「造轮子」而是直接使用了这些 Js 库。</p>
-<p>但是由于我自己是一个非常彻底的外行，看到一些效果的时候，不知道是基于其它库实现的，结果我就掉进了一个大坑：扒 js 代码去研究咋实现的…… 😢 我大概看了几天的 Tween、fullpage 的代码。😅😅😅 此事不表，我列一下我主要用到的库有哪些：</p>
-<ul>
-<li><a href="https://getbootstrap.com/">Bootstrap</a> 用来实现响应式的框架</li>
-<li><a href="https://alvarotrigo.com/fullPage/">Fullpage</a> 用来实现那种整页展示效果</li>
-<li><a href="https://nanogallery2.nanostudio.org/">nanogallery2</a> 实现图片排版，轮播</li>
-<li><s><a href="https://github.com/janpaepke/ScrollMagic">ScrollMagic</a> 整页滚动效果</s> 可能和 fullPage 效果差不多，就用 fp 代替了</li>
-<li><s><a href="https://github.com/kenwheeler/slick">slick</a>  用于图片轮播，</s> 后来使用 nanogallery2 代替。</li>
-</ul>
-<p>使用这些库之后完成的效果分别是这样的：</p>
-<p>Fullpage:<br>
-<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200505172135.png" alt="" loading="lazy"></p>
-<p>nanogallery2:<br>
-<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/20200505172225.png" alt="" loading="lazy"></p>
-<p>其实如果一开始就知道使用这几个库，那整个过程相当简简单单，读完每个库的 Documents 之后，就可以非常快速的完成自己想要的结果，毕竟这几个库都是使用广泛且完成度相当高。</p>
-<h3 id="几个坑">几个坑</h3>
-<ol>
-<li><strong>完成比完美更重要</strong></li>
-</ol>
-<p>第一个坑就是 Tween（GSAP） 这个动画插件，看到了别人成品极其炫丽的样子（我参照的网站可以<a href="https://perficientdigitallabs.com/">点这里查看</a>，我不禁也动了念头，但是搞了半天，发现这个库的入门成本还是挺高的，比较光是画 svg 的路径可能就直接搞死我。最终的结局就是我在研究了两天之后，被迫放弃。这个库可以放到以后网站升级的时候去研究。我当时已经在这个库上花了不少时间，并且我感觉自己不是一时半会就能使用它，所以不得以放弃。</p>
-<ol start="2">
-<li><strong>先确定是什么，更确定怎么做</strong></li>
-</ol>
-<p>再一个坑就是我一头插进 Tween 和 Fullpage 的 js 代码中去看具体实现的方法，其实不是我自己对自己的能力高估了，只是我没有想到，这些代码竟然是这样一个庞大的库里的 😂（主要是这些网站不是引入 js 文件，而是把所有的 js 文件都整合成了一个文件，所以我也不知道其中的代码哪一部分是啥）。后来我发现，这些库里的代码其实都是有比较明显的特征，或者是函数名，或者是报错信息。从这里我得到一个教训，以后再做类似的事情，我得先找到这些特征的地方，搜索一下，确定这是什么，再去想怎么解决。</p>
-<ol start="3">
-<li>Fullpage 与 nanogallery2 冲突</li>
-</ol>
-<p>其实这个问题是一个真正的技术问题 🤓 🤓 上面两个都是我自己血的教训。但是这个问题也已经被很多人发现，并且官方也给了解决方法。这就是使用受众多的库的好处之一，很多坑别人都已经趟过一遍 😄 。简单点说就是 Fullpage 和其它使用 Scroll 监听器的插件会冲突。解决方法个人感觉不太优雅，但是官方也就只给了这一种方法。具体可以见<a href="https://github.com/alvarotrigo/fullPage.js/wiki/FAQ---Frequently-Answered-Questions">此处</a>。我自己也没有心情去看看 nanogallery2 的代码做修改，就按照官方的解决方法来了。</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>如果没有记，这个纪念页面的开发者应该是我当时学校计院的一个学长。当时此网页一出，就引大众羡慕。但其后事情发展实在让人叹息。当时在日月光华上也是十大，我虽然围观过，但是对内情知之不详，此处不表。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
