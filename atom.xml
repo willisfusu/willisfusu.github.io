@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://willisfusu.github.io</id>
     <title>李二先生</title>
-    <updated>2021-06-25T20:25:11.537Z</updated>
+    <updated>2021-12-19T19:32:35.135Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://willisfusu.github.io"/>
     <link rel="self" href="https://willisfusu.github.io/atom.xml"/>
@@ -17,6 +17,47 @@
     <logo>https://willisfusu.github.io/images/avatar.png</logo>
     <icon>https://willisfusu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 李二先生</rights>
+    <entry>
+        <title type="html"><![CDATA[面试总结]]></title>
+        <id>https://willisfusu.github.io/post/jobinterview/</id>
+        <link href="https://willisfusu.github.io/post/jobinterview/">
+        </link>
+        <updated>2021-12-19T11:31:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>最近找工作的事情算是告一段落了，适时来总结一下，把这个过程中的一些所得总结下来。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>最近找工作的事情算是告一段落了，适时来总结一下，把这个过程中的一些所得总结下来。</p>
+<!-- more -->
+<h2 id="工作机会">工作机会</h2>
+<p>找工作的过程中，我投了非常多的简历（超过 30 家）刚开始还会自己记录一下，但是后来就干脆不记录了，为什么呢？因为根本收不到回复，就单单记录自己投了哪家公司就没有多大的意义了。最后，我自己接到的面试中：</p>
+<ol>
+<li>华为、五矿、埃森哲，只此三家是我自己投的。（大概 1/10）</li>
+<li>KLA、康宁、比亚迪、研一要么是同学推荐，要么是猎头推荐。（100%）</li>
+</ol>
+<p><strong>总结</strong>：在做一件事情之前，多和相关领域的同学聊一下，可能会节省自己很多很多的时间。不一定非得自己有了一定的了解再去聊，我自己感觉接入的越早，就会越节省时间，避免走弯路。</p>
+<h2 id="面试准备">面试准备</h2>
+<p>我在 2020 年 2 月份就开始和华为某一部门接触，一直到 7 月份主管面试没通过。当时我还没有意识到自己面试准备的问题，直到后来和一位博后师兄讨论起来，突发奇想。想问一下这位师兄在找工作的时候是如何给别人介绍自己的科研工作的。才算是解决我这个问题。总结来说：</p>
+<ol>
+<li>想明白面试官想知道什么（他们不是想详细的了解你的工作内容，真正想了解你工作内容的是你的导师。）</li>
+<li>如何体现出自己对工作内容的思考（增加自己对于工作内容的思考部分，增加自己入职之后的工作计划。不要觉得太幼稚，但是思考一下，总是有益的。）</li>
+</ol>
+<p>在搞明白这两点之后，我就对我的展示 PPT 做了优化，扔掉了大量的对工作内容细节的描述（我之前太傻，为什么会指望一个不相关领域的人，在听了我的汇报之后能很快了解我的能力呢？而且还是和工作不相关的。），反而着重于讲述项目的<strong>背景、挑战与创新</strong>。这其实是在展示自己的科研思考能力。这种软能力是可以迁移到工作中的。</p>
+<p>另外，我也会和面试官讨论工作的内容与规划。有的面试官是会给我一些建议，很好。如果没有，也没什么。毕竟对于工作内容的思考不仅仅是我一个新人的事情，很多职场人也不一定就有多清楚的认识。</p>
+<p><strong>总结</strong>：要与别人交流，学习别人的好方法，改进自己落后的方法。</p>
+<h2 id="心法">心法</h2>
+<p>这一个小节取名「心法」其实是有些过的，毕竟还没有达到这个高度。我想说什么呢，</p>
+<ol>
+<li>做一件事，虽然有很多的挫折，但是要保持一种积极的方向。</li>
+<li>真正的放下自己心中之前的固有认识。</li>
+</ol>
+<p>比如在找工作过程中，我刚开始对猎头不太喜欢介绍自己太多的细节，一般是把我准备的简历发出去。但是到后面，我变的非常耐心地，非常真诚地去介绍自己的工作和自己心里真正的想法。让他们给我一些建议。因为我们在一定程度上是目标一致的，是统一战线上的。</p>
+<p><strong>总结</strong>：情绪要积极、态度要真诚，针对事情，针对问题。</p>
+<h2 id="除了成功学之外的">除了成功学之外的</h2>
+<p>写了几点，越写越有点「成功学」的味道，在成功之后回头去找原因。我是讨厌成功学的，所以我想一件事能成，除了成功学总结出来的点，肯定还有其它的成分。这些成分很难介定，天时、地利、人和。本应该是无神论一员的我，时常思考无神论者如何看待「运气」。</p>
+<p>面试很多时候就有这种「运气」在里面，比如面试官恰好对你很感兴趣，比如当时恰好公司有职位空缺，比如你和面试官的气场就刚好能合到一起，能聊的开心。我不能否认这种「运气」，因为这是真实物质世界的存在。</p>
+<p>所以即使有一些面试，你已经准备的很好，但是最终还是失败了。不用过于怀疑、反思自己。可能就是你我无法控制的那一部分出了问题。<strong>而我们能做的就是把我们自己可以控制的部分做好</strong>。</p>
+<!-- more -->
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[黑苹果使用 M.2 NGFF 转接卡造成 Airdrop 反应慢，信号不好问题的解决方法]]></title>
         <id>https://willisfusu.github.io/post/hackintosh-ngff-card/</id>
@@ -630,78 +671,6 @@ https://www.toutiao.com/article/v2/tab_comments/?aid=24&amp;app_name=toutiao-web
 <li><a href="https://www.runoob.com/python/python-json.html">JSON</a></li>
 <li><a href="https://www.cnblogs.com/bigtreei/p/10466518.html">json.loads</a></li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ 联想 M910q open core 黑苹果装机遇「坑」记录]]></title>
-        <id>https://willisfusu.github.io/post/Lenovo-M910q-OpenCore-Hackintosh/</id>
-        <link href="https://willisfusu.github.io/post/Lenovo-M910q-OpenCore-Hackintosh/">
-        </link>
-        <updated>2020-05-20T05:40:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>因为疫情在家隔离已经快两个月了，学校不开门，实验室也不给进。无奈之下只好在家里「折腾」。因为之前在网上看到别人晒的联想 M920q 黑苹果装机，对于联想这个 Tiny 机型实在是心里种草，在 ebay 上搜索了下，发现有人出售 M910q 价格也比较合适，于是就拍下，准备搞黑苹果🐶。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>因为疫情在家隔离已经快两个月了，学校不开门，实验室也不给进。无奈之下只好在家里「折腾」。因为之前在网上看到别人晒的联想 M920q 黑苹果装机，对于联想这个 Tiny 机型实在是心里种草，在 ebay 上搜索了下，发现有人出售 M910q 价格也比较合适，于是就拍下，准备搞黑苹果🐶。</p>
-<!-- more -->
-<h2 id="为什么有这篇文章">为什么有这篇文章</h2>
-<p>因为自己以前在我的 T440P 上「折腾」过黑苹果，感觉现在的黑苹果安装已经非常简单，只要按照教程来，十有八九是可以成功的。但是我自己在安装 10.15.4 Catalina 的过程中遇到了很多指南上没有讲到或者是和指南推荐值不同的情况，为了对的起自己折腾花掉的时间，于是就把这些「坑」给记录下来。</p>
-<h2 id="机器配置信息">机器配置信息</h2>
-<p>CPU: i5-7600T</p>
-<p>iGPU: intel HD graphics 630</p>
-<p>Disk01: Samsung SSD 860 EVO 500G</p>
-<p>Disk02: Samsung MZVLM128HEGR-000L1</p>
-<p>Chipset: Q270</p>
-<p>RAM: 16GB</p>
-<h2 id="安装教程">安装教程</h2>
-<p>推荐按照<a href="https://dortania.github.io/OpenCore-Desktop-Guide/">OpenCore-Desktop-Guide</a> 指南进行配置安装。个人感觉这个指南已经是很详细的了，并且最好的一点是该指南里基本将能用的到的 config 设置项给解释了一遍，按照这个指南进行安装，可以很好的了解到自己的设置到底是在设置些什么。 尤其是对于「非标准硬件」<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>用户，非常有用。</p>
-<h2 id="我遇到的一些坑">我遇到的一些「坑」</h2>
-<h3 id="休眠唤醒之后卡住-死机只能硬重启解决">休眠唤醒之后卡住、死机，只能硬重启解决</h3>
-<p>其实这个问题不是我在 Opencore 下遇到的，是我在 Clover 下遇到的问题。我刚开始是使用 Clover 安装的，心里想着毕竟是一个受众非常广的引导方式了，就算是遇到了问题应该也可以很容易的在网上找到。安装完之后，除了休眠之外，都非常完美，没有什么问题。但是毕竟是处女座，总想是是不是可以修复。</p>
-<p><strong>现象</strong> 可以休眠，也可以键盘，鼠标唤醒，但是在唤醒之后，系统很快就会「冻」住，无任何反应。</p>
-<p>在网上搜了下，明确此问题会在以下情况下发生：</p>
-<ul>
-<li>使用了新的 AppleALC 补丁引起的问题</li>
-<li>Clover 引导</li>
-</ul>
-<p>退回 AppleALC 1.2.8 版本可以解决此问题。具体问题可以见下面的搜索结果：<br>
-<a href="https://hackintosher.com/guides/stop-macos-from-freezing-on-sleep-wake-with-a-catalina-hackintosh/">STOP MACOS FROM FREEZING DURING SLEEP/WAKE ON A CATALINA HACKINTOSH</a><br>
-<a href="https://www.reddit.com/r/hackintosh/comments/diwujo/catalina_vanilla_installation_freeze_after_sleep/">Catalina vanilla installation - freeze after sleep</a><br>
-<a href="https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Catalina-10.15-installation.html">关于数字音频中断，导致内核崩溃的解决方案</a></p>
-<p>我尝试了下上面帖子中推荐的方法：</p>
-<ol>
-<li>退回 1.2.8 版本 --&gt; 退回旧版本之后，的确可以解决「冻死」的问题，但是声卡却无法驱动了，试了不同的 layout-id 也不成功，应该是 1.2.8 版本和 10.15.4 Catalina 不兼容的问题。</li>
-<li>内核补丁 --&gt; 无效</li>
-</ol>
-<p>于是心里一横就准备换到 Opencore 下， <strong>问题解决</strong>。</p>
-<h3 id="opencore-引导时提示-memory-panic-stackshot-succeeded-然后重启或者卡住">Opencore 引导时，提示 memory panic stackshot succeeded 然后重启或者卡住</h3>
-<p>这种情况很有可能是没有分配 iGPU 的预留缓存，在 BIOS 中加入，或者在 Config 中添加 framebuffer-stolenmem 键。 这一个我找了个图片，图片如下：<br>
-<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/opencore.png" alt="" loading="lazy"></p>
-<h3 id="卡在eblogexitbsstart">卡在[EB|#LOG:EXITBS:START]</h3>
-<p>这个也是意料之外的问题，搜索了下，得到下面的帖子：</p>
-<p><a href="https://www.reddit.com/r/hackintosh/comments/g7rqt1/if_youre_stuck_at_endrandomseed_or/">if you're stuck at &quot;EndRandomSeed&quot; OR [EB|#LOG:EXITBS:START] ERROR with OpenCore 0.5.7, try this to fix</a></p>
-<p>需要将<br>
-RebuildAppleMemoryMap switch it OFF<br>
-SetupVirtualMap switch it ON<br>
-但是这是与 Vanilla 指南中的推荐值是相反的，原指南中对此两项的说明如下，我的 CPU 是 i5-7600T Kaby Lake 应该就是按照指南中的值来设定，不知道是哪里出了问题。</p>
-<pre><code class="language-ASL">RebuildAppleMemoryMap: YES
-Generates Memory Map compatible with macOS, can break on some laptop OEM firmwares so if you receive early boot failures disable this
-SetupVirtualMap: NO
-Fixes SetVirtualAddresses calls to virtual addresses, not needed on Skylake and newer. Some firmware like Gigabyte may still require it, and will kernel panic without this
-</code></pre>
-<h2 id="仍然存在的问题">仍然存在的问题</h2>
-<ol>
-<li>长时间休眠唤醒死机。 是的，现在不是因为「冻住」了，短时间内休眠再唤醒没有问题，但是长时间比如几个小时，就无法唤醒了。 使用命令<code>pmset -g log | grep -i failure</code> ，显示： Darkwake Exit Failure。尝试了几个方法，都没有效果，于是只好使用 Coffee Buzz 让系统不休眠。</li>
-</ol>
-<p>总结一下，就是从一个唤醒问题，换到了另一个唤醒问题。😭😭😭😭 我折腾这一圈干啥！<br>
-最后附上我<a href="https://github.com/willisfusu/Lenovo-M910q-Hackintosh">个人使用的EFI</a> <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>非标准硬件是指和网上大多数教程使用的硬件不同的硬件，是我杜撰的名词🦁。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p>仅作参考使用，在使用前建议先阅读 Open core 安装指南。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
 ]]></content>
     </entry>
 </feed>
