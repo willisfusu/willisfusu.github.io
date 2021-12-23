@@ -506,6 +506,7 @@ a.small {
   background-size: initial;
   background-repeat: no-repeat;
   background-position: right;
+  background-color: transparent;
 }
 .v .veditor:focus {
   background-position-y: 115px;
