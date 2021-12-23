@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://willisfusu.github.io</id>
     <title>李二先生</title>
-    <updated>2021-12-23T17:21:28.914Z</updated>
+    <updated>2021-12-23T18:00:09.490Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://willisfusu.github.io"/>
     <link rel="self" href="https://willisfusu.github.io/atom.xml"/>
@@ -22,17 +22,16 @@
         <id>https://willisfusu.github.io/post/ideasaboutnotes/</id>
         <link href="https://willisfusu.github.io/post/ideasaboutnotes/">
         </link>
-        <updated>2021-12-23T09:20:14.000Z</updated>
+        <updated>2021-12-23T01:20:14.000Z</updated>
         <summary type="html"><![CDATA[<p>昨天在少数派上读到了一篇文章，讲的是作者自己的笔记流程。读了之后有一些想法，可能还不够成熟，但是先记下来，方便后面进行优化。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>昨天在少数派上读到了一篇文章，讲的是作者自己的笔记流程。读了之后有一些想法，可能还不够成熟，但是先记下来，方便后面进行优化。</p>
 <!-- more -->
 <p>作者将流程划分为如下几个部分：</p>
-<pre><code class="language-mermaid">graph LR;
-
-信息源--&gt;收集--&gt;阅读+批注--&gt;临时笔记--&gt;永久笔记--&gt;创作
-
-</code></pre>
+<div class="mermaid">
+graph LR;
+<p>信息源--&gt;收集--&gt;阅读+批注--&gt;临时笔记--&gt;永久笔记--&gt;创作</p>
+</div>
 <h2 id="阅读批注">阅读+批注</h2>
 <p>基于对于「阅读+批注」，在日常的使用过程中，我有一些不同的看法：</p>
 <ol>
@@ -47,21 +46,15 @@
 <p><strong>临时笔记</strong>：应该是一些想法片段，可长可短。可能没有上下文关系的临时想法、启发。</p>
 <p><strong>永久笔记</strong>：当临时笔记数量很多的时候，有一些笔记可能会产生关系链接。当同一个链接下的临时笔记数量多到一定程度时，就可以总结生成永久笔记。</p>
 <h2 id="我自己感觉的流程">我自己感觉的流程</h2>
-<pre><code class="language-mermaid">graph LR;
-
-subgraph 文献管理
-
-信息源--&gt;收集--&gt;阅读+批注
-
-end
-
-subgraph 笔记系统
-
-阅读+批注--&gt;临时笔记--&gt;A[&quot;整理、产出&quot;]
-end
-
-</code></pre>
-]]></content>
+<div class="mermaid">
+graph LR;
+<p>subgraph 文献管理</p>
+<p>信息源--&gt;收集--&gt;阅读+批注</p>
+<p>end</p>
+<p>subgraph 笔记系统</p>
+<p>阅读+批注--&gt;临时笔记--&gt;A[&quot;整理、产出&quot;]<br>
+end</p>
+</div>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[面试总结]]></title>
