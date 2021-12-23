@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://willisfusu.github.io</id>
     <title>李二先生</title>
-    <updated>2021-12-19T22:40:29.147Z</updated>
+    <updated>2021-12-23T17:21:28.914Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://willisfusu.github.io"/>
     <link rel="self" href="https://willisfusu.github.io/atom.xml"/>
@@ -17,6 +17,52 @@
     <logo>https://willisfusu.github.io/images/avatar.png</logo>
     <icon>https://willisfusu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 李二先生</rights>
+    <entry>
+        <title type="html"><![CDATA[笔记的一些看法]]></title>
+        <id>https://willisfusu.github.io/post/ideasaboutnotes/</id>
+        <link href="https://willisfusu.github.io/post/ideasaboutnotes/">
+        </link>
+        <updated>2021-12-23T09:20:14.000Z</updated>
+        <summary type="html"><![CDATA[<p>昨天在少数派上读到了一篇文章，讲的是作者自己的笔记流程。读了之后有一些想法，可能还不够成熟，但是先记下来，方便后面进行优化。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>昨天在少数派上读到了一篇文章，讲的是作者自己的笔记流程。读了之后有一些想法，可能还不够成熟，但是先记下来，方便后面进行优化。</p>
+<!-- more -->
+<p>作者将流程划分为如下几个部分：</p>
+<pre><code class="language-mermaid">graph LR;
+
+信息源--&gt;收集--&gt;阅读+批注--&gt;临时笔记--&gt;永久笔记--&gt;创作
+
+</code></pre>
+<h2 id="阅读批注">阅读+批注</h2>
+<p>基于对于「阅读+批注」，在日常的使用过程中，我有一些不同的看法：</p>
+<ol>
+<li>批注和笔记一定要能做得到回溯到原文位置。</li>
+<li>原文需要能够保存在本地</li>
+</ol>
+<p>就这两条要求联合起来看，目前能做到的软件有 [[Zotero]] 和[[简悦]]。Zotero 本身就是文献管理软件，能够做到使用 UrlScheme 直接打开文件，并且定位到标注位置。但是不能对 Webpage 进行标注。简悦则是 Webpage 标注的一款浏览器插件。目前看下来，[[简悦能够实现标注与回溯功能]]。</p>
+<p>我打算结合使用这两种工具，对批注进行管理。</p>
+<h2 id="永久笔记与创作的关系">永久笔记与创作的关系</h2>
+<p>我自己认为永久笔记就是自己创作、产出的最后结果，无需再加一个创作过程。</p>
+<p><strong>笔记</strong>：一定是自己的想法、启发。而不仅仅是摘录。摘录应该通过链接系统回溯到参考文献中去。</p>
+<p><strong>临时笔记</strong>：应该是一些想法片段，可长可短。可能没有上下文关系的临时想法、启发。</p>
+<p><strong>永久笔记</strong>：当临时笔记数量很多的时候，有一些笔记可能会产生关系链接。当同一个链接下的临时笔记数量多到一定程度时，就可以总结生成永久笔记。</p>
+<h2 id="我自己感觉的流程">我自己感觉的流程</h2>
+<pre><code class="language-mermaid">graph LR;
+
+subgraph 文献管理
+
+信息源--&gt;收集--&gt;阅读+批注
+
+end
+
+subgraph 笔记系统
+
+阅读+批注--&gt;临时笔记--&gt;A[&quot;整理、产出&quot;]
+end
+
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[面试总结]]></title>
         <id>https://willisfusu.github.io/post/jobinterview/</id>
@@ -501,176 +547,6 @@ for col in collectionarray:
 </li>
 </ol>
 </section>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[今日头条新闻评论获取]]></title>
-        <id>https://willisfusu.github.io/post/jin-ri-tou-tiao-1/</id>
-        <link href="https://willisfusu.github.io/post/jin-ri-tou-tiao-1/">
-        </link>
-        <updated>2020-05-22T14:31:43.000Z</updated>
-        <summary type="html"><![CDATA[<p>本文属于「大型网红记录片」python 文科数据分析系列。</p>
-<h2 id="为什么有这篇文章">🐶为什么有这篇文章</h2>
-<p>因为老婆博士专业的原因，她需要获取不少网站的新闻或者帖子的评论，并且对评论进行数据分析或者是自然语义分析（NLP）。因此从来没有接触过 python，只有 VB 二级的我自然就成了她的技术支持，为她提供 python 爬虫和数据分析业务 🤣🤣。经过一段时间学习之后，我意识到，这些需求可能在文科的数据分析中具有某种程度上的一致性，如果能够记录下每个项目，可以供他人参考，也可以提高自己对于代码的理解。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>本文属于「大型网红记录片」python 文科数据分析系列。</p>
-<h2 id="为什么有这篇文章">🐶为什么有这篇文章</h2>
-<p>因为老婆博士专业的原因，她需要获取不少网站的新闻或者帖子的评论，并且对评论进行数据分析或者是自然语义分析（NLP）。因此从来没有接触过 python，只有 VB 二级的我自然就成了她的技术支持，为她提供 python 爬虫和数据分析业务 🤣🤣。经过一段时间学习之后，我意识到，这些需求可能在文科的数据分析中具有某种程度上的一致性，如果能够记录下每个项目，可以供他人参考，也可以提高自己对于代码的理解。</p>
-<!-- more -->
-<p>结合我自己的学习过程，我觉得如果能够在学习一门编程语言的过程中有一个比较明确的目的，并且从一个可以执行的项目开始，可以大幅度地提高自己的学习意愿与动力。所以我觉得如果可以，尽量从一个简单易行的项目入手，而不是拿到一个事无巨细的教程，从基础开始学习。自下而上是可以打下坚实的基础，但是自上而下的学习可以提供更强大的学习动力。</p>
-<p>此篇文章产生的需求为：<strong>对指定的今日头条上的新闻，获取文章下面的评论，并且将评论翻译为英文</strong>。</p>
-<h2 id="项目过程">🤖项目过程</h2>
-<h3 id="目标页面分析">目标页面分析</h3>
-<p>我们先随意选定一条新闻，打开新闻页面。比如这条<a href="https://www.toutiao.com/a6829669065624125959/">新闻</a>。打开之后页面如下：</p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_001.png" alt="" loading="lazy"></figure>
-<ol>
-<li>然后在页面上右键，选择「检查」</li>
-</ol>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_003.png" alt="" loading="lazy"></figure>
-<ol start="2">
-<li>之后会打开开发者工具页面，在 Chrome 下，应该是下面这张图这样</li>
-</ol>
-<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_002.png" alt="" loading="lazy"></figure>
-<ol start="3">
-<li>选择 Network， 并且刷新页面</li>
-</ol>
-<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_004.png" alt="" loading="lazy"></figure>
-<p>这个时候会得到这个页面所有的网络流量内容，我需要的评论内容肯定也在其中。从评论中随便找一句话，或者一个词，在开发者工具中 Control+F，可以打开搜索。搜索刚才随便找的词句。我就随意选了「转发了」，回车执行搜索后，会发现有结果出现。下一步就是点击搜索结果。点了之后，该搜索结果所在的条目，会变暗（或者变色）。</p>
-<ol start="4">
-<li>双击刚刚变色的条目，会打开下面的结果 <a name="json"></a></li>
-</ol>
-<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_007.png" alt="" loading="lazy"></figure>
-<p>选择 Preview 可以看到预览，看结构应该是一个 Json 文件。选择 data 打开，发现果然就是需要的评论内容。接下来就是 <strong>找到请求的 url 地址以及请求的参数信息</strong>。</p>
-<ol start="5">
-<li>点击 headers，查找请求信息</li>
-</ol>
-<figure data-type="image" tabindex="6"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_005.png" alt="" loading="lazy"></figure>
-<p>从这张图里，可以知道请求的 url 地址，以及请求方法是 Get 方法。继续往下拉，可以看到请求的头信息（request headers)</p>
-<figure data-type="image" tabindex="7"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_006.png" alt="" loading="lazy"></figure>
-<p><strong>通过上面五步，就完成了对目标页面的分析，那得到了什么结果呢？</strong></p>
-<ul>
-<li>请求地址 <code>https://www.toutiao.com/article/v2/tab_comments/?aid=24&amp;app_name=toutiao-web&amp;group_id=6829669065624125959&amp;item_id=6829669065624125959&amp;offset=0&amp;count=5</code></li>
-<li>请求方法 <code>Get</code></li>
-<li>请求参数 Parameters ：</li>
-</ul>
-<pre><code class="language-javascript">aid: 24 
-app_name: toutiao-web
-group_id: 6829669065624125959
-item_id: 6829669065624125959
-/* item_id, group_id 与文章链接中的数字是相同的，应该是文章的id*/
-offset: 0
-count: 5
-/*offset 应该是评论的偏移量，count应该是每次返回的评论数*/
-</code></pre>
-<h3 id="请求地址及请求参数分析">请求地址及请求参数分析</h3>
-<p>通过对目标页面分析之后，得到了请求的地址及请求参数。在使用爬虫时，我们需要自己构造请求链接，所以首先得搞清楚请求链接是怎么构造的。</p>
-<p>观察这个链接：<br>
-https://www.toutiao.com/article/v2/tab_comments/?aid=24&amp;app_name=toutiao-web&amp;group_id=6829669065624125959&amp;item_id=6829669065624125959&amp;offset=0&amp;count=5</p>
-<p>前半部分<code>https://www.toutiao.com/article/v2/tab_comments/?</code> 可以不用管，后半部分则是请求参数组合在一起。这样看起来，我们只需要在 for 循环中 offset 偏移就可以获取所有的评论。</p>
-<p><strong>验证</strong> 点击下图中标志出来的图标，清空 network 标签，然后点击评论下面的 「加载更多评论」，看看会返回什么结果。</p>
-<figure data-type="image" tabindex="8"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_009.png" alt="" loading="lazy"></figure>
-<p>跟上面一样，找到返回的评论，点击 headers，观察请求地址</p>
-<figure data-type="image" tabindex="9"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/jinri_008.png" alt="" loading="lazy"></figure>
-<p>将两次请求的地址放到一起对比，更容易找到变化：</p>
-<pre><code>https://www.toutiao.com/article/v2/tab_comments/?aid=24&amp;app_name=toutiao-web&amp;group_id=6829669065624125959&amp;item_id=6829669065624125959&amp;offset=0&amp;count=5
-
-https://www.toutiao.com/article/v2/tab_comments/?aid=24&amp;app_name=toutiao-web&amp;group_id=6829669065624125959&amp;item_id=6829669065624125959&amp;offset=5&amp;count=10
-</code></pre>
-<h3 id="python-程序编写">🦁Python 程序编写</h3>
-<p>由于此次返回的结果直接就是 Json 格式，对于结果处理是相当友好。 代码中用到的库如下：</p>
-<ul>
-<li><strong>requests</strong> http 请求库，用于向服务器发送请求，获得请求结果。</li>
-<li><strong>pymongo</strong> 数据库，用于数据持久化 （用其它文件存储方式也可以，我这里使用 pymongo 主要是因为自己想要熟练一下这个库的使用🦁🦁🦁🦁。完全也可以用 pandas 或者 Excel 相关的库替代）</li>
-<li><strong>json</strong> json 处理 因为返回的结果是 json 格式。</li>
-</ul>
-<ol>
-<li>请求链接构造</li>
-</ol>
-<p>首先我们要做的是构造请求的 url 链接，根据我们上面的分析，只要在 for 循环中更新 offset 就可以了。代码示例如下：</p>
-<pre><code class="language-python">def handle_comment_url(id):
-    for a in range(0, 80, 20):
-        # 此处使用 range 函数，产生 offset 的数值（0， 20， 40， 60……）这里的80是因为老婆只需要前50条热评。如果想得到所有的评论，可以将80换成一个很大的数值即可，例如80000。
-        param_data = {
-            &quot;group_id&quot;: id,
-            &quot;item_id&quot;: id,
-            &quot;offset&quot;: a,
-            &quot;count&quot;: 20
-        }
-        # param_data 就是上面分析得到的请求参数
-        url = &quot;https://www.toutiao.com/article/v2/tab_comments/?aid=24&amp;app_name=toutiao-web&amp;&quot; + urlencode(param_data)
-        # 构造 url，使用 urlencode 将参数组合到一起，省得自己写产生错误。
-        result = handle_response(url)
-        if result:
-            break
-        # 将构造的 url给到另一个函数，处理。这里 if 条件语句的作用是在上面想要获得所有评论时，可以及时退出循环。
-</code></pre>
-<ol start="2">
-<li>然后我们再构造结果请求函数</li>
-</ol>
-<pre><code class="language-python">def handle_url(url):
-    header = {
-        &quot;accept&quot;: &quot;text/javascript, text/html, application/xml, text/xml, */*&quot;,
-        &quot;accept - encoding&quot;: &quot;gzip, deflate, br&quot;,
-        &quot;accept-language&quot;: &quot;en-GB,en;q=0.9,zh;q=0.8,zh-CN;q=0.7,zh-TW;q=0.6,ja;q=0.5&quot;,
-        &quot;user-agent&quot;: &quot;user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36&quot;,
-        &quot;x-requested-with&quot;: &quot;XMLHttpRequest&quot;
-    }
-    # 增加 headers 参数可以一定程度上防止被「反爬虫」，只能说是一定程度上。「反爬虫」与「反反爬虫」之间的斗争是另一个很长的故事。
-    response = requests.get(url, headers=header)
-    return (response)
-</code></pre>
-<ol start="3">
-<li>处理返回结果的函数<br>
-我们现在构造一个处理返回结果的函数，并且在这个函数里，调用上面的 <strong>请求函数</strong>。</li>
-</ol>
-<p>另外，这一步里需要我们对请求返回的 json 数据的结构进行分析，以便我们可以找到对应的键值对。分析 json 很简单，找一个 json 解析的网页，比如<a href="https://www.json.cn/">这一个我常用的</a>。 然后将我们<a href="#json">上面得到的 json 结果</a> 复制进这个网页中，就可以在右边得到结构比较清晰的结果。</p>
-<pre><code class="language-python">def handle_response(url):
-    response = handle_url(url)
-    # 此处调用请求函数
-    response_json = json.loads(response.text)
-    # 使用 json 的 loads 方法，将 json 格式的数据，转换为 dict 格式的数据，方便 python  处理。
-    break_for = True
-    if (len(response_json[&quot;data&quot;]) == 0):
-        print(&quot;评论已经获取完毕！！&quot;)
-        return break_for
-    # 这里这个 if 语句用于判断评论是否请求完，如果已经请求完，那返回 True，方便上面步骤1中及时中断循环。
-    else:
-        for item in response_json[&quot;data&quot;]:
-            comment = {}
-            comment['id'] = item[&quot;comment&quot;][&quot;id&quot;]
-            comment['username']=item[&quot;comment&quot;][&quot;user_name&quot;]
-            comment[&quot;comment_text&quot;] = item[&quot;comment&quot;][&quot;text&quot;]
-            comment[&quot;reply_count&quot;] = item[&quot;comment&quot;][&quot;reply_count&quot;]
-            comment[&quot;digg_count&quot;] = item[&quot;comment&quot;][&quot;digg_count&quot;]
-            comment[&quot;creat_time&quot;] = item[&quot;comment&quot;]['create_time']
-            mycol.insert_one(comment)
-        print(&quot;已经完成20次数据库写入&quot;)
-    # 写入数据。
-</code></pre>
-<h3 id="说明">说明</h3>
-<ol>
-<li>多线程、协程的使用</li>
-</ol>
-<p>这个例子中，我其实尝试使用过多线程，毕竟可以大幅度缩减时间。但是今日头条对于爬虫限制的挺厉害，我有一天晚上就被限制了 ip，导致几个小时没法访问今日头条。所以后来就干脆不使用多线程了，能稳定的运行实在是优先于时间少。 也有可能是我使用方法不对，想尝试的朋友可以尝试。</p>
-<ol start="2">
-<li>pymongo 的使用</li>
-</ol>
-<p>在这个例子中使用 pymongo 仅仅是因为我想要练习使用这个工具，数据的持久化有太多方法，使用任何一种即可。其实使用 pymongo 后面还给我带来了不少不便利😂😂😂。</p>
-<ol start="3">
-<li>获取所有评论的方法</li>
-</ol>
-<p>在这个例子中，获取所有评论的方法显得有些「暴力」直接是使用一个很大的数值来代替真实的评论总数。其实这也是无奈，因为头条将对已有评论的回复也计算在评论数中，所以就算是使用真实的评论数，也得对返回的 json--&gt; data 长度进行判断。既然是这样，直接使用一个大数值代替也是一样的。</p>
-<h2 id="总结">📓总结</h2>
-<h3 id="技术总结">技术总结</h3>
-<p>头条新闻评论的获取就到这里了。其实大部分的爬虫都是这样的思路，最重要的就是获得请求地址，以及能构造出正确的请求 url。</p>
-<p>我的代码文件可以<a href="https://github.com/willisfusu/python_projects_wife/tree/master/jin_ri_tou_tiao">在这里找到</a></p>
-<h3 id="部分库及方法详解">部分库及方法详解</h3>
-<p>其实我自己在写的过程中，也是不断去确认一些函数、库、方法的使用详解。比如 json 的 load 与 loads 区别。所以我在这里把一些我查过的列出来，这样也方便我自己回来复习。</p>
-<ul>
-<li><a href="https://www.runoob.com/python/python-func-range.html">range()</a></li>
-<li><a href="https://www.runoob.com/python/python-json.html">JSON</a></li>
-<li><a href="https://www.cnblogs.com/bigtreei/p/10466518.html">json.loads</a></li>
-</ul>
 ]]></content>
     </entry>
 </feed>
