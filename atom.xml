@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://willisfusu.github.io</id>
     <title>李二先生</title>
-    <updated>2021-12-23T19:09:11.898Z</updated>
+    <updated>2021-12-24T16:46:54.056Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://willisfusu.github.io"/>
     <link rel="self" href="https://willisfusu.github.io/atom.xml"/>
@@ -17,6 +17,244 @@
     <logo>https://willisfusu.github.io/images/avatar.png</logo>
     <icon>https://willisfusu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 李二先生</rights>
+    <entry>
+        <title type="html"><![CDATA[2021年软件工具整理]]></title>
+        <id>https://willisfusu.github.io/post/2021yearreviewsoftware/</id>
+        <link href="https://willisfusu.github.io/post/2021yearreviewsoftware/">
+        </link>
+        <updated>2021-12-24T08:45:30.000Z</updated>
+        <summary type="html"><![CDATA[<p>转眼又到年末了，今年过的感觉尤其快。年初的时候还在忙着赶实验，年中的时候在赶紧写毕业论文，到了秋天又开始准备找工作、面试。年末几个月一直在整理小论文的发表。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>转眼又到年末了，今年过的感觉尤其快。年初的时候还在忙着赶实验，年中的时候在赶紧写毕业论文，到了秋天又开始准备找工作、面试。年末几个月一直在整理小论文的发表。</p>
+<!-- more -->
+<p>到了年末好像总是要做一下总结，看看过去的一年做了什么，没做成什么，规划新的一年里又准备做点啥。因为对 2021 年时间产生了严重的错觉🤪，所以一时不知道从什么地方开始。</p>
+<p>相较于其他部分的总结，软件工具方向的总结就容易多了，拿这个方向做个开端，慢慢做起来。</p>
+<h2 id="软件工具">软件工具</h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>平台</th>
+<th>付费</th>
+<th>评价<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></th>
+<th>新增</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1Password <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></td>
+<td>全平台</td>
+<td>¥50</td>
+<td>⭐︎⭐︎⭐︎⭐︎⭐︎</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Tasker</td>
+<td>Android</td>
+<td>£6</td>
+<td>⭐︎⭐︎⭐︎</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Authenticator</td>
+<td>Android</td>
+<td>免费</td>
+<td>⭐︎⭐︎⭐︎⭐︎⭐︎</td>
+<td>否</td>
+</tr>
+<tr>
+<td>百度网盘</td>
+<td>全平台</td>
+<td>¥198</td>
+<td>⭐︎⭐︎⭐︎</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Clubcard</td>
+<td>移动端</td>
+<td>免费</td>
+<td>⭐︎⭐︎⭐︎⭐︎⭐︎</td>
+<td>是</td>
+</tr>
+<tr>
+<td>DIDA</td>
+<td>全平台</td>
+<td>免费</td>
+<td>⭐︎⭐︎⭐︎⭐︎⭐︎</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Eudic</td>
+<td>全平台</td>
+<td>免费</td>
+<td>⭐︎⭐︎⭐︎⭐︎⭐︎</td>
+<td>否</td>
+</tr>
+<tr>
+<td>FIMO</td>
+<td>移动端</td>
+<td>£1.49</td>
+<td>⭐︎⭐︎⭐︎⭐︎⭐︎</td>
+<td>是</td>
+</tr>
+<tr>
+<td>FolderSync Pro</td>
+<td>Android</td>
+<td>£4.09</td>
+<td>⭐︎⭐︎⭐︎⭐︎</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Handshaker</td>
+<td>全平台</td>
+<td>免费</td>
+<td>⭐︎⭐︎⭐︎⭐︎⭐︎</td>
+<td>否</td>
+</tr>
+<tr>
+<td>几枝</td>
+<td>Android</td>
+<td>免费</td>
+<td>⭐︎⭐︎⭐︎⭐︎⭐︎</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Obsidian</td>
+<td>全平台</td>
+<td>免费</td>
+<td>⭐︎⭐︎⭐︎⭐︎⭐︎</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Poweramp</td>
+<td>Android</td>
+<td>£2.00</td>
+<td></td>
+<td>是</td>
+</tr>
+<tr>
+<td>Podcasts</td>
+<td>Android</td>
+<td>免费</td>
+<td>⭐︎⭐︎</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Spotify<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></td>
+<td>全平台</td>
+<td>¥157</td>
+<td>⭐︎⭐︎⭐︎⭐︎⭐︎</td>
+<td>否</td>
+</tr>
+<tr>
+<td>Niagara</td>
+<td>Android</td>
+<td>£15.00</td>
+<td>⭐︎⭐︎⭐︎⭐︎⭐︎</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Office 365</td>
+<td>全平台</td>
+<td>¥298</td>
+<td>⭐︎⭐︎⭐︎⭐︎⭐︎</td>
+<td>否</td>
+</tr>
+<tr>
+<td>Grammarly</td>
+<td>Win+Mac</td>
+<td>¥230</td>
+<td>⭐︎⭐︎⭐︎</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Simply Piano</td>
+<td>iPad</td>
+<td>¥156</td>
+<td></td>
+<td>是</td>
+</tr>
+<tr>
+<td>Scrivener</td>
+<td>Mac</td>
+<td>¥48</td>
+<td>⭐︎⭐︎⭐︎⭐︎⭐︎</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Tings3</td>
+<td>Mac</td>
+<td>¥38.8</td>
+<td>⭐︎⭐︎⭐︎⭐︎⭐︎</td>
+<td>是</td>
+</tr>
+<tr>
+<td>崩坏三</td>
+<td>移动端</td>
+<td>¥300</td>
+<td>⭐︎⭐︎</td>
+<td>是</td>
+</tr>
+<tr>
+<td>iCloud</td>
+<td>Mac+iPhone</td>
+<td>¥300</td>
+<td>⭐︎⭐︎⭐︎⭐︎⭐︎</td>
+<td>否</td>
+</tr>
+<tr>
+<td>合计：</td>
+<td></td>
+<td>¥2032</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="今年对我帮助最大的软件排序">今年对我帮助最大的软件排序</h2>
+<p>🥳🥳🥳🥳 <strong>Scrivener</strong></p>
+<p>如果没有 Scrivener 的话，我没法想像我会怎么完成我的毕业论文。在自己内心极其抗拒的情况下，能让我动笔写下去，并且最终完成论文草稿，Scrivener 帮助极大。方便的卡片式写作，文献引用，直接导出格式化的论文草稿将一篇文章的写作分成了无数个小部分，拿起笔来写一小部分一小部分，慢慢就汇成了最终的论文。</p>
+<p>Scrivener 并不完美，复杂的配置可能会劝退一批新手。但是这不妨碍它成为 2021 年对我帮助最大的软件<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>。</p>
+<p>🐶🐶🐶🐶<strong>ClubCard</strong></p>
+<p>ClubCard 绝对是今年让我最惊喜的软件，因为使用它我的的确确地省了好多好多钱🐶🐶。以前不知道在 Tesco 买东西使用 ClubCard 可以打这么高的折扣，最高的时候打过 5 折，并且 ClubCard 还不要会员费。有谁会不喜欢这样的软件呢？</p>
+<p>🤗🤗🤗🤗<strong>Spotify &amp; DIDA</strong></p>
+<p>Spotify 是整年使用过程中最「无感」的应用。无感是指你找不出什么使用问题，在使用过程中基本上能达到不打扰，只默默做好自己应该做的工作。</p>
+<div align=center>
+<img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/1trJpZYjtk.jpg" width = "360" height = "640" alt="spotify" align=center />
+</div>
+<p>李宗盛成为了我的最爱，总计听了 574 个小时，不知道陪我写论文的日日夜夜。</p>
+<p>另外一个使用「无感 」的应用是 DIDA。我没有开会员，但是基本的功能已经足够用来管理我的日常工作。我对 GTD 工作的想法是不要花里胡哨，不要一堆复杂操作。我最看重的是记录的方便性，能否还原纸质笔记的快速记录能力。其它像分组、日历这种功能，在我看来不影响 GTD 的方法论。这里多说一句，DIDA 的日历功能收费我是不太能理解的，我系统自带有日历，和 Outlook 能实时同步更新，为什么 DIDA 要自己在软件中集成一个日历功能？这样不是割裂了嘛？会议信息在系统日历中看，任务信息在 DIDA 中看？太蠢了。这一点上 Things3 做的就很好，直接使用系统日历。</p>
+<p>🤔🤔🤔🤔<strong>网盘</strong></p>
+<p>学校提供了免费的 Dropbox 无限容量给学生使用，我一直用的很开心。真的是太方便了，实时同步，历史版本。不愧是网盘的标杆。另外我还使用了 Onedrive 和 iCloud，都差不多，可能 iCloud 和系统集成更好。这也能理解，毕竟苹果自家给自家产品用。但是让我意外的是百度网盘。年末的时候，因为要下载一些资源，实在受不了百度网盘的速度，于是开通了一年的 SVIP（不得不说下这个名字，有点郭老师 VIP 中 P 的感觉了🐶），一年的费用只有 198，据说有年中活动的时候只有 178。得到的是 5T 的空间与不限速的下载（我在英国竟然都能跑到 10M/s）实在是太香了。</p>
+<p>考虑到 2022 年回国，网盘应用大概率需要重新选择，Dropbox 估计是没有替代品了，只能用 Onedrive 替代，好在 Onedrive 使用起来也很方便。Office365 送 1T 空间，作为同步盘使用已经足够了。存储上，只能考虑百度网盘了，价格不高，并且速度达标。但是因为百度的信用实在太差，放在上面的东西不保险，可以考虑使用加密软件加密后再上传，或者干脆只上传不会影响到个人的数据上去。总之使用百度网盘需要格外小心，风险等级高。</p>
+<h2 id="软件支出分析">软件支出分析</h2>
+<h3 id="会员费用支出占大头">会员费用支出占大头</h3>
+<p>2021 年的软件工具付费超 2020 年 10%。主要体现在会员类服务费用提高，百度网盘、Office365、iCloud 占据大头。另外游戏类支出仍然占 15%。</p>
+<h3 id="免费软件替代增加">免费软件替代增加</h3>
+<p>任务管理类软件由买断制 Things3 转到 DIDA 上来，笔记软件由付费的编辑器转移到 Obdidian 上。本质是对于方法论的认识进一步加深。免去了各种花哨的功能，从最根本出发使用工具。</p>
+<h3 id="2022-年预计支出增加">2022 年预计支出增加</h3>
+<ol>
+<li>会员服务在可预见的 2022 年仍将是支出大头。针对网盘类应用服务，需要再考虑如何合理搭配以实现效能最大化。</li>
+<li>2022 年回国之后预计增加 VPN、视频、日常服务类会员费用。</li>
+</ol>
+<h2 id="软件使用技巧">软件使用技巧</h2>
+<p>受限于博士毕业压力，在软件使用方面的产出有限。在经过年末删减之后，预计在新一年中，会有相当数量的使用技巧产出。</p>
+<p>在新的一年里，计划开启每周 Newsletter，强迫自己输出内容。详细计划待定。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>软件使用体验最好的状态是无感知的同时，能高效完成工作。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>与网友合用家庭版 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>淘宝日区家庭版 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p>如果有时间，可以考虑把我 Scrivener 的使用配置整理出来。 <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[笔记的一些看法]]></title>
         <id>https://willisfusu.github.io/post/ideasaboutnotes/</id>
@@ -449,97 +687,6 @@ plt.show()
 <figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/win-zotero.png" alt="" loading="lazy"></figure>
 <p><strong>使用时长</strong> 3年</p>
 <p><strong>价格</strong>免费软件</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[今日头条新闻评论翻译]]></title>
-        <id>https://willisfusu.github.io/post/jin-ri-tou-tiao-2/</id>
-        <link href="https://willisfusu.github.io/post/jin-ri-tou-tiao-2/">
-        </link>
-        <updated>2020-05-22T23:22:15.000Z</updated>
-        <summary type="html"><![CDATA[<p>上一篇文章我说到了由于老婆博士课题的原因，需要爬取今日头条的新闻评论，并且需要翻译成英文。我把评论的获取写成了文章，可以见<a href="https://willisfusu.github.io/post/jin-ri-tou-tiao-1/">此处</a>。今天我准备把如何使用 python 将中文翻译成英文总结一下，以备参考与之后复习之用。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>上一篇文章我说到了由于老婆博士课题的原因，需要爬取今日头条的新闻评论，并且需要翻译成英文。我把评论的获取写成了文章，可以见<a href="https://willisfusu.github.io/post/jin-ri-tou-tiao-1/">此处</a>。今天我准备把如何使用 python 将中文翻译成英文总结一下，以备参考与之后复习之用。</p>
-<!-- more -->
-<h2 id="1-为什么会有这篇文章">🐶1 为什么会有这篇文章</h2>
-<p>从老婆那边拿到的项目，她要求将今日头条的新闻评论翻译为英文，以为其博士课题服务。刚开始她是想着自己翻译，后来我我她大概需要多少评论翻译成英文，告诉我说大概800条…… 于是我就问她需不需要我先给她「机翻」一下，这样后期做较对要比自己翻译快很多。于是我就成功拿到了这个项目🤣🤣🤣🤣。</p>
-<h2 id="️2-项目过程">🐼️2 项目过程</h2>
-<h3 id="21-确定思路">2.1 确定思路</h3>
-<p>因为我自己也没有「根红苗正」的 python 学习经历，学习 python 完全是为了老婆的博士课题服务。因此这里讲到的思路可能并不是正统的程序员思路，姑且看之。</p>
-<ol>
-<li>读取评论内容。从我们之前存入的数据库中读取评论内容。</li>
-<li>找到谷歌翻译<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>的 API 接口，将评论传入。</li>
-<li>处理返回的翻译结果。</li>
-</ol>
-<h3 id="22-谷歌翻译-api-的配置与使用-a-namegooglea">2.2 谷歌翻译 API 的配置与使用 <a name="google"></a></h3>
-<p>这一部分内容建议阅读谷歌官方给出的指南，非常详细。分为了 Basic 与 Advanced 两个版本，选择任何一个指南进行都可以完成我们翻译文本的目标。</p>
-<p>谷歌翻译 API 可以<a href="https://cloud.google.com/translate/docs/quickstarts">点击这里阅读</a>。简单说分为以下四步：</p>
-<ol>
-<li>创建 Cloud Console project，并获得 Private Key (一个 json 文件）</li>
-<li>将第1步得到的 private key 添加到环境变量中</li>
-<li>配置 Google Cloud SDK （此步骤又包含了许多小步骤）</li>
-<li>安装 google-cloud-translate==2.0.1 python 库。</li>
-</ol>
-<pre><code>pip3 install google-cloud-translate==2.0.1
-</code></pre>
-<h3 id="23-代码实现">2.3 代码实现</h3>
-<p>其实分析到这里，整个项目也差不多完成了。剩下的代码部分比较简单。可以分为两步：1.引入 google-cloud-translate 库。 2. 传入评论。</p>
-<ol>
-<li>引入 google-cloud-translate 库</li>
-</ol>
-<pre><code class="language-python">from google.cloud import translate_v2 as translate
-# 引入 google.cloud 库，并重命名
-translate_client=translate.Client()
-# 创建translate对象
-</code></pre>
-<ol start="2">
-<li>传入评论内容，并处理返回结果  <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></li>
-</ol>
-<pre><code class="language-python">def translate_comment(col):
-    print('开始%s翻译'% col)
-    collection = mydb[col]
-    collection.update_many({}, {'$set': {'Comment_English': 'none'}})
-    # 获取评论 collection, 并且增加'Comment_English' 字段。
-    querry = {&quot;Comment_English&quot;: 'none'}
-    comment_array = collection.find({}, {'comment_text': 1})
-    print('已获取所有评论，准备开始翻译')
-    for i in comment_array:
-        ch_comment = emojis.decode(i['comment_text'])
-        # 由于很多评论中使用了 emoji 谷歌翻译不能正确识别 emoji，所以需要使用 emoji 库将 emoji 转换为 unicode 编码。 emoji 就是 😂️😅️☺️ 这种。
-        result=translate_client.translate(ch_comment,target_language='en')
-        collection.update_one(querry, {'$set': {'Comment_English': result['translatedText']}})
-        # 提交评论到谷歌翻译，并将返回的翻译结果更新 'Comment_English' 字段。
-</code></pre>
-<ol start="3">
-<li>因为有多条新闻，所以有很多组评论，需要再写一个 for 循环。</li>
-</ol>
-<pre><code class="language-python">collectionarray = mydb.list_collection_names()
-i = 1
-for col in collectionarray:
-    translate_comment(col)
-    print('已经完成%d个库评论数据翻译' % i)
-    i += 1
-</code></pre>
-<h3 id="24-说明">2.4 说明</h3>
-<p>如果是在像 pycharm 这样的 IDE 中执行上面的程序，很大概率（之所以说很大概率是因为我只在 pycharm 中运行过）遇到报错，提示谷歌凭证配置错误。不要担心，只要你是<a href="#google">按照上面</a>指南配置，那应该不会有错。之所以出现这个报错是因为只能在 cmd 或者 terminal 中运行。到命令终端中运行刚刚写的 py 文件，看看是不是正常执行。如果还不正常，就按照上面的指南再配置一遍。</p>
-<h2 id="️3-总结">🦁️3 总结</h2>
-<h3 id="31-使用到库">3.1 使用到库</h3>
-<ol>
-<li>pymongo 数据库</li>
-<li>emojis 处理评论中的 emoji，防止谷歌翻译报错</li>
-<li>google.cloud 谷歌翻译库</li>
-</ol>
-<h3 id="32-pymongo-修改新增字段">3.2 pymongo 修改/新增字段</h3>
-<p><a href="https://www.runoob.com/python3/python-mongodb-update-document.html">update/update_many/update_one</a></p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>这里选择谷歌翻译是因为人在英国，并且个人感觉谷歌翻译可能会比较准确一点？ <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p>再次说一下，这个项目中不一定非得使用数据库来存储，增加新字段，并更新字段浪费了我不少时间去学习🤪🤪🤪。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
 ]]></content>
     </entry>
 </feed>
