@@ -538,3 +538,6 @@ a.small {
   width: 33.33%;
   margin-bottom: 0.5rem;
 }
+::marker {
+  content: none;
+}

@@ -13,7 +13,11 @@ window.onscroll = function() {
 };
 //    highlight code
 Prism.highlightAll()
-    // toc setting
+
+// toc setting
+//    there will be bug, when scroll down, the toc will dispear and appear at the position as defined in css.
+//    but, if the position defined in css is larger than the div actual positon, the new div will disappear again.
+//    another bug is the div size changed when scroll down.
 var mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");
 var toccard=document.getElementById('toc-card');
 var tagcard=document.getElementById('tag-card');
@@ -24,37 +28,40 @@ window.addEventListener("scroll", event => {
 
    var h=tagcard.offsetHeight;
    var fromTop = window.scrollY;
-   mainNavLinks.forEach((link, index) => {
-      var section = document.getElementById(decodeURI(link.hash).substring(1));
-      var nextSection = null;
-      if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-        }
-      if (section.offsetTop <= fromTop) {
-         if (nextSection) {
-            if (nextSection.offsetTop > fromTop) {
-               link.classList.add("current");
+   if (mainNavLinks.length==0){
+      toccard.style.display="none";
+   }else{
+      mainNavLinks.forEach((link, index) => {
+         var section = document.getElementById(decodeURI(link.hash).substring(1));
+         var nextSection = null;
+         if (mainNavLinks[index + 1]) {
+               nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+         }
+         if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+               if (nextSection.offsetTop > fromTop) {
+                  link.classList.add("current");
+               } else {
+                  link.classList.remove("current");
+               }
             } else {
-               link.classList.remove("current");
+               link.classList.add("current");
             }
          } else {
-            link.classList.add("current");
+            link.classList.remove("current");
          }
-      } else {
-         link.classList.remove("current");
+      });
+      if (toccard.offsetTop<= fromTop){
+         toccard.classList.add('toc-fixed');
+         toccard.style.top=y+60+'px';
+      }else{
+         toccard.classList.remove('toc-fixed');
+         toccard.style.top='';
       }
-   });
-   if (toccard.offsetTop<= fromTop){
-      toccard.classList.add('toc-fixed');
-      toccard.style.top=y+60+'px';
-   }else{
-      toccard.classList.remove('toc-fixed');
-      toccard.style.top='';
    }
-//    there will be bug, when scroll down, the toc will dispear and appear at the position as defined in css.
-//            but, if the position defined in css is larger than the div actual positon, the new div will disappear again.
-//            another bug is the div size changed when scroll down.
 });
+
+
 // website operation time recoder at bottom
 function show_date_time() {
    window.setTimeout("show_date_time()", 1e3);
