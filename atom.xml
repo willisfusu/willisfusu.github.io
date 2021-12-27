@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://willisfusu.github.io</id>
     <title>李二先生</title>
-    <updated>2021-12-26T21:56:33.124Z</updated>
+    <updated>2021-12-27T17:49:47.884Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://willisfusu.github.io"/>
     <link rel="self" href="https://willisfusu.github.io/atom.xml"/>
@@ -17,6 +17,51 @@
     <logo>https://willisfusu.github.io/images/avatar.png</logo>
     <icon>https://willisfusu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 李二先生</rights>
+    <entry>
+        <title type="html"><![CDATA[2021 年总结]]></title>
+        <id>https://willisfusu.github.io/post/2021-nian-zong-jie/</id>
+        <link href="https://willisfusu.github.io/post/2021-nian-zong-jie/">
+        </link>
+        <updated>2021-12-27T09:48:28.000Z</updated>
+        <summary type="html"><![CDATA[<p>2021 年马上就要过去了，但是我还像是在 2020 年一样。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>2021 年马上就要过去了，但是我还像是在 2020 年一样。</p>
+<!-- more -->
+<hr />
+<p>恍恍惚惚，时间过的飞快。 2021 年从年初的 Weekly Shift 模式转换到 7 月之后的开放模式。我似乎记得前几天还是要每隔一周去实验室工作，回过头来就到年底了。时间的错乱让我似乎只记得今天做了什么，再往前回想就想一片空白。</p>
+<p>曼城的天气似乎也佐证了这一点：前半年很冷，后半年也很冷。这更加重了我的时间错乱感。</p>
+<p>之前写了自己 2021 年的<a href="https://willisfusu.github.io/post/2021yearreviewsoftware/">软件工具的总结</a>。这篇博客里，打算把我的 2021 年来个整体的回顾。</p>
+<h2 id="2021-年做了什么">🎉 2021 年做了什么</h2>
+<h3 id="完成博士课题的实验">完成博士课题的实验</h3>
+<p>博士课题的实验工作似乎就在昨天，但又好像过去了好久。无论如何，博士课题的所有实验，为博士毕业扫清了最大的障碍。每次回忆博士的实验工作，我都会懊恼自己为什么没有更加提前的完成博士的工作。站在 2021 年的末尾，总觉得自己好像应该能更快的完成。我没有觉得自己在天天工作，但是搞不清楚没有工作的时间做什么去了。</p>
+<p>这可能是 2021 年最大的谜团。</p>
+<h3 id="找到工作">找到工作</h3>
+<p>2021 年值得欣慰的一件事情：我找到工作了。关于找工作的内容已经总结在<a href="https://willisfusu.github.io/post/jobinterview/">另外一篇博客里</a></p>
+<p>这可能是年底我最高兴的事情，毕竟我之前投了好几十家企业，都没有得到什么正面的消息。11 月了，原本打算到明年的春天在继续找工作。结果，师姐、师弟、师妹推荐的工作都有了进展，最终还都拿到了 Offer。这么多年第一次体会到自己选择 Offer 的感觉 😆😆。</p>
+<h3 id="毕业论文">毕业论文</h3>
+<p>我自己还能记得清楚的是从 7 月份就开始写毕业论文，陆陆续续写到 10 月份已经大体框架写的差不多了。从 10 月份就开始搞小论文整理投稿，一直到 12 月份 😂。期间自己的忍耐力不知道提高了多少，真真正正得又把自己的抗打击能力提高了一大截。</p>
+<p>让我对自己如何应对工作中的压力，又有了更深一步的思考。</p>
+<h3 id="出门走了走">出门走了走</h3>
+<p>值得高兴的是，这一年我没有宅在家里。和女朋友还是一起出去走了一些地方，拍了一些照片，留下了一些回忆。</p>
+<p>去年自己搞过一个小网页，用来整理自己的照片。但是最终没有上线，今年看看能不能整理出来。这一点可以放到 2022 年的计划中去 😆😆😆😆。</p>
+<h2 id="2022-年准备做什么">🎉 2022 年准备做什么</h2>
+<p>好了，说完 2021 年就该老生常谈的新一年工作计划了。</p>
+<h3 id="准时毕业">准时毕业</h3>
+<p>希望我能在 3 月份之前，交掉毕业论文，能够在 5 月前完成答辩。</p>
+<h3 id="能够-handle-新工作">能够 Handle 新工作</h3>
+<p>新工作是和我之前非常不一样的内容，希望我能快速掌握新工作岗位上的技能，顺利完成学生到职场人士的转变。</p>
+<h3 id="继续深化自己的个人知识管理-pkm">继续深化自己的个人知识管理 （PKM）</h3>
+<p>2020 年到 2021 年，个人知识管理特别的火。这么火的东西我当然要学习一下，在这个过程中，我又重新认识了什么是笔记、什么是参考资料。看上去很简单的概念，对我的个人知识的整理、学习有很大的帮助。</p>
+<p>为了在 2022 年继续学习并且保持输出，我决定开设自己的 Newsletter，为自己写作，用自己的话写作。</p>
+<blockquote>
+<p>“If you can’t explain it simply, you don’t understand it well enough.”<br>
+—Albert Einstein</p>
+</blockquote>
+<p>希望能够在这个过程中，把我自己的知识能定期总结，让其真正地成为我的知识。</p>
+<hr />
+<p>2020 年了，在我第四个十年路上，希望我能有更多的成长于担当。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用Mermaid画流程图]]></title>
         <id>https://willisfusu.github.io/post/mermaid/</id>
@@ -526,155 +571,6 @@ end;
 <p>然后我就等到上传完，发现还有一部分文件是没有同步到本地的（实在是不能理解为什么，明明我已经从本地复制了 🤨），于是想着那就从云端下载吧，只要点一下☁️️标志就🆗️️了。但是我等了半天，也没有反应……</p>
 <p>折腾了大半个小时，经历了取消 iCloud 同步，再次同步以及 iCloud 的各种等待之后，我发现还是不行……本以为这个问题是个 bug 我没有能力解决了的时候，我发现，如果我打开一个在「云端」还没有同步下来的文件的时候，iCloud 就开始下载，但是没有速度。<strong>我发现之所以没有速度，是因为 iCloud 卡在了一个已经下载完，但不知道为什么没有结束的进程上。</strong> 于是我点了❎️，取消掉卡住的下载进程之后，竟然就可以正常下载了……</p>
 <p>真是太奇葩了。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ 网红之路-使用 Python 做数据调研]]></title>
-        <id>https://willisfusu.github.io/post/zhihu-sosuo/</id>
-        <link href="https://willisfusu.github.io/post/zhihu-sosuo/">
-        </link>
-        <updated>2020-05-30T15:10:13.000Z</updated>
-        <summary type="html"><![CDATA[<p>这篇文章是之前老婆突发奇想，想要在一些平台上建账号，尝试「网红」之路。我寻思着既然要做内容，那怎么也得先去了解一下自己内容在这个平台上的现况吧，比如这个话题的活跃度、发文量之类的。</p>
-<p>想了一下怎么去实现，找专业的调研机构是不太可行了，没有钱。那就只能自己做，然后我想了一下，觉得直接使用平台上的搜索功能，搜索自己需要的话题，然后统计文章数量与时间关系，大体上就可以得到时间变化曲线，应该也可以做个参考。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>这篇文章是之前老婆突发奇想，想要在一些平台上建账号，尝试「网红」之路。我寻思着既然要做内容，那怎么也得先去了解一下自己内容在这个平台上的现况吧，比如这个话题的活跃度、发文量之类的。</p>
-<p>想了一下怎么去实现，找专业的调研机构是不太可行了，没有钱。那就只能自己做，然后我想了一下，觉得直接使用平台上的搜索功能，搜索自己需要的话题，然后统计文章数量与时间关系，大体上就可以得到时间变化曲线，应该也可以做个参考。</p>
-<!-- more -->
-<h2 id="️-1需求">🦁️ 1.需求</h2>
-<p>利用平台的搜索功能，搜索自己需要的话题，并且量化之后，做出时间变化曲线。</p>
-<h2 id="2思路">🐶 2.思路</h2>
-<p>应该可以使用 Python 编写爬虫，然后获取某段时间内的文章，对文章的发文量、评论量、赞数进行统计做图。</p>
-<ul>
-<li>爬虫可以使用 requests 库</li>
-<li>数据做图使用 matplotlib 库</li>
-<li>数据处理 pandas 与 pymongo</li>
-</ul>
-<h2 id="3具体实施">🛸 3.具体实施</h2>
-<h3 id="31-首先分析目标网页">3.1 首先分析目标网页</h3>
-<p>其实现在几乎所有的平台都有搜索功能，我这里选知乎做个例子，其它平台都大同小异，思路总是一样的。</p>
-<ol>
-<li>对目标网页进行分析</li>
-</ol>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_001.png" alt="" loading="lazy"></figure>
-<p>上面的图片是知乎上搜索的页面，我随便找了个关键词就选了「python」，搜索之后，发现乱七八糟的太多了，我又选择了时间范围为「三个月内」，结果如下：</p>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_002.png" alt="" loading="lazy"></figure>
-<p>嗯，这样看上去就好多了，并且三个月，统计出来的数据也有一定的参考价值了。打开 Chrome 的「检查」页面。点击 network 选项卡，在左边寻找和搜索相关的数据包。会发现一个有 search 名字的包，如下所示：</p>
-<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_003.png" alt="" loading="lazy"></figure>
-<p>我们点击预览看看，果然就是返回的搜索结果，并且结果是 json 格式。仔细看一下请求的地址和数据</p>
-<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_004.png" alt="" loading="lazy"></figure>
-<p><em>一般而言，返回结果不可能只有一页</em> 所以我们向下滚动搜索结果页面，看看新刷新出来的结果返回什么样的数据包。向下滚动之后，不出所料果然又返回了一个新的搜索结果。</p>
-<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_005.png" alt="" loading="lazy"></figure>
-<p>仔细看下请求的地址，发现两次请求的参数有所不同。</p>
-<figure data-type="image" tabindex="6"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_006.png" alt="" loading="lazy"></figure>
-<p>多了两个参数：<code>search_hash_id</code>和<code>vertical_info</code></p>
-<p>分析目标网页到这，我们已经得到需要的内容：</p>
-<pre><code class="language-python">请求地址：https://www.zhihu.com/api/v4/search_v3?t=general&amp;q=python&amp;correction=1&amp;offset=20&amp;limit=20&amp;lc_idx=38&amp;show_all_topics=0&amp;time_zone=three_months&amp;search_hash_id=b633d8035402af9f9e431cbffc0aa46f&amp;vertical_info=0%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C0
-返回结果：json 格式
-</code></pre>
-<h3 id="32-爬虫代码">3.2 爬虫代码</h3>
-<p>其实大部分需要用到爬虫的地方，思路都差不多。我们得到请求的地址与返回的结果格式之后，就可以来编写代码了。</p>
-<p>仔细分析下请求地址中的参数：</p>
-<pre><code>general: 是指返回综合搜索结果
-q：搜索关键词
-correction：不知道是什么意思
-offset:搜索返回数据的偏移量
-limit：每次返回的结果数量
-lc_idx:不知道什么意思
-time_zone:时间范围
-search_hash_id：应该是此次执行的搜索行为的id
-vertical_info：不晓得
-</code></pre>
-<p>有了这些理解之后，我大概就知道了如何构造请求地址了，就是循环改变 offset 的数值，从而可以不断返回新的数据。每次返回20条数据的话，offset 可以取0、20、40、……之类的数据。</p>
-<p><em>请求数据</em></p>
-<pre><code class="language-python">pattern = re.compile(r'\\u003c/?em\\u003e')
-# remove &lt;em&gt; label
-def handle_url(url):
-    headers = {
-        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-        'accept-encoding': 'gzip',
-        'accept-language': 'en-GB,en;q=0.9,zh;q=0.8,zh-CN;q=0.7,zh-TW;q=0.6,ja;q=0.5',
-        &quot;cache-control&quot;: &quot;max-age=0&quot;,
-        'cookie': '_xsrf=a21de17a-59ee-4d29-b4b9-5c397d0917ca; _zap=cce7d96b-ecd2-4953-b958-cc0bfbe9a2e7; BAIDU_SSP_lcr=https://www.google.com/; cap_id=&quot;NGM1OGZlYTgwMWU2NGI5YjgyZGQyYzJlYTIwZDYyMTc=|1587130242|8f2a774418c56fabb1f42aaf30d7e37dbd0df1a7&quot;; capsion_ticket=&quot;2|1:0|10:1589482049|14:capsion_ticket|44:OGEzY2NkZGVjZTIzNDg2MGE1NWNkOTYwMTgxYWUzZWI=|0e51411a2863f1881abc1a57c7b1867e6b0a059464fa43e6a2e55bf97c86bc7d&quot;; d_c0=&quot;ADCb102P-hCPTr5IshFBfxUARc-mRhjx2iY=|1584472689&quot;; l_cap_id=&quot;MTI2ZDg3OWUxNmMwNDk2Y2ExYWI4ZjY5MDRjMGIyODQ=|1587130242|6c9a2dafefd22d23c9f19142a7fb4061ebc0f45f&quot;; q_c1=e14ff8f74d144c4d9b4ce781405d22ca|1589200919000|1589200919000; r_cap_id=&quot;OGIzMzU4ZmVjODFhNDZkYzg3MWZhOTdhMDliYTExNDY=|1587130242|5e08cedf3450929c6b9816ca0dfef46c1248fa24&quot;; tst=r; z_c0=&quot;2|1:0|10:1589482084|4:z_c0|92:Mi4xQWw0MEd3QUFBQUFBTUp2WFRZXzZFQ1lBQUFCZ0FsVk5aT0NxWHdDWEVhWUJXSE1BUzZuYnV6NURCSmNrNFlPNk9R|d2595436ce2f97f37b61de7c533b0415fd03bd8dc5b95c3d3199f7ab90bb5eeb&quot;; KLBRSID=5430ad6ccb1a51f38ac194049bce5dfe|1589487035|1589486377',
-        'sec-fetch-dest': 'document',
-        'sec-fetch-mode': 'navigate',
-        'sec-fetch-site': 'none',
-        'sec-fetch-user': '?1',
-        'upgrade-insecure-requests': '1',
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36',
-    }
-# 我试了一下，这些 headers 好像是都需要的……没有办法减少    
-    resp = requests.get(url, headers=headers)
-    clear_text = pattern.sub(&quot;&quot;, resp.text)
-# 因为我发现有一些返回的标题中含有 &lt;em&gt; 强调标签，所以使用正则表达式，替代掉    
-    return clear_text
-</code></pre>
-<p>我原本以为就这样轻松完成了呢，结果第二条 url 就没有办法返回数据了，但是同样的方法，第一条 url 可以返回数据，第二条就不可以。我刚开始是以为 headers 的问题，我反复尝试了不同的参数，结果还是不成，总是返回一个 error 的 json 包。</p>
-<p>在这里，我大概花了一个多小时，直到我又重新思考请求参数的含义，发现<code>search_hash_id</code>可能是一个很重要的参数。既然是执行的每次搜索的 id，那是不是每次搜索都会得到一个唯一的 id， 而我在代码中使用的 id 是浏览器执行的那次搜索。我在代码中使用，会不会和自己新执行的搜索不同？</p>
-<p>但是这个 id 是什么时候产生的呢？第一次搜索是不需要 id 的，之后每次搜索都会有这个参数。会不会是第一次搜索返回的结果中包含了这个参数呢？</p>
-<p>于是我回头去检查了下第一次返回的结果</p>
-<figure data-type="image" tabindex="7"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/zhihu_007.png" alt="" loading="lazy"></figure>
-<p>果然被我发现了，第一次返回的 json 包中含有了此次搜索操作的 id，而且我还发现 lc_idx 这个参数也是每次不同的。</p>
-<p><em>思路调整</em></p>
-<p>这样我调整了下思路，我需要执行一次搜索操作，从返回的结果中得到 <code>search_hash_id</code>和<code>lc_idx</code>，然后再按照规律构造请求地址。</p>
-<p><em>构造请求</em></p>
-<p>按照上面调整之后的思路，我这样来构造请求：</p>
-<pre><code class="language-python">def make_url(searchid, lcid, offset):
-    baseurl = &quot;https://api.zhihu.com/search_v3?advert_count=0&amp;correction=1&amp;&quot;
-    param = {
-        &quot;lc_idx&quot;: lcid,
-        &quot;limit&quot;: 20,
-        &quot;offset&quot;: offset,
-        &quot;q&quot;: &quot;python&quot;,
-        &quot;search_hash_id&quot;: searchid,
-        &quot;show_all_topics&quot;: 0,
-        &quot;t&quot;: &quot;general&quot;,
-        &quot;time_zone&quot;: &quot;three_months&quot;,
-        'vertical_info': '0,0,0,0,0,0,0,0,0,0',
-    }
-    url = baseurl + urlencode(param)
-    return url
-</code></pre>
-<p>尝试了一下，果然可以正常得到结果。但是发现一个问题：<em>只能最多返回200条数据</em> 开始我以为是反爬虫，但是我在浏览器中试了下，不断向下拉，刷新结果，也只能返回200条数据，换了几个关键词，也是同样的结果。</p>
-<h3 id="33-数据处理">3.3 数据处理</h3>
-<p>虽然只能得到200多条数据，但是好歹也算得到了数据。数据处理就当是练手了吧</p>
-<p>怎么处理呢？我需要知道每天这个话题的发文量，然后将发文量与时间做图，就能知道这个话题的热度变化。<br>
-代码如下：</p>
-<pre><code class="language-python">import pymongo
-import time
-from matplotlib import pyplot as plt
-import pandas as pd
-
-newclient=pymongo.MongoClient('mongodb://localhost:27017')
-mydb=newclient['data_research']
-mycol=mydb['Zhihu']
-
-mydata=mycol.find({})
-
-for item in mydata:
-    datestamp=item['date']
-    local_date=time.localtime(datestamp)
-    date_fmt=time.strftime('%Y-%m-%d',local_date)
-    mycol.update_one({&quot;date&quot;:datestamp},{'$set':{'date':date_fmt}})
-# 因为得到的时间是时间戳，所以需要先将其转换了正常的时间格式，并更新数据库
-x=mycol.aggregate([{'$group':{'_id':&quot;$date&quot;,'num':{'$sum':1}}},{'$sort':{'_id':-1}}])
-# 采用聚类计算，按照时间分组，并且计算每组中的数量，然后按照时间降序排列
-
-df=pd.DataFrame(x)
-x_a=df['_id']
-y_a=df['num']
-plt.plot(x_a,y_a)
-plt.xticks(rotation=90)
-plt.show()
-# 转成 dataframe 之后，方便作图
-</code></pre>
-<h3 id="34-最终结果">3.4 最终结果</h3>
-<p>虽然因为知乎的限制，这种方式可以说是失败了，但是也算是练习了自己的技巧吧</p>
-<figure data-type="image" tabindex="8"><img src="https://raw.githubusercontent.com/willisfusu/piconly/master/image/Figure_1.png" alt="" loading="lazy"></figure>
-<h2 id="4总结">😁 4.总结</h2>
-<p>首先吐槽一下，现在的互联网越来越封闭了，不只是知乎一家，其它家平台也是把数据都各种限制在自己的手中。从平台的角度说，这没有什么问题，我自己家的数据嘛。但是从用户的角度，或者从互联网的角度来说，每个平台就成了一个一个的小「孤岛」，原本互联网是降低用户获取信息的成本，但是现在或许连信息也获取不到了。</p>
-<p>知乎将搜索的返回结果限制在 200 条也不知道是出于什么考虑，可能是觉得不会有人看 200 条结果？但是你也没提供任何 filter 工具呀！<strong>按时间排序、赞数排序、热度排序</strong>什么也没有。这样的搜索结果就是返回了一大堆没什么用的数据……</p>
-<p>事后我搜索了一下，发现竟然也有人在吐槽知乎的搜索功能。<a href="https://www.zhihu.com/question/26617244">为什么知乎的搜索功能如此之烂？</a></p>
-<p>好了，不说了，总之这此数据调研没有成功 😂️😂️😂️😂️😂️😂️</p>
 ]]></content>
     </entry>
 </feed>
