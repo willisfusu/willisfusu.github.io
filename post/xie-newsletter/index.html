@@ -54,97 +54,51 @@
                 <div class="col-12 col-lg-8">
                     <article class="post">
                         <h1>
-                            <a itemprop="url" class="post-title" href="https://willisfusu.github.io/post/vim-install/">Vim 安装及简单配置 Markdown</a>
+                            <a itemprop="url" class="post-title" href="https://willisfusu.github.io/post/xie-newsletter/">写Newsletter</a>
                         </h1>
                         <p id="post-meta">
-                            <i class="fa fa-clock-o"></i>2020-03-17 |
+                            <i class="fa fa-clock-o"></i>2022-01-15 |
                             <i class="fa fa-tags"></i>
-                                <a href="https://willisfusu.github.io/tag/will-tech/">技术</a>
-                                
-                                <a href="https://willisfusu.github.io/tag/eF4paoQRX8/">笔记</a>
-                                
-                                <a href="https://willisfusu.github.io/tag/Q6e7HivT3/">Vim</a>
-                                
-                                <a href="https://willisfusu.github.io/tag/ZeIdG4LyD/">markdown</a>
+                                <a href="https://willisfusu.github.io/tag/will-thinking/">想法</a>
                                 |
-                            <i class="fa fa-book-reader"></i>7 min read
+                            <i class="fa fa-book-reader"></i>3 min read
                         </p>
                         
                         
-                            <blockquote class="fa fa-exclamation-triangle warning">
-                                此文章发表于<strong><span style="color:#f75357">
-                                        669</span></strong> 天前，请注意文章时效
-                            </blockquote>
-                            
                         <div class="post-content" itemprop="articleBody">
-                            <h2 id="one-why-i-need-to-install-vim">1️⃣ Why I need to install Vim?</h2>
-<p>最近看了几篇有关于 Vim 和 IDE 的文章，突然想起自己以前也曾经折腾过 Vim 这个大神级软件，只是之前都无疾而终了。刚好自己这两天又在纠结 Markdown 究竟是使用 Yu's Writer 还是 Typora。当然这两个软件都已经非常强大了，但是自己在家里的电脑上和办公室的电脑上使用的软件不同，总感觉乱乱的。 而自己又恰好是一个天生爱折腾的人，就想着把这两件事一起做了。</p>
+                            <p>今天读了晨炜在少数派上写的文章炜晨<a href="https://sspai.com/u/dwp1rzme/updates">谢了20期Newsletter，我有这些想和你分享</a>。虽然作者是针对如何写 Newsletter，但是我觉地这篇文章对于如何写作有一些帮助。</p>
 <!-- more -->
+<h2 id="为自己写作">为自己写作</h2>
+<blockquote>
+<p>我一开始为了把自己的想法凑成一篇文章，会刻意去找一些科学文献来支撑我的观点。我写得不流畅，估计读者读起来也不流畅。后来我意识到，我的引用更像是为了证明自己是对的（你看别人也这么说），但引用应该是为了深入观点。一个为 ego 服务，另一个为内容服务。</p>
+</blockquote>
+<p>我自己也有这样的问题，一旦开始写东西，就想着要说服别人。这样不应该，要要为自己写作，要为内容写作。不用写很多引用，就像是和自己的朋友聊天一样，要分享。除非这个引用是必须的，是有助于内容的。</p>
+<blockquote>
+<p>可是后来发现当我把积累了一段时间的内容写完之后，我没有那么多东西写了。而为了推荐链接我有时要刻意地去读文章，但我希望自己主要以书本为信息来源。</p>
+</blockquote>
+<p>写作的内容需要自己慢慢摸索，知道找到自己可以持续输出的方向。从这里我可以看出, 即使是写的很好的作者，刚开始也面临着选择方向的问题。所以我自己在写作过程中，没没有什么可写是很正常的。<mark>重要的是不刻意，不强求</mark>。这一点其实和我之前的一个<a href="obsidian://open?vault=Will&amp;file=2021-12-19">想法</a>一样。</p>
+<h2 id="为什么要写博客">为什么要写博客</h2>
+<blockquote>
+<p>一是记录自己的学习和思考。用 Zettlekestan 卡片式笔记法记录了一些笔记，但给自己看的不免随意，希望通过发布出来督促我更好地内化那些知识。</p>
+</blockquote>
+<p>这一点和我的想法是一样的，我也是觉得应该把自己的笔记有一个定期的整理，而不是等到年末或者某个时间一齐整理。</p>
+<h2 id="总结">总结</h2>
 <ol>
-<li>统一自己在家里和在办公室 Markdown 编辑器,</li>
-<li>顺带学习使用 Vim 这个软件。</li>
+<li>语言要有自己的风格，不是要学别人。也不要搞得那么正式，就<mark>像朋友之间分享</mark>就可以。</li>
+<li>不要强求内容，但是要<mark>保持写作</mark>，慢慢找到自己能持续输出的方向。</li>
 </ol>
-<h2 id="two-how-to-install">2️⃣ How to Install</h2>
-<p>安装 vim 的过程非常简单，无论是使用 <a href="https://www.vim.org/">vim</a> 还是使用 <a href="https://neovim.io/">Neovim</a> 都可以非常快速的完成安装过程。</p>
-<p>虽然安装过程非常简单，但是后面的配置才是最麻烦的步骤。这里多说一句，工具只是工具，工具的优劣并不代表使用人的优劣。毕竟<strong>草木竹石皆可为剑，飞花摘叶均可伤人</strong>。从自己折腾的过程中能学习到有用的知识才更重要。</p>
-<h2 id="three-config-the-vim">3️⃣ Config the Vim</h2>
-<p>对于 Vim 的配置才真正的是最麻烦的，因为 Vim 的可拓展性实在是太强悍了。所以在使用 Vim 之前一定要自己想清楚使用这个软件的目的是什么。对于我而言则是编辑 Markdown 以及后面可能用其替代 Pycharm 作为我的 Python 编辑器（虽然这一步我觉得还远，目前离开了 Pycharm 这种 IDE 我基本是不会写代码的 :Cry:）。</p>
-<h3 id="create-vim-config-file">Create Vim Config file</h3>
-<p>这里 Vim 和 Neovim 有些不同。vim 的配置文件是 <code>vimrc</code>，而 Neovim 的配置文件是<code>init.vim</code>。并且我下载的 Neovim 是一个绿色版本，需要自己创建 <code>init.vim</code>。所以下载 Neovim 之后的第一步就是创建配置文件。</p>
-<p>在 <code>~\AppData\Local\</code> 下创建 <code>nvim</code> 文件夹，然后在此文件夹下创建文件 <code>init.vim</code>。此时这个配置文件是空的，没关系，不要担心。后面再往里写自己定义的配置。</p>
-<h3 id="install-plugin-manager">Install Plugin Manager</h3>
-<p>Vim 的强大之处就在于有众多的插件，所以也就有了插件管理工具。直接下载的 pristine Vim 相貌简陋，不是说不能用，就是感觉自己在2020年使用这样一个「东西」像是失了智。所以我们还要再想法去增加一个些个插件<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。</p>
-<p>Vim 的插件管理工具有太多了，我就随便按照别人的介绍用了 <a href="https://github.com/junegunn/vim-plug">vim-Plug</a>。安装方法也很简单，作者已经写的非常详细，包含了各种系统以及 Vim 与 Neovim 两个软件。只要仔细读一下应该就会安装了。</p>
-<h3 id="install-plugin">Install Plugin</h3>
-<p>安装完 vim-plug 之后就可以使用其来安装管理其它的插件。具体的安装方式也非常的简单，只要在<code>init.vim</code> 文件中写入如下样式的代码即可：</p>
-<pre><code>Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'Yggdroot/indentLine'
-Plug 'mhinz/vim-startify'
-Plug 'w0ng/vim-hybrid'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-</code></pre>
-<p>通常你可以在插件的 github 页面找到相应的安装方式，但是有时候插件作者可能不会给出所有插件管理工具的安装方式，这个时候就要自己动手。其实也很简单，就是 <code>Plug</code> + <code>用户名/仓库名</code> 就可以了。写完 <code>init.vim</code> 文件之后保存文件。在 vim 中使用命令 <code>:source ~\AppData\Local\nvim\init.vim</code> 载入配置文件。然后使用 <code>:PlugInstall</code> 安装插件。当提示「完成」或者 Done 时，插件就完成安装了，可以说是非常方便。</p>
-<h3 id="plugin-settings">Plugin settings</h3>
-<p>绝大多数时间，每一个插件都会有一些自己的设置，需要在安装完插件之后仔细阅读一下说明文件。因为我自己主要是使用 Markdown ，所以在下面就写一下自己的插件设置。在自己使用的时候，需要按照自己的需求来设置。</p>
-<p>主要是对 vim-markdown 这个插件的设置，因为这个插件默认会不显示 Markdown 中的标示符号，例如 <code># ## ** ** \`</code>之类的，这没有什么不好，但是我更想看到「源码」这样方便我在后面的检查过程中就知道自己是不是写错了什么，而不用非得等到预览的时候才发现，然后回过头来修改。设置很简单：</p>
-<pre><code>let g:vim_markdown_conceal=0
-let g:tex_conceal=&quot;&quot;
-let g:vim_markdown_math=1
-let g:vim_markdown_conceal_code_blocks=0
-</code></pre>
-<p>保存，然后载入配置文件之后，就生效了。</p>
-<h3 id="powershell-settings">PowerShell Settings</h3>
-<p>有时候还需要在 PowerShell 中调用 Vim，只要将 <code>nvim.exe</code> 所在的 bin 文件夹的路径添加到系统环境变量中就可以了。😋</p>
-<h2 id="four-谈点感想">4️⃣ 谈点感想<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></h2>
-<p>Vim 是一个学习成本很高的工具，这个学习成本高就高在很难在短时间内入门。如果不多了解一些知识点，可能会遇到无数问题。我自己的经验就是先按照别人的一个配置自己设定好，不要直接套用，而是按照别的人作法去设置自己的配置文件。大概明白自己用了些什么插件，更改了什么属性。不必要特别深入的了解。这一步就是让软件工作起来，并且自己大体上知道软件是怎么工作的。</p>
-<p>然后就是把这个软件放到实际的工作中大量的使用，这时候你会发现自己有很多需求没有被满足，而这些没有被满足的点才真正是你在使用这个软件过程中需要学习解决的。找到痛点这是第二步。</p>
-<p>第三步就是针对这些个痛点，去寻找解决方案，在找解决方案的过程中，因为 自己是带着问题来的，所以会更具效率，更有针对性。很多软件想要面面具到的学习，有时候是不可能的，举个身边最常见的例子： Office 系列的软件，没见到谁能把 Word 每一个功能都学习到，都用到。一个我们日常如此大量使用的软件尚且无法全面学习，更合况其它的软件。</p>
-<p>完成了第三步之后，就是在些基础上提高。对这个软件有了了解，并且软件也能正常工作，这时候再来折腾就容易多了，也更容易进步。</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>从这个角度上来说，Vim 岂不就是一个可以自己组装的 IDE？那些个人还争个什么劲呀！嗨。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p>纯粹是自己胡乱想的，其实没有什么实质性的内容。原本是想着将自己的一些习惯给提炼成方法论 😃 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
 
                         </div>
                          <blockquote>
-                             <p>本文链接：<a style="text-decoration: underline" href="https://willisfusu.github.io/post/vim-install/">https://willisfusu.github.io/post/vim-install/</a></p>
+                             <p>本文链接：<a style="text-decoration: underline" href="https://willisfusu.github.io/post/xie-newsletter/">https://willisfusu.github.io/post/xie-newsletter/</a></p>
                              <p>此文章由<a style="text-decoration: underline" href="https://willisfusu.github.io/">李二先生</a>采用<a style="text-decoration: underline" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可,转载请注明出处。
                              </p>
                          </blockquote>
                     </article>
                     <ul class="post-near">
                         
-                        <li>上一篇<a href="https://willisfusu.github.io/post/zotero/">Zotero 文献管理软件配置</a> </li>
                         
-                        
-                        <li>上一篇<a href="https://willisfusu.github.io/post/python-wordcloud/">Python获取歌词、分词及词云绘制（一）</a> </li>
+                        <li>上一篇<a href="https://willisfusu.github.io/post/2021-nian-zong-jie/">2021 年总结</a> </li>
                         
                     </ul>
                     <div id="vcomment"></div>
@@ -182,13 +136,7 @@ let g:vim_markdown_conceal_code_blocks=0
             <div class="toc-container">
                 <p style="margin-bottom: .5rem;">暂时完成，没有美化</p>
                 
-                    <li class="tag"> 🎉 <a href="https://willisfusu.github.io/tag/will-tech/">技术</a></li>
-                
-                    <li class="tag"> 🎉 <a href="https://willisfusu.github.io/tag/eF4paoQRX8/">笔记</a></li>
-                
-                    <li class="tag"> 🎉 <a href="https://willisfusu.github.io/tag/Q6e7HivT3/">Vim</a></li>
-                
-                    <li class="tag"> 🎉 <a href="https://willisfusu.github.io/tag/ZeIdG4LyD/">markdown</a></li>
+                    <li class="tag"> 🎉 <a href="https://willisfusu.github.io/tag/will-thinking/">想法</a></li>
                 
             </div>
         </div>
@@ -201,18 +149,9 @@ let g:vim_markdown_conceal_code_blocks=0
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#one-why-i-need-to-install-vim">:one: Why I need to install Vim?</a></li>
-<li><a href="#two-how-to-install">:two: How to Install</a></li>
-<li><a href="#three-config-the-vim">:three: Config the Vim</a>
-<ul>
-<li><a href="#create-vim-config-file">Create Vim Config file</a></li>
-<li><a href="#install-plugin-manager">Install Plugin Manager</a></li>
-<li><a href="#install-plugin">Install Plugin</a></li>
-<li><a href="#plugin-settings">Plugin settings</a></li>
-<li><a href="#powershell-settings">PowerShell Settings</a></li>
-</ul>
-</li>
-<li><a href="#four-%E8%B0%88%E7%82%B9%E6%84%9F%E6%83%B3">:four: 谈点感想[^2]</a></li>
+<li><a href="#%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%86%99%E4%BD%9C">为自己写作</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E5%8D%9A%E5%AE%A2">为什么要写博客</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
 </ul>
 </li>
 </ul>
